@@ -1,0 +1,24 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+a:hover{
+    scale: 1.8;
+}
+
+/*HEADER*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(125, 125, 125, .3);
+}
+div img{
+    width: 3rem;
+    height: 3rem;
+}
