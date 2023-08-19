@@ -17,8 +17,17 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     background-color: rgba(125, 125, 125, .3);
+    border-bottom: solid 2px #fff;
 }
-div img{
+.logo img{
     width: 3rem;
     height: 3rem;
+}
+
+.left{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
