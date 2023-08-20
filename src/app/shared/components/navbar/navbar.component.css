@@ -44,3 +44,11 @@ nav{
     justify-content: space-between;
     gap: 2rem;
 }
+
+/*Hamburger menu*/
+.toggle_btn{
+    display: none;
+}
+.toggle_btn img{
+    max-width: 2rem;
+}
