@@ -19,7 +19,7 @@ a:hover{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: rgba(125, 125, 125, .3);
     border-bottom: solid 2px #fff;
 }
