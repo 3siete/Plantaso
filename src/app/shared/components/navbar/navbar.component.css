@@ -49,10 +49,10 @@ nav{
 }
 
 /*Hamburger menu*/
-.toggle_btn{
+.burger_btn{
     display: none;
 }
-.toggle_btn img{
+.burger_btn img{
     max-width: 2rem;
 }
 
@@ -86,7 +86,7 @@ nav{
         padding-left: 20px;
         padding-right: 20px;
     }
-    nav .toggle_btn{
+    nav .burger_btn{
         display: block;
     }
 }
