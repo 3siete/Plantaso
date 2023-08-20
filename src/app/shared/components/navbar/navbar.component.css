@@ -90,3 +90,9 @@ nav{
         display: block;
     }
 }
+@media(max-width:476px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
