@@ -16,6 +16,9 @@ a:hover{
 }
 
 /*HEADER*/
+header{
+    position: relative;
+}
 nav{
     display: flex;
     align-items: center;
@@ -51,4 +54,15 @@ nav{
 }
 .toggle_btn img{
     max-width: 2rem;
+}
+
+/*DROPDOWN MENU*/
+.dropdown_menu{
+    position: absolute;
+    margin-top: 3px;
+    right: 1.3rem;
+    top: 60px;
+    width: 300px;
+    height: 260px;
+    background-color: rgba(125, 125, 125, .3);
 }
