@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 burgerBtn:boolean = false
 
+responsiveMenu(){
+  if(this.burgerBtn === false){
+    this.burgerBtn = true;
+  }else{
+    this.burgerBtn = false;
+  }
+}
+
 }
