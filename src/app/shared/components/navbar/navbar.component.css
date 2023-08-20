@@ -66,3 +66,9 @@ nav{
     height: 260px;
     background-color: rgba(125, 125, 125, .3);
 }
+.dropdown_menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
