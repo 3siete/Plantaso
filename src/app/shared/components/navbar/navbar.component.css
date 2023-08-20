@@ -63,11 +63,12 @@ nav{
     right: 1.3rem;
     top: 60px;
     width: 300px;
-    height: 260px;
+    height: 220px;
     background-color: rgba(125, 125, 125, .3);
 }
 .dropdown_menu li{
     padding: .7rem;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
