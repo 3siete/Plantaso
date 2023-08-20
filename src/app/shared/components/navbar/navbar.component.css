@@ -73,3 +73,20 @@ nav{
     align-items: center;
     justify-content: center;
 }
+/*RESPONSIVE DESING*/
+
+@media(max-width:900px){
+    nav .right,
+    nav .left{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    nav .toggle_btn{
+        display: block;
+    }
+}
