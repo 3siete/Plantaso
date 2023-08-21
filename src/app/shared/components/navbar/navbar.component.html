@@ -3,14 +3,14 @@
         <ul class="left"> 
             <li><a [routerLink]="['/inicio']">INICIO</a></li>
             <li><a [routerLink]="['articulos']">ARTICULOS</a></li>
-            <li><a routerLink="/productos">PRODUCTOS</a></li>
+            <li><a [routerLink]="['/productos']">PRODUCTOS</a></li>
         </ul>
 
         <div class="logo"><img src="../../../../assets/logo.png" alt="logo"></div>
 
         <ul class="right">
-            <li><a [routerLink]="['/auth']">INICIAR SESION</a></li>
-            <li><a [routerLink]="['/auth']">REGISTRARTE</a></li>
+            <li><a [routerLink]="['/auth/iniciarsesion']">INICIAR SESION</a></li>
+            <li><a [routerLink]="['/auth/registrate']">REGISTRARTE</a></li>
         </ul>
 
         <div class="burger_btn">
@@ -27,5 +27,6 @@
             <li><a [routerLink]="['/auth']">REGISTRATE</a></li>
         </ul>
     </div>
-
 </header>
+
+<router-outlet></router-outlet>
