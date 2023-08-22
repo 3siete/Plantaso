@@ -57,3 +57,7 @@
      transition: 1s;
      /* Transición suave de 1 segundo */
  }
+  /* Estilos para el contenido de la tarjeta al hacer hover */
+  .card:hover .card-body {
+    right: 0; /* Muestra el contenido desplazándolo hacia la derecha */
+  }
