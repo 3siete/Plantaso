@@ -25,3 +25,35 @@
      border-radius: 15px;
      /* Radio de borde de la imagen */
  }
+
+ /* Estilos para el contenido de la tarjeta que se muestra al hacer hover */
+ .card-body {
+     width: 100%;
+     /* Ocupa todo el espacio disponible */
+     height: 100%;
+     /* Ocupa todo el espacio disponible */
+     top: 0;
+     /* Coloca el contenido en la parte superior */
+     right: -100%;
+     /* Inicialmente, fuera de la vista */
+     position: absolute;
+     /* Posicionamiento absoluto */
+     background: #07101352;
+     /* Fondo semi-transparente */
+     backdrop-filter: blur(5px);
+     /* Desenfoque de fondo */
+     border-radius: 15px;
+     /* Radio de borde */
+     color: #fff;
+     /* Color del texto */
+     padding: 30px;
+     /* Relleno interno */
+     display: flex;
+     /* Activa el modelo de diseño flexbox */
+     flex-direction: column;
+     /* Organiza el contenido verticalmente */
+     justify-content: center;
+     /* Centra verticalmente el contenido */
+     transition: 1s;
+     /* Transición suave de 1 segundo */
+ }
