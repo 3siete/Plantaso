@@ -57,14 +57,31 @@
      transition: 1s;
      /* Transición suave de 1 segundo */
  }
-  /* Estilos para el contenido de la tarjeta al hacer hover */
-  .card:hover .card-body {
-    right: 0; /* Muestra el contenido desplazándolo hacia la derecha */
-  }
-   /* Estilos para el título de la tarjeta */
-   .card-title {
-    text-transform: uppercase; /* Texto en mayúsculas */
-    font-size: 30px; /* Tamaño de fuente */
-    font-weight: 500; /* Peso de fuente */
-    line-height: 30px; /* Altura de línea */
-  }
+
+ /* Estilos para el contenido de la tarjeta al hacer hover */
+ .card:hover .card-body {
+     right: 0;
+     /* Muestra el contenido desplazándolo hacia la derecha */
+ }
+
+ /* Estilos para el título de la tarjeta */
+ .card-title {
+     text-transform: uppercase;
+     /* Texto en mayúsculas */
+     font-size: 30px;
+     /* Tamaño de fuente */
+     font-weight: 500;
+     /* Peso de fuente */
+     line-height: 30px;
+     /* Altura de línea */
+ }
+
+ /* Estilos para el subtítulo de la tarjeta */
+ .card-sub-title {
+     text-transform: capitalize;
+     /* Primera letra de cada palabra en mayúscula */
+     font-size: 14px;
+     /* Tamaño de fuente */
+     font-weight: 300;
+     /* Peso de fuente */
+ }
