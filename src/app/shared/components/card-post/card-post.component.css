@@ -1,9 +1,27 @@
  /* Estilos para la tarjeta */
  .card {
-    width: 320px; /* Ancho fijo de la tarjeta */
-    height: 500px; /* Altura fija de la tarjeta */
-    border-radius: 25px; /* Radio de borde */
-    overflow: hidden; /* Oculta el contenido que desborda */
-    border: 3px solid #fff; /* Borde sólido blanco */
-    position: relative; /* Posicionamiento relativo */
-  }
+     width: 320px;
+     /* Ancho fijo de la tarjeta */
+     height: 500px;
+     /* Altura fija de la tarjeta */
+     border-radius: 25px;
+     /* Radio de borde */
+     overflow: hidden;
+     /* Oculta el contenido que desborda */
+     border: 3px solid #fff;
+     /* Borde sólido blanco */
+     position: relative;
+     /* Posicionamiento relativo */
+ }
+
+ /* Estilos para la imagen de la tarjeta */
+ .card-img {
+     width: 100%;
+     /* Ocupa todo el espacio disponible */
+     height: 100%;
+     /* Ocupa todo el espacio disponible */
+     object-fit: cover;
+     /* Ajusta la imagen al contenedor */
+     border-radius: 15px;
+     /* Radio de borde de la imagen */
+ }
