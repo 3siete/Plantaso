@@ -97,3 +97,27 @@
      font-weight: 400;
      /* Peso de fuente */
  }
+
+ /* Estilos para el botón de la tarjeta */
+ .card-btn {
+     color: #4D5057;
+     /* Color del texto */
+     background: #73a4b4;
+     /* Fondo azul */
+     padding: 10px 20px;
+     /* Relleno interno */
+     width: 120px;
+     /* Ancho fijo del botón */
+     border-radius: 5px;
+     /* Radio de borde */
+     text-transform: capitalize;
+     /* Texto en mayúscula */
+     border: none;
+     /* Sin bordes */
+     outline: none;
+     /* Sin estilo de enfoque */
+     font-weight: 500;
+     /* Peso de fuente */
+     cursor: pointer;
+     /* Cambia el cursor a una mano */
+ }
