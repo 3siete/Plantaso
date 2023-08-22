@@ -85,3 +85,15 @@
      font-weight: 300;
      /* Peso de fuente */
  }
+
+ /* Estilos para la información adicional de la tarjeta */
+ .card-info {
+     font-size: 16px;
+     /* Tamaño de fuente */
+     line-height: 25px;
+     /* Altura de línea */
+     margin: 20px 0;
+     /* Margen superior e inferior */
+     font-weight: 400;
+     /* Peso de fuente */
+ }
