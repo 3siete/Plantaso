@@ -1,5 +1,7 @@
 li{
     list-style: none;
+    padding: .5rem;
+    border-bottom: solid 1px white;
 }
 a{
     text-decoration: none;
@@ -10,7 +12,7 @@ a{
     position: relative;
 }
 a:hover{
-    color: blue;
+    color: black;
     transform: scale(1.2);
     z-index: 1;
 }
@@ -23,8 +25,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(125, 125, 125, .3);
-    border-bottom: solid 2px #fff;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(7px);
+    border-bottom: solid 1px #fff;
+    height: 4rem;
 }
 .logo img{
     width: 3rem;
@@ -59,13 +63,16 @@ nav{
 /*DROPDOWN MENU*/
 .dropdown_menu{
     position: absolute;
-    margin-top: 3px;
-    right: 1.3rem;
-    top: 60px;
+    border-top: solid 1px white;
+    margin-top: 2px;
+    left: 2rem;
+    top: 70px;
     width: 300px;
     height: 220px;
-    background-color: rgba(125, 125, 125, .3);
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(7px);
 }
+
 .dropdown_menu li{
     padding: .7rem;
     margin-bottom: 10px;
@@ -83,16 +90,16 @@ nav{
     nav{
         display: flex;
         justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     nav .burger_btn{
         display: block;
     }
 }
-@media(max-width:476px){
+@media(max-width:768px){
     .dropdown_menu{
-        left: 2rem;
+        right: 2rem;
         width: unset;
     }
 }
