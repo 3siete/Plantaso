@@ -8,15 +8,15 @@ const routes: Routes = [
     loadChildren:()=>import('./modules/auth/auth.module').then(m=>m.AuthModule),
   },
   {
-    path:'',
+    path:'inicio',
     loadChildren:()=>import('./modules/home/home.module').then(m=>m.HomeModule),
   },
   {
-    path:'',
+    path:'productos',
     loadChildren:()=>import('./modules/products/products.module').then(m=>m.ProductsModule),
   },
   {
-    path:'',
+    path:'articulos',
     loadChildren:()=>import('./modules/articles/articles.module').then(m=>m.ArticlesModule),
   }
 ];

@@ -6,7 +6,7 @@ import { RegisterComponent } from './pages/register/register.component';
 const routes: Routes = [
 //rutas secundarias.
   {path:'iniciarsesion',component:LoginComponent},
-  {path:'registrate',component:RegisterComponent}
+  {path:'registrarte',component:RegisterComponent}
 ];
 
 @NgModule({

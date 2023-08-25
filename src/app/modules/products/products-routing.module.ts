@@ -4,7 +4,7 @@ import { ProductsPageComponent } from './pages/products-page/products-page.compo
 
 const routes: Routes = [
   //ruta secundaria
-  {path:'productos',component:ProductsPageComponent}
+  {path:'',component:ProductsPageComponent}
   
 ];
 
