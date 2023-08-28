@@ -1,18 +1,17 @@
 li{
     list-style: none;
-    padding: .5rem;
-    border-bottom: solid 1px white;
+    line-height: 1rem;
 }
 a{
     text-decoration: none;
-    color: #fff;
-    font-size: .7rem;
+    color: #E8FCCF;
+    font-size: 1rem;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.1s;
     position: relative;
+    text-shadow: 1px;
 }
-a:hover{
-    color: black;
+a:active{
     transform: scale(1.2);
     z-index: 1;
 }
@@ -26,8 +25,8 @@ nav{
     align-items: center;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(7px);
-    border-bottom: solid 1px #fff;
+    backdrop-filter: blur(8px);
+    border-bottom: solid 1px #E8FCCF;
     height: 4rem;
 }
 .logo img{
@@ -63,18 +62,20 @@ nav{
 /*DROPDOWN MENU*/
 .dropdown_menu{
     position: absolute;
-    border-top: solid 1px white;
+    border-top: solid 1px #E8FCCF;
     margin-top: 2px;
     left: 2rem;
     top: 70px;
     width: 300px;
-    height: 220px;
+    height: 205px;
     background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(8px);
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1);
+    
 }
 
 .dropdown_menu li{
-    padding: .7rem;
+    line-height: 2rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -95,6 +96,9 @@ nav{
     }
     nav .burger_btn{
         display: block;
+    }
+    nav .dropdown_menu{
+        transition: 1s;
     }
 }
 @media(max-width:768px){
