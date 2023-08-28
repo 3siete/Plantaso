@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+burgerBtn:boolean = false
+
+responsiveMenu(){
+  if(this.burgerBtn === false){
+    this.burgerBtn = true;
+  }else{
+    this.burgerBtn = false;
+  }
+}
 
 }
