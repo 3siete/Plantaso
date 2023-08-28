@@ -18,7 +18,8 @@ import { ContainerComponent } from './components/container/container.component';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ContainerComponent
   ]
 })
 export class SharedModule { }
