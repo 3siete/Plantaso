@@ -1,0 +1,15 @@
+.container{
+    max-height: 90svh;
+    max-width: 95svw;
+    height: 88svh;
+    width: 95svw;
+    margin: 15px auto ;
+}
+
+.subcontainer{
+    background: #B0D28D;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    border: solid 10px #fff;
+}
