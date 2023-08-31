@@ -1,8 +1,8 @@
 /* Estilos para la clase '.card' */
 .card {
-    width: 320px;
+    width: 160px;
     /* Ancho fijo de la tarjeta */
-    height: 500px;
+    height: 220px;
     /* Altura fija de la tarjeta */
     padding: .8em;
     /* Relleno interno de la tarjeta */
@@ -34,15 +34,15 @@
 
 /* Estilos para la clase '.card-info' */
 .card-info {
-    padding-top: 10%;
+    padding-top: 5%;
     /* Relleno superior de la información */
 }
 
 /* Estilos para los elementos 'svg' */
 svg {
-    width: 20px;
+    width: 15px;
     /* Ancho de los elementos svg */
-    height: 20px;
+    height: 15px;
     /* Altura de los elementos svg */
 }
 
@@ -56,7 +56,7 @@ svg {
     /* Distribuye el espacio entre los elementos flexibles */
     align-items: center;
     /* Centra verticalmente los elementos */
-    padding-top: 10px;
+    padding-top: 5px;
     /* Relleno superior del pie de página */
     border-top: 1px solid #ddd;
     /* Borde superior del pie de página */
@@ -66,21 +66,21 @@ svg {
 .text-title {
     text-transform: uppercase;
     /* Texto en mayúsculas */
-    font-size: 30px;
+    font-size: 15px;
     /* Tamaño de fuente */
     font-weight: 500;
     /* Peso de fuente */
-    line-height: 30px;
+    line-height: 10px;
     /* Altura de línea */
 }
 
 /* Estilos para el texto con clase '.text-body' */
 .text-body {
-    font-size: 16px;
+    font-size: 10px;
     /* Tamaño de fuente */
-    line-height: 25px;
+    line-height: 15px;
     /* Altura de línea */
-    margin: 10px 0;
+    margin: 5px 0;
     /* Margen superior e inferior */
     font-weight: 400;
     /* Peso de fuente */
@@ -94,7 +94,7 @@ svg {
     /* Borde del botón */
     display: flex;
     /* Activa el modelo de diseño flexbox */
-    padding: .3em;
+    padding: .2em;
     /* Relleno interno del botón */
     cursor: pointer;
     /* Cambia el cursor a una mano al pasar por encima */
