@@ -61,3 +61,15 @@ svg {
     border-top: 1px solid #ddd;
     /* Borde superior del pie de página */
 }
+
+/* Estilos para el texto con clase '.text-title' */
+.text-title {
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+    font-size: 30px;
+    /* Tamaño de fuente */
+    font-weight: 500;
+    /* Peso de fuente */
+    line-height: 30px;
+    /* Altura de línea */
+}
