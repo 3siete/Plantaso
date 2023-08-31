@@ -111,3 +111,11 @@ svg {
     background-color: #ffcaa6;
     /* Color de fondo del botón al hacer hover */
 }
+
+/* Estilos para la imagen con clase '.card-img' al hacer hover */
+.card-img:hover {
+    transform: translateY(-25%);
+    /* Desplaza la imagen hacia arriba al hacer hover */
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    /* Sombra de la imagen al hacer hover */
+}
