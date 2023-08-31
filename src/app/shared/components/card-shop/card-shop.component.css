@@ -103,3 +103,11 @@ svg {
     transition: .3s ease-in-out;
     /* Transición suave de 0.3 segundos para cambios animados */
 }
+
+/* Estilos para el botón con clase '.card-button' al hacer hover */
+.card-button:hover {
+    border: 1px solid #ffcaa6;
+    /* Borde del botón al hacer hover */
+    background-color: #ffcaa6;
+    /* Color de fondo del botón al hacer hover */
+}
