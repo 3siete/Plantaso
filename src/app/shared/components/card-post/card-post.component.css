@@ -1,8 +1,8 @@
  /* Estilos para la tarjeta */
  .card {
-     width: 320px;
+     width: 160px;
      /* Ancho fijo de la tarjeta */
-     height: 500px;
+     height: 220px;
      /* Altura fija de la tarjeta */
      border-radius: 25px;
      /* Radio de borde */
@@ -46,7 +46,7 @@
      /* Radio de borde */
      color: #fff;
      /* Color del texto */
-     padding: 30px;
+     padding: 10px;
      /* Relleno interno */
      display: flex;
      /* Activa el modelo de diseño flexbox */
@@ -68,11 +68,11 @@
  .card-title {
      text-transform: uppercase;
      /* Texto en mayúsculas */
-     font-size: 30px;
+     font-size: 18px;
      /* Tamaño de fuente */
      font-weight: 500;
      /* Peso de fuente */
-     line-height: 30px;
+     line-height: 15px;
      /* Altura de línea */
  }
 
@@ -80,7 +80,7 @@
  .card-sub-title {
      text-transform: capitalize;
      /* Primera letra de cada palabra en mayúscula */
-     font-size: 14px;
+     font-size: 10px;
      /* Tamaño de fuente */
      font-weight: 300;
      /* Peso de fuente */
@@ -88,11 +88,11 @@
 
  /* Estilos para la información adicional de la tarjeta */
  .card-info {
-     font-size: 16px;
+     font-size: 12px;
      /* Tamaño de fuente */
-     line-height: 25px;
+     line-height: 12px;
      /* Altura de línea */
-     margin: 20px 0;
+     margin: 10px 0;
      /* Margen superior e inferior */
      font-weight: 400;
      /* Peso de fuente */
@@ -104,9 +104,9 @@
      /* Color del texto */
      background: #73a4b4;
      /* Fondo azul */
-     padding: 10px 20px;
+     padding: 5px 10px;
      /* Relleno interno */
-     width: 120px;
+     width: 60px;
      /* Ancho fijo del botón */
      border-radius: 5px;
      /* Radio de borde */
