@@ -45,3 +45,19 @@ svg {
     height: 20px;
     /* Altura de los elementos svg */
 }
+
+/* Estilos para la clase '.card-footer' */
+.card-footer {
+    width: 100%;
+    /* Ancho completo del pie de página */
+    display: flex;
+    /* Activa el modelo de diseño flexbox */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos flexibles */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding-top: 10px;
+    /* Relleno superior del pie de página */
+    border-top: 1px solid #ddd;
+    /* Borde superior del pie de página */
+}
