@@ -1,0 +1,11 @@
+/* Estilos para la clase '.card' */
+.card {
+    width: 320px; /* Ancho fijo de la tarjeta */
+    height: 500px; /* Altura fija de la tarjeta */
+    padding: .8em; /* Relleno interno de la tarjeta */
+    background: #f5f5f5; /* Color de fondo de la tarjeta */
+    position: relative; /* Posicionamiento relativo */
+    overflow: visible; /* Controla cómo se muestra el contenido que desborda */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); /* Sombra de la tarjeta */
+    border-radius: 25px; /* Radio de borde de la tarjeta */
+  }
