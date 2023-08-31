@@ -87,3 +87,19 @@ svg {
     padding-bottom: 1px;
     /* Relleno inferior */
 }
+
+/* Estilos para el botón con clase '.card-button' */
+.card-button {
+    border: 1px solid #252525;
+    /* Borde del botón */
+    display: flex;
+    /* Activa el modelo de diseño flexbox */
+    padding: .3em;
+    /* Relleno interno del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar por encima */
+    border-radius: 50px;
+    /* Radio de borde del botón */
+    transition: .3s ease-in-out;
+    /* Transición suave de 0.3 segundos para cambios animados */
+}
