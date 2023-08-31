@@ -37,3 +37,11 @@
     padding-top: 10%;
     /* Relleno superior de la información */
 }
+
+/* Estilos para los elementos 'svg' */
+svg {
+    width: 20px;
+    /* Ancho de los elementos svg */
+    height: 20px;
+    /* Altura de los elementos svg */
+}
