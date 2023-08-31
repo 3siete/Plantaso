@@ -31,3 +31,9 @@
     transition: .3s ease;
     /* Transición suave de 0.3 segundos para cambios animados */
 }
+
+/* Estilos para la clase '.card-info' */
+.card-info {
+    padding-top: 10%;
+    /* Relleno superior de la información */
+}
