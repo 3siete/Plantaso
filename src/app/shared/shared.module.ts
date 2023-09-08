@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
-import { AppRoutingModule } from '../app-routing.module';
 import { ContainerComponent } from './components/container/container.component';
 
 
@@ -12,7 +11,6 @@ import { ContainerComponent } from './components/container/container.component';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
   ],
   exports: [
     FooterComponent,
