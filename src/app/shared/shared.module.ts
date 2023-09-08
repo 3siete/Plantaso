@@ -8,6 +8,7 @@ import { ContainerComponent } from './components/container/container.component';
   declarations: [
     FooterComponent,
     ContainerComponent
+    
   ],
   imports: [
     CommonModule,
