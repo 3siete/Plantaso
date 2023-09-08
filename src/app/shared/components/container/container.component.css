@@ -3,7 +3,8 @@
     max-width: 95svw;
     height: 88svh;
     width: 95svw;
-    margin: 15px auto ;
+    margin: auto ;
+    margin-top: 9px;
 }
 
 .subcontainer{
