@@ -21,7 +21,9 @@
                         <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                     </div>
                 </a>
-                <span class="tooltip">algoquenose</span>
+                <div *ngIf="hover">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
             </li>
             <li class="tools">
                 <a href="#">
@@ -29,7 +31,9 @@
                         <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                     </div>
                 </a>
-                <span class="tooltip">algoquenose</span>
+                <div *ngIf="hover">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
             </li>
             <li class="tools">
                 <a href="#">
@@ -37,7 +41,9 @@
                         <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                     </div>
                 </a>
-                <span class="tooltip">algoquenose</span>
+                <div *ngIf="hover">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
             </li>
             <li class="tools">
                 <a href="#">
@@ -45,7 +51,9 @@
                         <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                     </div>
                 </a>
-                <span class="tooltip">favoritos</span>
+                <div *ngIf="hover">
+                    <span [ngClass]="'tooltip'">favoritos</span>
+                </div>
             </li>
         </ul>
     </div>
