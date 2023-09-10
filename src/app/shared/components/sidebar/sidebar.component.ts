@@ -9,8 +9,13 @@ export class SidebarComponent {
 hover:boolean = false;
 
   mouseover(){
-    if(hover:true){
-
+    if(this.hover === false){
+      this.hover = true
+      console.log('true')
+    }else{
+      this.hover = false
+      
+      console.log('false')
     }
   }
 
