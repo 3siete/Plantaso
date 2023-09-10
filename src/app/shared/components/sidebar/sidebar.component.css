@@ -34,3 +34,13 @@ li{
     flex-direction: column;
     justify-content: space-around;
 }
+
+/*tooltip*/
+.tooltip{
+    background-color: #99C66F;
+    position: absolute;
+    right: -1.2rem;
+    transform: translateX(100%) translateY(-50%);
+    
+}
+
