@@ -11,11 +11,9 @@ hover:boolean = false;
   mouseover(){
     if(this.hover === false){
       this.hover = true
-      console.log('true')
     }else{
       this.hover = false
       
-      console.log('false')
     }
   }
 
