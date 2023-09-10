@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-true:boolean = false;
+hover:boolean = false;
 
   mouseover(){
     if(hover:true){
