@@ -31,11 +31,13 @@ li{
     height: 100%;
 }
 .sidebar ul li{
-    background-color: aquamarine;
     flex-direction: column;
     justify-content: space-around;
     margin: 8px 0;
     position: relative;
+}
+.icon img{
+    max-width: 3rem;
 }
 
 /*tooltip*/
