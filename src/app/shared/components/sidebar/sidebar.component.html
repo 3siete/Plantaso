@@ -11,8 +11,9 @@
                         <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                     </div>
                 </a>
-                
-                <span [ngClass]="'tooltip'">categorias</span>
+                <div *ngIf="hover">
+                    <span [ngClass]="'tooltip'">categorias</span>
+                </div>
             </li>
             <li class="tools">
                 <a href="#">
