@@ -36,11 +36,13 @@ li{
 }
 
 /*tooltip*/
-.tooltip{
+.sidebar .tooltip{
     background-color: #99C66F;
     position: absolute;
-    right: -1.2rem;
+    right: 1.2rem;
+    top: 0;
     transform: translateX(100%) translateY(-50%);
-    
+    padding: 0 .8rem;
+    font-size: .85rem;
 }
 
