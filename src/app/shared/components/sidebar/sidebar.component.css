@@ -39,7 +39,7 @@ li{
 }
 
 /*tooltip*/
-.sidebar li .tooltip{
+.tooltip{
     background-color: #fff;
     position: absolute;
     right: -1.2rem;
