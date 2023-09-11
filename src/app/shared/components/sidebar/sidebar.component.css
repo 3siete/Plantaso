@@ -3,8 +3,6 @@ a{
 }
 li{
     list-style: none;
-    border-radius: 100%;
-    background-color: #B0D28D;
 }
 .container{
     width: 100%;
@@ -39,6 +37,7 @@ li{
     margin: 8px 0;
     position: relative;
 }
+
 .icon img{
     max-width: 3rem;
 }
