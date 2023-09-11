@@ -19,12 +19,11 @@ li{
     display: flex;
     flex-direction: column;
     background-color: #99C66F;
-    border-radius: 40px;
+    border-radius:  0 30px 30px 0;
     height: auto;
     width: 5.4rem;
     align-items: center;
     justify-content: space-evenly;
-    border: solid 1px #fff;
 }
 .sidebar-tools{
     display: flex;
