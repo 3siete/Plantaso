@@ -13,5 +13,9 @@ export class HomePageComponent {
   ngOnInit(): void {
     // Selecciona todos los elementos con la clase CSS 'parallax-el' dentro del componente actual.
     const parallaxEls = this.elementRef.nativeElement.querySelectorAll('.parallax-el');
+
+    // Crea una línea de tiempo GSAP para gestionar las animaciones.
+    const timeline = gsap.timeline();
+
   }
 }
