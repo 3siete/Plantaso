@@ -1,0 +1,121 @@
+/* Estilos para la clase '.card' */
+.card {
+    width: 160px;
+    /* Ancho fijo de la tarjeta */
+    height: 220px;
+    /* Altura fija de la tarjeta */
+    padding: .8em;
+    /* Relleno interno de la tarjeta */
+    background: #f5f5f5;
+    /* Color de fondo de la tarjeta */
+    position: relative;
+    /* Posicionamiento relativo */
+    overflow: visible;
+    /* Controla cómo se muestra el contenido que desborda */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    /* Sombra de la tarjeta */
+    border-radius: 25px;
+    /* Radio de borde de la tarjeta */
+}
+
+/* Estilos para la clase '.card-img' */
+.card-img {
+    background-color: #ffcaa6;
+    /* Color de fondo de la imagen */
+    height: 60%;
+    /* Altura de la imagen */
+    width: 100%;
+    /* Ancho de la imagen */
+    border-radius: .5rem;
+    /* Radio de borde de la imagen */
+    transition: .3s ease;
+    /* Transición suave de 0.3 segundos para cambios animados */
+}
+
+/* Estilos para la clase '.card-info' */
+.card-info {
+    padding-top: 5%;
+    /* Relleno superior de la información */
+}
+
+/* Estilos para los elementos 'svg' */
+svg {
+    width: 15px;
+    /* Ancho de los elementos svg */
+    height: 15px;
+    /* Altura de los elementos svg */
+}
+
+/* Estilos para la clase '.card-footer' */
+.card-footer {
+    width: 100%;
+    /* Ancho completo del pie de página */
+    display: flex;
+    /* Activa el modelo de diseño flexbox */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos flexibles */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding-top: 5px;
+    /* Relleno superior del pie de página */
+    border-top: 1px solid #ddd;
+    /* Borde superior del pie de página */
+}
+
+/* Estilos para el texto con clase '.text-title' */
+.text-title {
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+    font-size: 15px;
+    /* Tamaño de fuente */
+    font-weight: 500;
+    /* Peso de fuente */
+    line-height: 10px;
+    /* Altura de línea */
+}
+
+/* Estilos para el texto con clase '.text-body' */
+.text-body {
+    font-size: 10px;
+    /* Tamaño de fuente */
+    line-height: 15px;
+    /* Altura de línea */
+    margin: 5px 0;
+    /* Margen superior e inferior */
+    font-weight: 400;
+    /* Peso de fuente */
+    padding-bottom: 1px;
+    /* Relleno inferior */
+}
+
+/* Estilos para el botón con clase '.card-button' */
+.card-button {
+    border: 1px solid #252525;
+    /* Borde del botón */
+    display: flex;
+    /* Activa el modelo de diseño flexbox */
+    padding: .2em;
+    /* Relleno interno del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar por encima */
+    border-radius: 50px;
+    /* Radio de borde del botón */
+    transition: .3s ease-in-out;
+    /* Transición suave de 0.3 segundos para cambios animados */
+}
+
+/* Estilos para el botón con clase '.card-button' al hacer hover */
+.card-button:hover {
+    border: 1px solid #ffcaa6;
+    /* Borde del botón al hacer hover */
+    background-color: #ffcaa6;
+    /* Color de fondo del botón al hacer hover */
+}
+
+/* Estilos para la imagen con clase '.card-img' al hacer hover */
+.card-img:hover {
+    transform: translateY(-25%);
+    /* Desplaza la imagen hacia arriba al hacer hover */
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    /* Sombra de la imagen al hacer hover */
+}
