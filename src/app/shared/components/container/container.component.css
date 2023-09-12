@@ -12,6 +12,7 @@
     height: 100%;
     width: 100%;
     border-radius: 50px;
-    border: solid 10px #fff;
-    padding: .8rem;
+    border: solid 10px #99C66F;
+    display: flex;
+    box-shadow: -10px 10px 50px;
 }
