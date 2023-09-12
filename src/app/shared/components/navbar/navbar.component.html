@@ -1,1 +1,32 @@
-<p>navbar works!</p>
+<div class="header">
+    <nav>
+        <div class="burger_btn" >
+            <img src="../../../../assets/hamburger_menu_icon.png" alt="hamburger_icon" id="burger_btn" (click)="responsiveMenu()">
+        </div>
+
+        <ul class="left"> 
+            <li><a routerLink="/inicio">INICIO</a></li>
+            <li><a routerLink="/articulos">ARTÍCULOS</a></li>
+            <li><a routerLink="/productos">PRODUCTOS</a></li>
+        </ul>
+
+        <div class="logo"><a href="/inicio"><img src="../../../../assets/logo.png" alt="logo"></a></div>
+
+        <ul class="right">
+            <li><a routerLink="/iniciarsesion">INICIAR SESIÓN</a></li>
+            <li><a routerLink="/registrarte">REGISTRARTE</a></li>
+        </ul>
+    </nav>
+
+    <div *ngIf="burgerBtn">
+
+        <ul [ngClass]="'dropdown_menu'" (click)="responsiveMenu()">
+            
+            <li><a routerLink="/inicio" >INICIO</a></li>
+            <li><a routerLink="/productos">PRODUCTOS</a></li>
+            <li><a routerLink="/articulos">ARTÍCULOS</a></li>
+            <li><a routerLink="/iniciarsesion">INICIAR SESIÓN</a></li>
+            <li><a routerLink="/registrarte">REGÍSTRATE</a></li>
+        </ul>
+    </div>
+</div>

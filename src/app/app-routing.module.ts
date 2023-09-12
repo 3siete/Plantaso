@@ -4,19 +4,19 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   //lazyloading
   {
-    path: 'auth',
+    path: '',
     loadChildren:()=>import('./modules/auth/auth.module').then(m=>m.AuthModule),
   },
   {
-    path:'home',
+    path:'inicio',
     loadChildren:()=>import('./modules/home/home.module').then(m=>m.HomeModule),
   },
   {
-    path:'products',
+    path:'productos',
     loadChildren:()=>import('./modules/products/products.module').then(m=>m.ProductsModule),
   },
   {
-    path:'articles',
+    path:'articulos',
     loadChildren:()=>import('./modules/articles/articles.module').then(m=>m.ArticlesModule),
   }
 ];
