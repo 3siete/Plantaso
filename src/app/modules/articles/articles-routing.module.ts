@@ -4,7 +4,7 @@ import { ArticlesPageComponent } from './pages/articles-page/articles-page.compo
 
 const routes: Routes = [
   //ruta secundaria
-  {path:'articulos',component:ArticlesPageComponent},
+  {path:'',component:ArticlesPageComponent},
 ];
 
 @NgModule({
