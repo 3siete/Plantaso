@@ -1,24 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AppRoutingModule } from '../app-routing.module';
+
 import { CardShopComponent } from './components/card-shop/card-shop.component';
+
+import { ContainerComponent } from './components/container/container.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 
 
 @NgModule({
   declarations: [
-    NavbarComponent,
+    CardShopComponent,
+
     FooterComponent,
-    CardShopComponent
+    ContainerComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
   ],
   exports: [
-    NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ContainerComponent,
+    
+    CardShopComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

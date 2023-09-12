@@ -1,3 +1,7 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+
 *{
     padding: 0;
     margin: 0;
@@ -5,7 +9,7 @@
 }
 
 body{
-    background-image: url("../src/assets/fondo/bro-12.png");
+    background-image: url("../src/assets/fondo/bro-12.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;

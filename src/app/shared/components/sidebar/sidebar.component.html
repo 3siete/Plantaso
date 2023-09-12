@@ -1,0 +1,61 @@
+<div class="container">
+<div class="sidebar">
+    <div class="sidebar-logo">
+        <img src="../../../../assets/logo.png" alt="">
+    </div>
+    <div class="sidebar-tools">
+        <ul>
+            <li class="tools">
+                <a href="#">
+                    <div class="icon" (mouseover)="hover1=true" (mouseleave)="hover1=false">
+                        <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                    </div>
+                </a>
+                <div *ngIf="hover1">
+                    <span [ngClass]="'tooltip'">categorias</span>
+                </div>
+            </li>
+            <li class="tools">
+                <a href="#">
+                    <div class="icon" (mouseover)="hover2=true" (mouseleave)="hover2=false">
+                        <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                    </div>
+                </a>
+                <div *ngIf="hover2">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
+            </li>
+            <li class="tools">
+                <a href="#">
+                    <div class="icon" (mouseover)="hover3=true" (mouseleave)="hover3=false">
+                        <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                    </div>
+                </a>
+                <div *ngIf="hover3">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
+            </li>
+            <li class="tools">
+                <a href="#">
+                    <div class="icon" (mouseover)="hover4=true" (mouseleave)="hover4=false">
+                        <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                    </div>
+                </a>
+                <div *ngIf="hover4">
+                    <span [ngClass]="'tooltip'">algoquenose</span>
+                </div>
+            </li>
+            <li class="tools">
+                <a href="#">
+                    <div class="icon"(mouseover)="hover5=true" (mouseleave)="hover5=false">
+                        <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                    </div>
+                </a>
+                <div *ngIf="hover5">
+                    <span [ngClass]="'tooltip'">favoritos</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
