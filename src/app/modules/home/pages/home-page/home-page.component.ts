@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
+  constructor(private elementRef: ElementRef) {
 
+  }
+  ngOnInit(): void {
+    // Selecciona todos los elementos con la clase CSS 'parallax-el' dentro del componente actual.
+    const parallaxEls = this.elementRef.nativeElement.querySelectorAll('.parallax-el');
+
+    // Crea una línea de tiempo GSAP para gestionar las animaciones.
+    const timeline = gsap.timeline();
+
+  }
 }
