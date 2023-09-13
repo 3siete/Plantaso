@@ -7,16 +7,11 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent
-    
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent
 
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
