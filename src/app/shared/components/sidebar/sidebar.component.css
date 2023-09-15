@@ -38,8 +38,8 @@ li{
     position: relative;
 }
 
-.icon img{
-    max-width: 3rem;
+.material-symbols-outlined{
+    font-size: 3rem;
 }
 
 /*tooltip*/
@@ -60,4 +60,16 @@ li{
     box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
     transition: all 0.3s;
     text-align: center;
+}
+
+/*RESPONSIVE*/
+.sidebar-responsive{
+    display: none;
+}
+
+@media (max-width: 678px) { 
+    .sidebar, .tooltip{
+        display: none;
+    }
+    
 }
