@@ -6,27 +6,28 @@
             <div class="sidebar-tools">
                 <ul>
                     <li class="tools">
-                        <a href="#">
+                        <a href="">
                             <div class="icon" (mouseover)="hover1=true" (mouseleave)="hover1=false">
-                                <span class="material-symbols-outlined">category</span>
-                            </div>
-                        </a>
-                        <div *ngIf="hover1">
-                            <span [ngClass]="'tooltip'">categorias</span>
-                        </div>
-                    </li>
-                    <li class="tools">
-                        <a href="#">
-                            <div class="icon" (mouseover)="hover2=true" (mouseleave)="hover2=false">
                                 <span class="material-symbols-outlined">search</span>
                             </div>
                         </a>
-                        <div *ngIf="hover2">
-                            <span [ngClass]="'tooltip'">algoquenose</span>
+                        <div *ngIf="hover1">
+                            <span [ngClass]="'tooltip'">buscar</span>
                         </div>
                     </li>
                     <li class="tools">
-                        <a href="#">
+                        <a href="">
+                            <div class="icon" (mouseover)="hover2=true" (mouseleave)="hover2=false">
+                                <span class="material-symbols-outlined">category</span>
+                                
+                            </div>
+                        </a>
+                        <div *ngIf="hover2">
+                            <span [ngClass]="'tooltip'">categorías</span>
+                        </div>
+                    </li>
+                    <li class="tools">
+                        <a href="">
                             <div class="icon" (mouseover)="hover3=true" (mouseleave)="hover3=false">
                                 <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                             </div>
@@ -36,7 +37,7 @@
                         </div>
                     </li>
                     <li class="tools">
-                        <a href="#">
+                        <a href="">
                             <div class="icon" (mouseover)="hover4=true" (mouseleave)="hover4=false">
                                 <img src="../../../../assets/hamburger_menu_icon.png" alt="">
                             </div>
@@ -46,9 +47,9 @@
                         </div>
                     </li>
                     <li class="tools">
-                        <a href="#">
+                        <a href="">
                             <div class="icon"(mouseover)="hover5=true" (mouseleave)="hover5=false">
-                                <img src="../../../../assets/hamburger_menu_icon.png" alt="">
+                                <span class="material-symbols-outlined">Favorite</span>
                             </div>
                         </a>
                         <div *ngIf="hover5">
