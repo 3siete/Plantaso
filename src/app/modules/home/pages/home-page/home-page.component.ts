@@ -28,7 +28,9 @@ export class HomePageComponent {
 
     // Itera sobre los elementos seleccionados
     Array.from(imgEls).forEach((el: any) => {
-      
+      // Convierte el elemento a tipo HTMLElement
+      const htmlElement = el as HTMLElement;
+     
     });
   }
 }
