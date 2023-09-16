@@ -93,7 +93,10 @@ export class HomePageComponent {
     // Selecciona el elemento oculto
     const hideEl = this.elementRef.nativeElement.querySelector('.hide') as HTMLElement;
 
-  
+    // Verifica si el elemento existe
+    if (hideEl) {
+
+    }
   }
 }
 
