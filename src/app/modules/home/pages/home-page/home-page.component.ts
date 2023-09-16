@@ -32,6 +32,8 @@ export class HomePageComponent {
       const htmlElement = el as HTMLElement;
       // Verifica si no tiene la clase 'text'
       if (!htmlElement.classList.contains('text')) {
+        // Obtiene la distancia del atributo 'data-distance' o usa 0 si es indefinido
+        const distance = parseFloat(htmlElement['dataset']['distance'] || '0');
         
       }
     });
