@@ -116,3 +116,16 @@
 .bro-1 {
     z-index: 120;
 }
+
+.contenedor {
+    background-color: #B0D28D;
+    border-radius: 25px;
+    padding: 20px;
+    /* Agrega espacio alrededor del contenido en dispositivos móviles */
+    margin: 20px auto;
+    /* Centra el contenedor horizontalmente */
+    max-width: 100%;
+    /* Asegura que el contenedor no sea más ancho que la pantalla */
+    position: relative;
+    /* Permite que los elementos secundarios se posicionen con respecto a este contenedor */
+}
