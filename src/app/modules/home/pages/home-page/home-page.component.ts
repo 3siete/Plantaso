@@ -74,5 +74,9 @@ export class HomePageComponent {
     // Selecciona el elemento del subtítulo 'h2'
     const textH2 = this.elementRef.nativeElement.querySelector('.text h2') as HTMLElement;
 
+    // Verifica si el elemento existe
+    if (textH2) {
+   
+    }
   }
 }
