@@ -117,3 +117,26 @@
     z-index: 120;
 }
 
+.contenedor {
+    background-color: #B0D28D;
+    height: 90vh;
+    width: 80vw;
+    border-radius: 25px;
+    display: grid;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.sub-contenedor {
+    background-color: #99C66F;
+    height: 40vh;
+    width: 75vw;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: auto;
+    margin: auto;
+    padding: 0 20px;
+}
