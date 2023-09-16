@@ -34,7 +34,16 @@ export class HomePageComponent {
       if (!htmlElement.classList.contains('text')) {
         // Obtiene la distancia del atributo 'data-distance' o usa 0 si es indefinido
         const distance = parseFloat(htmlElement['dataset']['distance'] || '0');
-        
+        // Aplica una animación al elemento usando GSAP
+        timeline.from(
+          htmlElement,
+          {
+            top: `${htmlElement.offsetHeight / 2 + distance}px`,
+            duration: 1,
+            ease: 'power3.out'
+          },
+          '1'
+        );
       }
     });
   }
