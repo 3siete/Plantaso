@@ -1,0 +1,12 @@
+/* Estilos para la sección de inicio (.landing) */
+.landing {
+    display: flex;
+    flex-direction: column;
+    /* Cambia la dirección de los elementos en dispositivos móviles */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    /* Agrega espacio alrededor del contenido en dispositivos móviles */
+}
+
+
