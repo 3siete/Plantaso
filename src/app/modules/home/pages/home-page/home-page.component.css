@@ -50,3 +50,15 @@
     padding: 20px;
     /* Agrega un relleno interno de 20 píxeles alrededor del contenido del elemento */
 }
+
+/* Estilos para elementos <h2> dentro de elementos con la clase ".text" */
+
+.text h2 {
+    font-weight: 100;
+    /* Establece el peso de la fuente a 100, lo que la hace muy ligera */
+    font-size: 6.5rem;
+    /* Establece el tamaño de la fuente en 6.5 unidades rem */
+    margin: 10px 0;
+    /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
+}
+
