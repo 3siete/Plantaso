@@ -95,7 +95,14 @@ export class HomePageComponent {
 
     // Verifica si el elemento existe
     if (hideEl) {
-
+      // Crea una línea de tiempo GSAP para la animación del elemento oculto
+      const timeline = gsap.timeline();
+      timeline.from(hideEl, {
+        // Anima la opacidad
+        opacity: 0,
+        duration: 1.5
+      },
+        '3');
     }
   }
 }
