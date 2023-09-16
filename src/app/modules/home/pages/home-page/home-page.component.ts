@@ -52,6 +52,12 @@ export class HomePageComponent {
     // Selecciona el elemento de texto principal 'h1'
     const textH1 = this.elementRef.nativeElement.querySelector('.text h1') as HTMLElement;
 
+    // Verifica si el elemento existe
+    if (textH1) {
+
+    }
+
+
   }
 
 
