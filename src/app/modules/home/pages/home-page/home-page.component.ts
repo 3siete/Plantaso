@@ -49,6 +49,8 @@ export class HomePageComponent {
   }
   // Animación de elementos de texto principal
   private animateTextElements(): void {
+    // Selecciona el elemento de texto principal 'h1'
+    const textH1 = this.elementRef.nativeElement.querySelector('.text h1') as HTMLElement;
 
   }
 
