@@ -15,4 +15,5 @@
     border: solid 10px #99C66F;
     display: flex;
     box-shadow: -10px 10px 50px;
+    overflow-y: scroll;
 }
