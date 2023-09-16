@@ -90,7 +90,10 @@ export class HomePageComponent {
   }
   // Animación de elementos ocultos
   private animateHiddenElements(): void {
+    // Selecciona el elemento oculto
+    const hideEl = this.elementRef.nativeElement.querySelector('.hide') as HTMLElement;
 
+  
   }
 }
 
