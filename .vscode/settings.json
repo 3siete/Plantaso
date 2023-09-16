@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "icons",
         "articles-html",
-        "articles-css"
+        "articles-css",
+        "products-page-html"
     ]
 }
