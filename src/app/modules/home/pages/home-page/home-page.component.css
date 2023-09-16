@@ -62,3 +62,15 @@
     /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
 }
 
+/* Estilos para elementos <h1> dentro de elementos con la clase ".text" */
+
+.text h1 {
+    font-weight: 800;
+    /* Establece el peso de la fuente a 800, lo que la hace muy negrita */
+    font-size: 8rem;
+    /* Establece el tamaño de la fuente en 8 unidades rem */
+    line-height: 0.33;
+    /* Establece la altura de línea a 0.33, lo que puede ajustar el espaciado entre líneas */
+    margin: 10px 0;
+    /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
+}
