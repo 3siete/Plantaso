@@ -54,7 +54,15 @@ export class HomePageComponent {
 
     // Verifica si el elemento existe
     if (textH1) {
-
+      // Crea una línea de tiempo GSAP para la animación del texto principal
+      const timeline = gsap.timeline();
+      timeline
+        .from(textH1, {
+          // Anima la posición 'y' basada en la posición en la ventana
+          y: window.innerHeight - textH1.getBoundingClientRect().top + 200,
+          duration: 2
+        },
+          '2.5');
     }
 
 
