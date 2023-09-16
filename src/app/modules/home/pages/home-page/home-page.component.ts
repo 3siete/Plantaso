@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+// Importaciones necesarias
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { gsap } from "gsap";
 
 @Component({
   selector: 'app-home-page',
