@@ -74,3 +74,45 @@
     margin: 10px 0;
     /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
 }
+
+/* Estilos para los elementos con clase .bro-N (reemplaza N por el número correspondiente) */
+.bro-11 {
+    z-index: 45;
+}
+
+
+.bro-9 {
+    z-index: 30;
+}
+
+.bro-8 {
+    z-index: 40;
+}
+
+.bro-7 {
+    z-index: 50;
+}
+
+.bro-6 {
+    z-index: 60;
+}
+
+.bro-5 {
+    z-index: 70;
+}
+
+.bro-4 {
+    z-index: 80;
+}
+
+.bro-3 {
+    z-index: 89;
+}
+
+.bro-2 {
+    z-index: 110;
+}
+
+.bro-1 {
+    z-index: 120;
+}
