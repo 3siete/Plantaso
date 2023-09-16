@@ -69,5 +69,8 @@ export class HomePageComponent {
     this.animateSubtitle();
   }
 
+  // Animación del subtítulo
+  private animateSubtitle(): void {
 
+  }
 }
