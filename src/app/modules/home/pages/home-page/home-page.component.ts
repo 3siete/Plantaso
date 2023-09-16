@@ -8,5 +8,5 @@ import { gsap } from "gsap";
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
-
+  constructor(private elementRef: ElementRef) { }
 }
