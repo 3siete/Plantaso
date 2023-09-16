@@ -65,7 +65,8 @@ export class HomePageComponent {
           '2.5');
     }
 
-
+    // Inicia la animación del subtítulo
+    this.animateSubtitle();
   }
 
 
