@@ -76,7 +76,16 @@ export class HomePageComponent {
 
     // Verifica si el elemento existe
     if (textH2) {
-   
+      // Crea una línea de tiempo GSAP para la animación del subtítulo
+      const timeline = gsap.timeline();
+      timeline
+        .from(textH2, {
+          // Anima la posición 'y' y la opacidad
+          y: -150,
+          opacity: 0,
+          duration: 1.5
+        },
+          '3');
     }
   }
 }
