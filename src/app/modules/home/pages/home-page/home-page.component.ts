@@ -9,4 +9,9 @@ import { gsap } from "gsap";
 })
 export class HomePageComponent {
   constructor(private elementRef: ElementRef) { }
+  ngOnInit(): void {
+    // Inicia la animación de elementos con clase 'img'
+    this.animateImgElements();
+    
+  }
 }
