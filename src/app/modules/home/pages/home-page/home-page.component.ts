@@ -26,6 +26,9 @@ export class HomePageComponent {
     // Crea una línea de tiempo GSAP para las animaciones
     const timeline = gsap.timeline();
 
-
+    // Itera sobre los elementos seleccionados
+    Array.from(imgEls).forEach((el: any) => {
+      
+    });
   }
 }
