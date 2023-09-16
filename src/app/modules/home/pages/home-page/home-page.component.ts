@@ -88,4 +88,10 @@ export class HomePageComponent {
           '3');
     }
   }
+  // Animación de elementos ocultos
+  private animateHiddenElements(): void {
+
+  }
 }
+
+
