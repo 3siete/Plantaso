@@ -1,6 +1,12 @@
 .articles{
+    width: 100%;
     display: grid;
+    place-content: center;
     gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%,15rem),1fr));
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,10rem),1fr));
+    grid-auto-flow: dense;
+}
+.articles app-card-post{
+    place-content: center;
 }
