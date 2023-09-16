@@ -8,6 +8,7 @@
     padding: 20px;
     /* Agrega espacio alrededor del contenido en dispositivos móviles */
 }
+
 /* Estilos para las imágenes (.img) */
 .img {
     width: 100%;
@@ -26,3 +27,26 @@
     /* Coloca las imágenes en la parte izquierda del contenedor */
 }
 
+/* Estilos para el texto (.text) */
+.text {
+    z-index: 90;
+    /* Establece el valor de z-index a 90 para controlar la superposición de elementos */
+    position: absolute;
+    /* Establece la posición del elemento como absoluta para un posicionamiento preciso */
+    top: 33%;
+    /* Coloca el elemento 33% desde la parte superior del contenedor principal */
+    left: 50%;
+    /* Coloca el elemento en el centro horizontal del contenedor principal */
+    transform: translate(-50%, -50%);
+    /* Centra el elemento vertical y horizontalmente */
+    text-align: center;
+    /* Alinea el texto en el centro horizontalmente */
+    text-transform: uppercase;
+    /* Convierte el texto en mayúsculas */
+    color: #fff;
+    /* Establece el color del texto en blanco (#fff) */
+    pointer-events: auto;
+    /* Habilita la interacción con el cursor del mouse en el elemento */
+    padding: 20px;
+    /* Agrega un relleno interno de 20 píxeles alrededor del contenido del elemento */
+}
