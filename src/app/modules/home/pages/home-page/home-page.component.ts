@@ -30,7 +30,10 @@ export class HomePageComponent {
     Array.from(imgEls).forEach((el: any) => {
       // Convierte el elemento a tipo HTMLElement
       const htmlElement = el as HTMLElement;
-     
+      // Verifica si no tiene la clase 'text'
+      if (!htmlElement.classList.contains('text')) {
+        
+      }
     });
   }
 }
