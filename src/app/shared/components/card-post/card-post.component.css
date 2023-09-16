@@ -1,6 +1,5 @@
  /* Estilos para la tarjeta */
  .card {
-    display: inline-block;
      border-radius: 25px;
      /* Radio de borde */
      overflow: hidden;
