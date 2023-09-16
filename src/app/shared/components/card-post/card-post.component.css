@@ -1,9 +1,5 @@
  /* Estilos para la tarjeta */
  .card {
-     width: 160px;
-     /* Ancho fijo de la tarjeta */
-     height: 220px;
-     /* Altura fija de la tarjeta */
      border-radius: 25px;
      /* Radio de borde */
      overflow: hidden;
