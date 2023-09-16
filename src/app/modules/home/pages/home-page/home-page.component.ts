@@ -19,4 +19,8 @@ export class HomePageComponent {
     // Inicia la animación de elementos ocultos
     this.animateHiddenElements();
   }
+  // Animación de elementos con clase 'img'
+  private animateImgElements(): void {
+
+  }
 }
