@@ -21,6 +21,11 @@ export class HomePageComponent {
   }
   // Animación de elementos con clase 'img'
   private animateImgElements(): void {
+    // Selecciona todos los elementos con la clase 'img'
+    const imgEls = this.elementRef.nativeElement.querySelectorAll('.img');
+    // Crea una línea de tiempo GSAP para las animaciones
+    const timeline = gsap.timeline();
+
 
   }
 }
