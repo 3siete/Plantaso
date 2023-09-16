@@ -12,9 +12,11 @@ export class HomePageComponent {
   ngOnInit(): void {
     // Inicia la animación de elementos con clase 'img'
     this.animateImgElements();
-
+    
     // Inicia la animación de elementos de texto
     this.animateTextElements();
 
+    // Inicia la animación de elementos ocultos
+    this.animateHiddenElements();
   }
 }
