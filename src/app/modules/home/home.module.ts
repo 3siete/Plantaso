@@ -16,7 +16,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
   ]
 })
 export class HomeModule { }
