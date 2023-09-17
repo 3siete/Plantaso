@@ -4,6 +4,7 @@
         "articles-html",
         "articles-css",
         "products-page-html",
-        "products-page-css"
+        "products-page-css",
+        "auth"
     ]
 }
