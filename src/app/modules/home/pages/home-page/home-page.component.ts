@@ -60,7 +60,7 @@ export class HomePageComponent {
         .from(textH1, {
           // Anima la posición 'y' basada en la posición en la ventana
           y: window.innerHeight - textH1.getBoundingClientRect().top + 200,
-          duration: 2
+          duration: 1
         },
           '1.5');
     }
@@ -83,7 +83,7 @@ export class HomePageComponent {
           // Anima la posición 'y' y la opacidad
           y: -150,
           opacity: 0,
-          duration: 1.5
+          duration: 0.75,
         },
           '2');
     }
