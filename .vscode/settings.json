@@ -6,6 +6,7 @@
         "products-page-html",
         "products-page-css",
         "auth",
-        "auth-login-html"
+        "auth-login-html",
+        "auth-register-html"
     ]
 }
