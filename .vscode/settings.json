@@ -5,6 +5,7 @@
         "articles-css",
         "products-page-html",
         "products-page-css",
-        "auth"
+        "auth",
+        "auth-login-html"
     ]
 }
