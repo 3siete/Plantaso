@@ -1,30 +1,26 @@
 /* Estilos para la sección de inicio (.landing) */
 .landing {
     display: flex;
-    flex-direction: column;
-    /* Cambia la dirección de los elementos en dispositivos móviles */
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     align-items: center;
-    text-align: center;
-    padding: 20px;
-    /* Agrega espacio alrededor del contenido en dispositivos móviles */
 }
 
 /* Estilos para las imágenes (.img) */
 .img {
-    width: 100%;
+    object-fit: fill;
+    width: 1349px;
     /* Haz que las imágenes ocupen todo el ancho del contenedor */
     height: auto;
     /* Mantén la proporción original de la imagen */
+    max-width: 100vw;
     max-height: 100vh;
     /* Evita que las imágenes sean más altas que la pantalla */
-    margin-bottom: 20px;
-    /* Agrega espacio entre las imágenes */
     position: absolute;
     /* Permite superponer las imágenes */
-    top: 0;
-    /* Coloca las imágenes en la parte superior del contenedor */
-    left: 0;
-    /* Coloca las imágenes en la parte izquierda del contenedor */
+
 }
 
 /* Estilos para el texto (.text) */
@@ -120,23 +116,23 @@
 .contenedor {
     background-color: #B0D28D;
     height: 90vh;
-    width: 80vw;
+    width: 88vw;
     border-radius: 25px;
     display: grid;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 50px;
+    padding: 0.9rem;
 }
 
 .sub-contenedor {
     background-color: #99C66F;
     height: 40vh;
-    width: 75vw;
+    width: 83vw;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: auto;
     margin: auto;
     padding: 0 20px;
 }

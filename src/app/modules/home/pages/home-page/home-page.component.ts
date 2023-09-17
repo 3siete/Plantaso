@@ -62,7 +62,7 @@ export class HomePageComponent {
           y: window.innerHeight - textH1.getBoundingClientRect().top + 200,
           duration: 2
         },
-          '2.5');
+          '1.5');
     }
 
     // Inicia la animación del subtítulo
@@ -85,7 +85,7 @@ export class HomePageComponent {
           opacity: 0,
           duration: 1.5
         },
-          '3');
+          '2');
     }
   }
   // Animación de elementos ocultos
