@@ -177,10 +177,9 @@ h4{
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 0 20px;
+    padding: 5% 20px;
     box-shadow: 0 5px 15px;
 }
 .who{
