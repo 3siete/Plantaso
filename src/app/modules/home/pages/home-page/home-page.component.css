@@ -12,7 +12,7 @@
 /* Estilos para las imágenes (.img) */
 .img {
     object-fit: fill;
-    width: 1349px;
+    width: 100%;
     /* Haz que las imágenes ocupen todo el ancho del contenedor */
     height: auto;
     /* Mantén la proporción original de la imagen */
@@ -150,10 +150,12 @@ h3{
     border-bottom: solid 1px #fff;
 }
 .promo {
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }
 .svg{
+    padding: 10%;
+    object-fit:contain;
     padding-left: 100px;
 }
