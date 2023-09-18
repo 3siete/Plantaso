@@ -142,7 +142,7 @@
 }
 
 /*contenedor promo*/
-h3 { 
+h3 {
     position: absolute;
     text-transform: uppercase;
     color: #fff;
@@ -166,21 +166,36 @@ h3 {
 }
 
 .svg {
-    
+
     position: absolute;
     max-width: 50%;
-    max-height: 50%; 
+    max-height: 50%;
 
 }
 
 /*contenedor quienes somos*/
-h4{
+p {
+    color: #fff;
+    font-size: 20px;
+    /* Tamaño de fuente */
+    line-height: 25px;
+    /* Altura de línea */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    font-weight: 400;
+    /* Peso de fuente */
+    padding: 10%;
+    /* Relleno inferior */
+}
+
+h4 {
     text-transform: uppercase;
     color: #fff;
     font-size: 2rem;
     text-align: center;
     border-bottom: solid 1px #fff;
 }
+
 .mini-contenedor {
     background-color: #99C66F;
     height: 83vh;
@@ -193,6 +208,7 @@ h4{
     padding: 5% 20px;
     box-shadow: 0 5px 15px;
 }
-.who{
+
+.who {
     display: flex;
 }
