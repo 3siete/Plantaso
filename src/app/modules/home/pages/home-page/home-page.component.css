@@ -165,8 +165,8 @@ h3 {
 /*contenedor quienes somos*/
 .mini-contenedor {
     background-color: #99C66F;
-    height: 40vh;
-    width: 83vw;
+    height: 83vh;
+    width: 35vw;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
