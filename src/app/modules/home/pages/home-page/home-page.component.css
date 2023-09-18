@@ -163,6 +163,13 @@ h3 {
 }
 
 /*contenedor quienes somos*/
+h4{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    border-bottom: solid 1px #fff;
+}
 .mini-contenedor {
     background-color: #99C66F;
     height: 83vh;
