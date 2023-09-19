@@ -22,10 +22,9 @@
             <div class="group">
                 <label for="pass" class="label">Contraseña</label>
                 <input id="pass" type="password" class="input" formControlName="password">
-                
             </div>
             <div class="group">
-                <input type="submit" class="button" value="Regístrate">
+                <input type="submit" class="button" value="Regístrate" [disabled]="registerForm.invalid">
             </div>
             <div class="hr" ></div>
             <div class="foot-lnk">
@@ -34,6 +33,6 @@
             </form>
         </div>
         </div>
-    </div>      
+    </div>
 </app-container>
 
