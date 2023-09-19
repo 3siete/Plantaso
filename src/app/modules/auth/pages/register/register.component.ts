@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { User } from '../../models/user.model';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
