@@ -1,18 +1,6 @@
 import { Component, inject } from '@angular/core';
-import {  FormBuilder,
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 
-
-interface SignUpForm {
-  name: FormControl<string>;
-  lastName: FormControl<string>;
-  email: FormControl<string>;
-  password: FormControl<string>;
-}
 
 
 
@@ -25,24 +13,24 @@ export class RegisterComponent {
   
   formBuilder = inject(FormBuilder)
 
-  form: FormGroup<SignUpForm> = this.formBuilder.group({
-    name: this.formBuilder.control('', {
+  form:FormGroup = new FormGroup({
+    name: new FormControl('', {
       validators: Validators.required,
       nonNullable: true,
     }),
-    lastName: this.formBuilder.control('', {
+    lastName: new FormControl('', {
       validators: Validators.required,
       nonNullable: true,
     }),
-    email: this.formBuilder.control('', {
+    email:new FormControl('', {
       validators: [Validators.required, Validators.email],
       nonNullable: true,
     }),
-    password: this.formBuilder.control('', {
-      validators: [Validators.required, Validators.minLength(7)],
+    password: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(9)],
       nonNullable: true,
     }),
-  });
+  })
 
   onSubmit(){
     if (this.form.valid) return;
