@@ -8,33 +8,30 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  
   formBuilder = inject(FormBuilder)
 
-signUpForm: FormGroup;
+  form: FormGroup = this.formBuilder.group({
+    names: this.formBuilder.control('', {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
+    lastName: this.formBuilder.control('', {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
+    email: this.formBuilder.control('', {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
+    password: this.formBuilder.control('', {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
+  })
 
-
-  constructor(){
-    this.signUpForm = this.formBuilder.group({
-      names: this.formBuilder.control('', {
-        validators: Validators.required,
-        nonNullable: true,
-      }),
-      lastName: this.formBuilder.control('', {
-        validators: Validators.required,
-        nonNullable: true,
-      }),
-      email: this.formBuilder.control('', {
-        validators: [Validators.required, Validators.email],
-        nonNullable: true,
-      }),
-      password: this.formBuilder.control('', {
-        validators: Validators.required,
-        nonNullable: true,
-      }),
-    })
-  }
   onSubmit(){
-    if (this.signUpForm.valid) return;
-    console.log(this.signUpForm.value)    
+    if (this.form.valid) return;
+    console.log(this.form.value)    
   } 
 }
