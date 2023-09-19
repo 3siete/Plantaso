@@ -6,22 +6,22 @@
                 <form  [formGroup]="form" (ngSubmit)="onSubmit()" class="sign-in-htm">
                     <div class="group">
                         <label for="user" class="label">Nombre</label>
-                        <input id="user" type="text" class="input" [formGroupName]="name">
+                        <input id="user" type="text" class="input" formGroupName="names">
                     </div>
                     <div class="group">
                         <label for="lastname" class="label">Apellido</label>
-                        <input id="lastname" type="text" class="input" data-type="lastname">
+                        <input id="lastname" type="text" class="input" data-type="lastname" formGroupName="lastname">
                     </div>
                     <div class="group">
                         <label for="mail" class="label">Correo</label>
-                        <input id="mail" type="text" class="input" data-type="mail">
+                        <input id="mail" type="text" class="input" data-type="mail" formGroupName="mail">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Contraseña</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <input id="pass" type="password" class="input" data-type="password" formGroupName="password">
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Registrate">
+                        <input type="submit" class="button" value="Regístrate" >
                     </div>
                     <div class="hr"></div>
                     <div class="foot-lnk">
