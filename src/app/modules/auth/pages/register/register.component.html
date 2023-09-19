@@ -3,17 +3,21 @@
     <div class="login">
         <div class="login-html">
             <div class="login-form">
-                <div class="sign-in-htm">
+                <form class="sign-in-htm">
                     <div class="group">
-                        <label for="user" class="label">Username</label>
+                        <label for="user" class="label">Nombre</label>
                         <input id="user" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="mail" class="label">mail</label>
+                        <label for="lastname" class="label">Apellido</label>
+                        <input id="lastname" type="text" class="input" data-type="lastname">
+                    </div>
+                    <div class="group">
+                        <label for="mail" class="label">Correo</label>
                         <input id="mail" type="text" class="input" data-type="mail">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
+                        <label for="pass" class="label">Contraseña</label>
                         <input id="pass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
@@ -23,7 +27,7 @@
                     <div class="foot-lnk">
                         <a routerLink="/iniciarsesion">Inicia Sesión</a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
