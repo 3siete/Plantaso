@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { User } from '../../models/user.model';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,5 +9,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class RegisterComponent {
   formBuilder = inject(FormBuilder)
+  user:User = {
+    name:FormControl<string>,
+  }
 
 }
