@@ -3,7 +3,7 @@
     <div class="login">
         <div class="login-html">
             <div class="login-form">
-                <form class="sign-in-htm">
+                <form [formGroup]="signUpForm" (ngSubmit)="SingUp()" class="sign-in-htm">
                     <div class="group">
                         <label for="user" class="label">Nombre</label>
                         <input id="user" type="text" class="input">
