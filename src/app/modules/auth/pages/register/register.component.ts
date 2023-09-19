@@ -9,8 +9,17 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class RegisterComponent {
   formBuilder = inject(FormBuilder)
-  user:User = {
-    name:FormControl<string>,
+
+signUpForm: FormGroup;
+
+
+  constructor(){
+    this.signUpForm = this.formBuilder.group({
+      
+    })
+  }
+  onSubmit(){
+
   }
 
 }
