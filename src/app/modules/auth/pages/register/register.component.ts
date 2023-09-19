@@ -11,7 +11,7 @@ export class RegisterComponent {
   
   formBuilder = inject(FormBuilder)
 
-  form: FormGroup = this.formBuilder.group({
+  form = new FormGroup({
     names: this.formBuilder.control('', {
       validators: Validators.required,
       nonNullable: true,
