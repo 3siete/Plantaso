@@ -12,7 +12,7 @@
 /* Estilos para las imágenes (.img) */
 .img {
     object-fit: fill;
-    width: 1349px;
+    width: 100%;
     /* Haz que las imágenes ocupen todo el ancho del contenedor */
     height: auto;
     /* Mantén la proporción original de la imagen */
@@ -124,6 +124,7 @@
     margin-top: 100px;
     margin-bottom: 50px;
     padding: 0.9rem;
+    box-shadow: 0 5px 15px;
 }
 
 .sub-contenedor {
@@ -138,4 +139,84 @@
     margin: auto;
     padding: 0 20px;
     box-shadow: 0 5px 15px;
+}
+h5{
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 4px;
+}
+
+/*contenedor promo*/
+h3 {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: solid 1px #fff;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    /* Centra el elemento vertical y horizontalmente */
+
+}
+
+.promo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.svg {
+
+    position: absolute;
+    max-width: 50%;
+    max-height: 50%;
+
+}
+
+/*contenedor quienes somos*/
+p {
+    color: #fff;
+    font-size: 20px;
+    /* Tamaño de fuente */
+    line-height: 25px;
+    /* Altura de línea */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    font-weight: 400;
+    /* Peso de fuente */
+    padding: 10%;
+    /* Relleno inferior */
+}
+
+h4 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: solid 1px #fff;
+}
+
+.mini-contenedor {
+    background-color: #99C66F;
+    height: 83vh;
+    width: 35vw;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 5% 20px;
+    box-shadow: 0 5px 15px;
+}
+
+.who {
+    display: flex;
 }
