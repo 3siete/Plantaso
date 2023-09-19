@@ -7,6 +7,7 @@
         "products-page-css",
         "auth",
         "auth-login-html",
-        "auth-register-html"
+        "auth-register-html",
+        "auth-register"
     ]
 }
