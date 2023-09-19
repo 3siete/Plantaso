@@ -34,7 +34,7 @@ signUpForm: FormGroup;
     })
   }
   onSubmit(){
-
-  }
-
+    if (this.signUpForm.valid) return;
+    console.log(this.signUpForm.value)    
+  } 
 }
