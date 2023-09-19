@@ -6,7 +6,7 @@
                 <form  [formGroup]="form" (ngSubmit)="onSubmit()" class="sign-in-htm">
                     <div class="group">
                         <label for="user" class="label">Nombre</label>
-                        <input id="user" type="text" class="input">
+                        <input id="user" type="text" class="input" [formGroupName]="name">
                     </div>
                     <div class="group">
                         <label for="lastname" class="label">Apellido</label>

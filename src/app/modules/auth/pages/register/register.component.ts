@@ -1,6 +1,20 @@
 import { Component, inject } from '@angular/core';
-import { User } from '../../models/user.model';
-import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
+import {  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+
+
+interface SignUpForm {
+  name: FormControl<string>;
+  lastName: FormControl<string>;
+  email: FormControl<string>;
+  password: FormControl<string>;
+}
+
+
 
 @Component({
   selector: 'app-register',
@@ -11,24 +25,24 @@ export class RegisterComponent {
   
   formBuilder = inject(FormBuilder)
 
-  form:FormGroup = new FormGroup({
-    names: new FormControl('', {
+  form: FormGroup<SignUpForm> = this.formBuilder.group({
+    name: this.formBuilder.control('', {
       validators: Validators.required,
       nonNullable: true,
     }),
-    lastName: new FormControl('', {
+    lastName: this.formBuilder.control('', {
       validators: Validators.required,
       nonNullable: true,
     }),
-    email:new FormControl('', {
+    email: this.formBuilder.control('', {
       validators: [Validators.required, Validators.email],
       nonNullable: true,
     }),
-    password: new FormControl('', {
-      validators: [Validators.required, Validators.minLength(9)],
+    password: this.formBuilder.control('', {
+      validators: [Validators.required, Validators.minLength(7)],
       nonNullable: true,
     }),
-  })
+  });
 
   onSubmit(){
     if (this.form.valid) return;
