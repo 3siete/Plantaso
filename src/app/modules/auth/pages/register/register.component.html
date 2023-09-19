@@ -2,39 +2,38 @@
 <app-container>
     <div class="login">
         <div class="login-html">
-          <div class="login-form">
+        <div class="login-form">
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="sign-in-htm">
-              <div class="group">
+            <div class="group">
                 <label for="user" class="label">Nombre</label>
                 <input id="user" type="text" class="input" formControlName="name">
                 
-              </div>
-              <div class="group">
+            </div>
+                <div class="group">
                 <label for="lastname" class="label">Apellido</label>
                 <input id="lastname" type="text" class="input" formControlName="lastname">
                 
-              </div>
-              <div class="group">
+            </div>
+            <div class="group">
                 <label for="mail" class="label">Correo</label>
                 <input id="mail" type="text" class="input" formControlName="email">
                 
-              </div>
-              <div class="group">
+            </div>
+            <div class="group">
                 <label for="pass" class="label">Contraseña</label>
                 <input id="pass" type="password" class="input" formControlName="password">
                 
-              </div>
-              <div class="group">
+            </div>
+            <div class="group">
                 <input type="submit" class="button" value="Regístrate">
-              </div>
-              <div class="hr"></div>
-              <div class="foot-lnk">
+            </div>
+            <div class="hr" ></div>
+            <div class="foot-lnk">
                 <a routerLink="/iniciarsesion">Inicia Sesión</a>
-              </div>
+            </div>
             </form>
-          </div>
         </div>
-      </div>
-      
+        </div>
+    </div>      
 </app-container>
 
