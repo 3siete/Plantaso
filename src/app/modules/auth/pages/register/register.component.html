@@ -7,22 +7,22 @@
                     <div class="group">
                         <label for="user" class="label">Nombre</label>
                         <input id="user" type="text" class="input" formGroupName="names">
-                        <span>hola</span>
+                        <span >hola</span>
                     </div>
                     <div class="group">
                         <label for="lastname" class="label">Apellido</label>
-                        <input id="lastname" type="text" class="input" data-type="lastname" formGroupName="lastname">
+                        <input id="lastname" type="text" class="input"  formGroupName="lastname">
                     </div>
                     <div class="group">
                         <label for="mail" class="label">Correo</label>
-                        <input id="mail" type="text" class="input" data-type="mail" formGroupName="mail">
+                        <input id="mail" type="text" class="input"  formGroupName="email">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Contraseña</label>
-                        <input id="pass" type="password" class="input" data-type="password" formGroupName="password">
+                        <input id="pass" type="password" class="input" formGroupName="password">
                     </div>
                     <div class="group">
-                        <input *ngIf=""  type="submit" class="button" value="Regístrate" >
+                        <input type="submit" class="button" value="Regístrate" >
                     </div>
                     <div class="hr"></div>
                     <div class="foot-lnk">
@@ -32,5 +32,7 @@
             </div>
         </div>
     </div>
+    
+{{ registerForm.value | json }}
 </app-container>
 

@@ -27,7 +27,8 @@ export class RegisterComponent {
 
 
   onSubmit(){
-    if (this.registerForm.valid) return;
+
     console.log(this.registerForm.value)    
+  
   } 
 }
