@@ -13,10 +13,11 @@ import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} f
 export class RegisterComponent {
   
   formBuilder = inject(FormBuilder)
-  registerForm!: FormGroup;
+  ;
+  registerForm: any;
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
+    const registerForm : FormGroup = this.formBuilder.group({
       name : ['',[Validators.required] ],
       lastname : ['', [Validators.required]],
       email : ['',[Validators.required, Validators.email]],
