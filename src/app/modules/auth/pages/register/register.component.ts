@@ -11,25 +11,22 @@ import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} f
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  
-  formBuilder = inject(FormBuilder)
-  ;
-  registerForm: any;
+  constructor(private fb:FormBuilder){}
+  registerForm!:FormGroup;
 
   ngOnInit(): void {
-    const registerForm : FormGroup = this.formBuilder.group({
+    this.registerForm = this.fb.group({
       name : ['',[Validators.required] ],
       lastname : ['', [Validators.required]],
       email : ['',[Validators.required, Validators.email]],
-      passoword : ['', [Validators.required, Validators.minLength(7)]]
+      password : ['', [Validators.required, Validators.minLength(7)]]
     })
   }
 
 
 
   onSubmit(){
+    console.log(this.registerForm.value)
 
-    console.log(this.registerForm.value)    
-  
   } 
 }
