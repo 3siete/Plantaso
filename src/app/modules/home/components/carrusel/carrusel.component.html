@@ -1,17 +1,5 @@
-
-<div class="card">
-    <p-carousel [numVisible]="5" [numScroll]="3" [circular]="true" autoPlayInterval="3000">
-        <p>asdñklfjlkañsd</p>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    <app-card-post></app-card-post>
-    </p-carousel>
-</div>
+<ng-template let-tarjeta pTemplate="item">
+    <!-- Utiliza tu componente de tarjeta personalizada para mostrar cada tarjeta -->
+    <app-tarjeta [tarjeta]="tarjeta"></app-tarjeta>
+ </ng-template>
+ 

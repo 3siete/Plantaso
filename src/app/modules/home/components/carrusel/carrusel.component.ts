@@ -7,5 +7,5 @@ import { CardPostComponent } from 'src/app/shared/components/card-post/card-post
   styleUrls: ['./carrusel.component.css']
 })
 export class CarruselComponent {
-
+  
 }
