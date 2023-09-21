@@ -1,5 +1,12 @@
 {
     "conventionalCommits.scopes": [
-        
+        "home css",
+        "Contenedor",
+        "Cards",
+        "delete",
+        "home",
+        "home-page/ts",
+        "home-html",
+        "carrusel"
     ]
 }
