@@ -1,9 +1,5 @@
 /* Estilos para la clase '.card' */
 .card {
-    width: 160px;
-    /* Ancho fijo de la tarjeta */
-    height: 220px;
-    /* Altura fija de la tarjeta */
     padding: .8em;
     /* Relleno interno de la tarjeta */
     background: #f5f5f5;
