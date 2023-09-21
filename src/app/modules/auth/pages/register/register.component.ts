@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { User } from '../../models/user.model';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
+import { Message, MessageService } from 'primeng/api';
 
 
   
@@ -8,11 +9,16 @@ import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} f
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+
 })
 export class RegisterComponent {
+  
   constructor(private fb:FormBuilder){}
+
   registerForm!:FormGroup;
+
+
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -21,6 +27,8 @@ export class RegisterComponent {
       email : ['',[Validators.required, Validators.email]],
       password : ['', [Validators.required, Validators.minLength(7)]]
     })
+
+    
   }
 
 
