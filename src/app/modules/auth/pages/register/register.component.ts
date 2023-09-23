@@ -18,6 +18,7 @@ export class RegisterComponent {
 
   registerForm!:FormGroup;
 
+
   ngOnInit(): void {
     this.registerForm = this.fb.group({
       name : ['',[Validators.required] ],
