@@ -14,7 +14,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.group{
+	margin-bottom: 5px;
+}
 
 .login-html .tab,
 .login-form .group .label,
@@ -51,7 +53,6 @@
 .login-form .group .button{
 	background:#99C66F;
 }
-
 
 .hr{
 	height:2px;
