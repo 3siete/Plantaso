@@ -4,36 +4,51 @@
         <div class="login-html">
             <div class="login-form">
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="sign-in-htm">
-                <div class="group">
-                    <span class="p-float-label">
-                        <input pInputText 
-                            id="username" 
-                            formControlName="name" 
-                            />
-                        <label htmlFor="username">Nombre*</label>
-                    </span>
-                </div>
                     <div class="group">
-                    <label for="lastname" class="label">Apellido</label>
-                    <input id="lastname" type="text" class="input" formControlName="lastname">
-                    
-                </div>
-                <div class="group">
-                    <label for="mail" class="label">Correo</label>
-                    <input id="mail" type="text" class="input" formControlName="email">
-                    
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Contraseña</label>
-                    <input id="pass" type="password" class="input" formControlName="password">
-                </div>
-                <div class="group">
-                    <input type="submit" class="button" value="Regístrate" [disabled]="registerForm.invalid">
-                </div>
-                <div class="hr" ></div>
-                <div class="foot-lnk">
-                    <a routerLink="/iniciarsesion">Inicia Sesión</a>
-                </div>
+                        <span class="p-float-label">
+                            <input pInputText 
+                                id="name" 
+                                formControlName="name" 
+                                />
+                            <label htmlFor="name">Nombre*</label>
+                        </span>
+                    </div>
+                    <div class="group">
+                        <span class="p-float-label">
+                            <input pInputText 
+                                id="lasname" 
+                                formControlName="lastname" 
+                                />
+                            <label htmlFor="lastname">Apellido*</label>
+                        </span>
+                        
+                    </div>
+                    <div class="group">
+                        <span class="p-float-label">
+                            <input pInputText 
+                                id="email" 
+                                formControlName="email" 
+                                />
+                            <label htmlFor="email">Correo*</label>
+                        </span>
+                        
+                    </div>
+                    <div class="group">
+                        <span class="p-float-label">
+                            <input pInputText 
+                                id="password" 
+                                formControlName="password" 
+                                />
+                            <label htmlFor="password">Contraseña*</label>
+                        </span>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Regístrate" [disabled]="registerForm.invalid">
+                    </div>
+                    <div class="hr" ></div>
+                    <div class="foot-lnk">
+                        <a routerLink="/iniciarsesion">Inicia Sesión</a>
+                    </div>
                 </form>
             </div>
         </div>
