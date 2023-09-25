@@ -22,6 +22,13 @@
                             <label htmlFor="password">Contraseña*</label>
                         </span>
                     </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Regístrate" [disabled]="loginForm.invalid">
+                    </div>
+                    <div class="hr" ></div>
+                    <div class="foot-lnk">
+                        <a routerLink="/iniciarsesion">Inicia Sesión</a>
+                    </div>
                 </form>
             </div>
         </div>
