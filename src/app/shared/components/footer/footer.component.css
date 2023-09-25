@@ -54,3 +54,15 @@ ul {
 	margin-bottom: 10px;
 }
 
+/* Estilos para los enlaces en las listas del pie de página */
+.footer-col ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
