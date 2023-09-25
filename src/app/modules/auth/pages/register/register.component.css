@@ -40,3 +40,6 @@
 .foot-lnk{
 	text-align:center;
 }
+input{
+	border-radius:25px;
+}
