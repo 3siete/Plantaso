@@ -66,3 +66,9 @@ ul {
 	transition: all 0.3s ease;
 }
 
+/* Estilos cuando se pasa el ratón sobre los enlaces en las listas del pie de página */
+.footer-col ul li a:hover {
+	color: #ffffff;
+	padding-left: 8px;
+}
+
