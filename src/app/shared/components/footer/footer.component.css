@@ -92,3 +92,17 @@ ul {
 	background-color: #ffffff;
 }
 
+/* Estilos responsivos para pantallas pequeñas (max-width: 767px) */
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Estilos responsivos para pantallas aún más pequeñas (max-width: 574px) */
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
