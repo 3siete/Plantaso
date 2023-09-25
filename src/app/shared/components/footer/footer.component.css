@@ -49,4 +49,8 @@ ul {
 	width: 50px;
 }
 
+/* Estilos para las listas en las columnas del pie de página */
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
 
