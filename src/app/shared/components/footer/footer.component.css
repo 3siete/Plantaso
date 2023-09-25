@@ -37,3 +37,16 @@ ul {
 	position: relative;
 }
 
+/* Línea decorativa debajo de los títulos de las columnas */
+.footer-col h4::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #4D5057;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+
