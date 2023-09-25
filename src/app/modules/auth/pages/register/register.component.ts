@@ -10,14 +10,12 @@ import { Message, MessageService } from 'primeng/api';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-
 })
-export class RegisterComponent {
-  
+
+export class RegisterComponent {  
   constructor(private fb:FormBuilder){}
 
   registerForm!:FormGroup;
-
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -30,6 +28,5 @@ export class RegisterComponent {
 
   onSubmit(){
     console.log(this.registerForm.value)
-
   } 
 }
