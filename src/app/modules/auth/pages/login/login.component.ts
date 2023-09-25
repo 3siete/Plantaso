@@ -10,4 +10,11 @@ export class LoginComponent {
   constructor(private fb:FormBuilder){}
   loginForm!:FormGroup;
 
+  ngOnInit(): void{
+    this.loginForm = this.fb.group({
+      
+    })
+  }
+
+
 }
