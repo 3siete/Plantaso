@@ -8,6 +8,7 @@
         "auth",
         "auth-login-html",
         "auth-register-html",
-        "auth-register"
+        "auth-register",
+        "auth-login"
     ]
 }
