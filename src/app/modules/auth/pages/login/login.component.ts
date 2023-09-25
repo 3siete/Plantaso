@@ -16,6 +16,8 @@ export class LoginComponent {
       password: ['', [Validators.required, Validators.minLength(7)]]
     })
   }
-
+  onSubmit(){
+    console.log(this.loginForm.value)
+  } 
 
 }
