@@ -21,3 +21,11 @@ ul {
 	padding: 70px 0;
 }
 
+/* Establece el ancho y el espaciado de las columnas del pie de página */
+.footer-col {
+   width: 25%;
+   padding: 0 15px;
+}
+
+
+
