@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,5 +8,6 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent {
   constructor(private fb:FormBuilder){}
+  loginForm!:FormGroup;
 
 }
