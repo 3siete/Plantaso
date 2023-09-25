@@ -10,3 +10,9 @@
 	flex-wrap: wrap;
 }
 
+/* Quita los puntos de lista en las listas desordenadas */
+ul {
+	list-style: none;
+}
+
+
