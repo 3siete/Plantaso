@@ -15,4 +15,9 @@ ul {
 	list-style: none;
 }
 
+/* Estilos generales para el pie de página */
+.footer {
+	background-color: #4DA167;
+	padding: 70px 0;
+}
 
