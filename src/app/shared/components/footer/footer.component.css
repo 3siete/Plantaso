@@ -4,3 +4,9 @@
 	margin: auto;
 }
 
+/* Establece las propiedades de las filas (elementos flexibles) */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
