@@ -1,0 +1,6 @@
+/* Establece el ancho máximo del contenedor principal y lo centra */
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
