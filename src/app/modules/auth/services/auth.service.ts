@@ -12,5 +12,7 @@ export class AuthService {
 
   userData : Subject<any> = new Subject<any>;
 
-  constructor() { }
+  constructor(private afAuth: AngularFireAuth) { 
+
+  }
 }
