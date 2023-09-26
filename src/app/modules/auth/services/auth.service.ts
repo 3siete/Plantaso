@@ -48,6 +48,10 @@ export class AuthService {
     
   }
   
-  
+  signOut(): void {
+    this.afAuth.signOut().then((res) => {
+      localStorage.removeItem('user');
+    })
+  }
 
 }
