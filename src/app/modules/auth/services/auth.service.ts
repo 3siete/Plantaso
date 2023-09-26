@@ -23,4 +23,23 @@ export class AuthService {
       }
     })
   }
+
+
+
+
+
+
+
+
+  register(user: any): Promise<any> {
+    return this.afAuth.createUserWithEmailAndPassword(user.email, user.password).then((res) => {
+      this.setUserData(res.user, user.name, user.password)
+    })
+  }
+
+
+
+  
+
+
 }
