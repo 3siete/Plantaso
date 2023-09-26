@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth'
-import { AngularFirestore } from '@angular/fire/compat/firestore'
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore'
 import { Subject } from 'rxjs';
 import { User } from '../models/user.model';
 
@@ -35,6 +35,11 @@ export class AuthService {
     return this.afAuth.createUserWithEmailAndPassword(user.email, user.password).then((res) => {
       this.setUserData(res.user, user.name, user.password)
     })
+  }
+
+  setUserData(user:any, name?:string): Promise<any> {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`)
+    
   }
 
 
