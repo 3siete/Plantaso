@@ -29,8 +29,20 @@ export class AuthService {
     })
   }
 
+  SignIn({email, password}: any) {
+    return this.afAuth.signInWithEmailAndPassword(email, password)
+      .then((result) => {
+        this.setUserData(result.user);
+        this.afAuth.authState.subscribe((user) => {
+          if (user) {
+            this.router.navigate(['/inicio']);
+          }
+        });
+      })
+      .catch((error) => {console.error(error)})
+  }
 
-  register({email, password}:any){
+  register({email, password}: any){
     return this.afAuth.createUserWithEmailAndPassword(email, password)
     .then((res) => {this.setUserData(res.user)})
     .catch((error) => {console.error(error)})

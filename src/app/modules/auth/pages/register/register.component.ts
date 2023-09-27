@@ -3,6 +3,7 @@ import { User } from '../../models/user.model';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import { Message, MessageService } from 'primeng/api';
 import { AuthService } from '../../services/auth.service';
+import { get } from 'firebase/database';
 
 
   
@@ -35,3 +36,4 @@ export class RegisterComponent {
     .catch(error => {console.error(error)})
   } 
 }
+
