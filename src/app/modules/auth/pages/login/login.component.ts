@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private fb:FormBuilder){}
+  constructor(private fb:FormBuilder, private authService:AuthService){}
   loginForm!:FormGroup;
 
   ngOnInit(): void{
@@ -19,7 +20,7 @@ export class LoginComponent {
   onSubmit(){
     
     const value = this.loginForm.value;
-    
+
     console.log(this.loginForm.value)
   } 
 
