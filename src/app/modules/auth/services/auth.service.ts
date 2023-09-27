@@ -29,7 +29,7 @@ export class AuthService {
     })
   }
 
-  SignIn({email, password}: any) {
+  login({email, password}: any) {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.setUserData(result.user);
