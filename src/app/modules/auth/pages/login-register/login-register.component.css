@@ -60,3 +60,17 @@
     margin-bottom: 10px;
   }
   
+  /* Estilos para los campos de entrada */
+  .input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #134611; /* Color de fondo del campo de entrada */
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%; /* Columnas en el grid */
+    padding: 0 0.4rem;
+    position: relative;
+  }
+  
