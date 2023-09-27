@@ -1,85 +1,96 @@
 /* Contenedor principal con fondo verde */
 .container {
-    position: relative;
-    width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
-    background-color: #99C66F; /* Color de fondo verde */
-    min-height: 100vh; /* Altura mínima del viewport */
-    overflow: hidden; /* Oculta el desbordamiento */
-  }
-  
-  /* Contenedor de formularios */
-  .forms-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  
-  /* Contenedor que almacena los formularios de inicio de sesión y registro */
-  .signin-signup {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    transform: translate(-50%, -50%); /* Centra horizontalmente */
-    left: 75%; /* Desplazado hacia la derecha */
-    width: 50%;
-    transition: 1s 0.7s ease-in-out; /* Transición con retardo */
-    display: grid;
-    grid-template-columns: 1fr; /* Columna única en el grid */
-    z-index: 5;
-  }
-  
-  /* Estilos generales para los formularios */
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0rem 5rem;
-    transition: all 0.2s 0.7s; /* Transición con retardo */
-    overflow: hidden;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  
-  /* Estilos específicos para el formulario de registro */
-  form.sign-up-form {
-    opacity: 0; /* Inicialmente transparente */
-    z-index: 1; /* Capa inferior */
-  }
-  
-  /* Estilos específicos para el formulario de inicio de sesión */
-  form.sign-in-form {
-    z-index: 2; /* Capa superior */
-  }
-  
-  /* Estilo del título en los formularios */
-  .title {
-    font-size: 2.2rem;
-    color: #ffffff; /* Color de texto blanco */
-    margin-bottom: 10px;
-  }
-  
-  /* Estilos para los campos de entrada */
-  .input-field {
-    max-width: 380px;
-    width: 100%;
-    background-color: #134611; /* Color de fondo del campo de entrada */
-    margin: 10px 0;
-    height: 55px;
-    border-radius: 55px;
-    display: grid;
-    grid-template-columns: 15% 85%; /* Columnas en el grid */
-    padding: 0 0.4rem;
-    position: relative;
-  }
-  
-  /* Estilos para el icono dentro de los campos de entrada */
-  .input-field i {
-    text-align: center;
-    line-height: 55px;
-    color: #1e7d26; /* Color del icono */
-    transition: 0.5s; /* Transición de medio segundo */
-    font-size: 1.1rem;
-  }
-  
+  position: relative;
+  width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
+  background-color: #99C66F; /* Color de fondo verde */
+  min-height: 100vh; /* Altura mínima del viewport */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+/* Contenedor de formularios */
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Contenedor que almacena los formularios de inicio de sesión y registro */
+.signin-signup {
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  transform: translate(-50%, -50%); /* Centra horizontalmente */
+  left: 75%; /* Desplazado hacia la derecha */
+  width: 50%;
+  transition: 1s 0.7s ease-in-out; /* Transición con retardo */
+  display: grid;
+  grid-template-columns: 1fr; /* Columna única en el grid */
+  z-index: 5;
+}
+
+/* Estilos generales para los formularios */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s; /* Transición con retardo */
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* Estilos específicos para el formulario de registro */
+form.sign-up-form {
+  opacity: 0; /* Inicialmente transparente */
+  z-index: 1; /* Capa inferior */
+}
+
+/* Estilos específicos para el formulario de inicio de sesión */
+form.sign-in-form {
+  z-index: 2; /* Capa superior */
+}
+
+/* Estilo del título en los formularios */
+.title {
+  font-size: 2.2rem;
+  color: #ffffff; /* Color de texto blanco */
+  margin-bottom: 10px;
+}
+
+/* Estilos para los campos de entrada */
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #134611; /* Color de fondo del campo de entrada */
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%; /* Columnas en el grid */
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+/* Estilos para el icono dentro de los campos de entrada */
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #1e7d26; /* Color del icono */
+  transition: 0.5s; /* Transición de medio segundo */
+  font-size: 1.1rem;
+}
+
+/* Estilos para el campo de entrada de texto */
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff; /* Color del texto */
+}
+
