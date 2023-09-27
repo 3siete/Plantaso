@@ -74,3 +74,12 @@
     position: relative;
   }
   
+  /* Estilos para el icono dentro de los campos de entrada */
+  .input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #1e7d26; /* Color del icono */
+    transition: 0.5s; /* Transición de medio segundo */
+    font-size: 1.1rem;
+  }
+  
