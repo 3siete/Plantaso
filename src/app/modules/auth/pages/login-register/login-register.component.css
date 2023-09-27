@@ -48,4 +48,8 @@
     z-index: 1; /* Capa inferior */
   }
   
- 
+  /* Estilos específicos para el formulario de inicio de sesión */
+  form.sign-in-form {
+    z-index: 2; /* Capa superior */
+  }
+  
