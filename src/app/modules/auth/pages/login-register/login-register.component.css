@@ -42,3 +42,10 @@
     grid-row: 1 / 2;
   }
   
+  /* Estilos específicos para el formulario de registro */
+  form.sign-up-form {
+    opacity: 0; /* Inicialmente transparente */
+    z-index: 1; /* Capa inferior */
+  }
+  
+ 
