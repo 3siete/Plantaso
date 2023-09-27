@@ -30,10 +30,10 @@ export class AuthService {
   }
 
 
-  register(user: any): Promise<any> {
-    return this.afAuth.createUserWithEmailAndPassword(user.email, user.password).then((res) => {
-      this.setUserData(res.user, user.name)
-    })
+  register({email, password}:any){
+    return this.afAuth.createUserWithEmailAndPassword(email, password)
+    .then((res) => {this.setUserData(res.user)})
+    .catch((error) => {console.error(error)})
   }
 
   setUserData(user:any, name?:string): Promise<any> {
