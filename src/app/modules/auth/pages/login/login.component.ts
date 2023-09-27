@@ -17,6 +17,9 @@ export class LoginComponent {
     })
   }
   onSubmit(){
+    
+    const value = this.loginForm.value;
+    
     console.log(this.loginForm.value)
   } 
 
