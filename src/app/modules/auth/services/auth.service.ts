@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth'
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore'
 import { Subject } from 'rxjs';
 import { User } from '../models/user.model';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -14,7 +15,8 @@ export class AuthService {
 
   constructor(
     private afAuth: AngularFireAuth, 
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    public router: Router,
     ) { 
     this.afAuth.authState.subscribe((user) => {
       if (user) {
