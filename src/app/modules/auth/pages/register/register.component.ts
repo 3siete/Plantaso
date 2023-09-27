@@ -30,10 +30,11 @@ export class RegisterComponent {
   
   onSubmit(): void{
     const value = this.registerForm.value;
-    console.log(value);
-    this.authService.register(value)
-    .then(res => {console.log(res)})
-    .catch(error => {console.error(error)})
+    this.authService.register(value);
+    // console.log(value);
+    // this.authService.register(value)
+    // .then(res => {console.log(res)})
+    // .catch(error => {console.error(error)})
   } 
 }
 
