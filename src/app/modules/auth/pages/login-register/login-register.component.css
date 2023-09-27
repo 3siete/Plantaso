@@ -1,0 +1,9 @@
+/* Contenedor principal con fondo verde */
+.container {
+    position: relative;
+    width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
+    background-color: #99C66F; /* Color de fondo verde */
+    min-height: 100vh; /* Altura mínima del viewport */
+    overflow: hidden; /* Oculta el desbordamiento */
+  }
+  
