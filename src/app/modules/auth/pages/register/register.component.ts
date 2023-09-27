@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { User } from '../../models/user.model';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import { Message, MessageService } from 'primeng/api';
+import { AuthService } from '../../services/auth.service';
 
 
   
@@ -13,7 +14,7 @@ import { Message, MessageService } from 'primeng/api';
 })
 
 export class RegisterComponent {  
-  constructor(private fb:FormBuilder){}
+  constructor(private fb:FormBuilder,private authService: AuthService ){}
 
   registerForm!:FormGroup;
 
@@ -25,8 +26,12 @@ export class RegisterComponent {
       password : ['', [Validators.required, Validators.minLength(7)]]
     })
   }
-
-  onSubmit(){
-    console.log(this.registerForm.value)
+  
+  onSubmit(): void{
+    const value = this.registerForm.value;
+    console.log(value);
+    this.authService.register(value)
+    .then(res => {console.log(res)})
+    .catch(error => {console.error(error)})
   } 
 }
