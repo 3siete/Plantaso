@@ -16,7 +16,7 @@ export class AuthService {
   constructor(
     private afAuth: AngularFireAuth, 
     private afs: AngularFirestore,
-    public router: Router,
+    public router: Router
     ) { 
     this.afAuth.authState.subscribe((user) => {
       if (user) {
@@ -50,7 +50,6 @@ export class AuthService {
 
   setUserData(user:any){
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`)
-    
     const userData:User = {
       uid:user.uid,
       name:user.name,
@@ -61,11 +60,10 @@ export class AuthService {
     return userRef.set(userData, {
       merge: true
     })
-    
   }
   
   signOut(): void {
-    this.afAuth.signOut()
+    this.afAuth.signOut() 
     .then((res) => {localStorage.removeItem('user');
     this.router.navigate(['/iniciarsesion'])
   })

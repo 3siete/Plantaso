@@ -3,8 +3,6 @@ import { User } from '../../models/user.model';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import { Message, MessageService } from 'primeng/api';
 import { AuthService } from '../../services/auth.service';
-import { get } from 'firebase/database';
-
 
   
 
@@ -28,13 +26,14 @@ export class RegisterComponent {
     })
   }
   
-  onSubmit(): void{
+  onSubmit(){
+    // console.log('hola')
     const value = this.registerForm.value;
-    this.authService.register(value);
+    // this.authService.register(value);
     // console.log(value);
-    // this.authService.register(value)
-    // .then(res => {console.log(res)})
-    // .catch(error => {console.error(error)})
+  this.authService.register(value)
+  .then(res => {console.log(res)})
+  .catch(error => {console.error(error)})
   } 
 }
 
