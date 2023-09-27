@@ -29,3 +29,16 @@
     z-index: 5;
   }
   
+  /* Estilos generales para los formularios */
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s; /* Transición con retardo */
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
