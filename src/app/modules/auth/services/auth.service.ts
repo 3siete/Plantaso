@@ -12,7 +12,10 @@ export class AuthService {
 
   userData : Subject<any> = new Subject<any>;
 
-  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) { 
+  constructor(
+    private afAuth: AngularFireAuth, 
+    private afs: AngularFirestore
+    ) { 
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData.next(user);
