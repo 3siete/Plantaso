@@ -16,3 +16,16 @@
     left: 0;
   }
   
+  /* Contenedor que almacena los formularios de inicio de sesión y registro */
+  .signin-signup {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    transform: translate(-50%, -50%); /* Centra horizontalmente */
+    left: 75%; /* Desplazado hacia la derecha */
+    width: 50%;
+    transition: 1s 0.7s ease-in-out; /* Transición con retardo */
+    display: grid;
+    grid-template-columns: 1fr; /* Columna única en el grid */
+    z-index: 5;
+  }
+  
