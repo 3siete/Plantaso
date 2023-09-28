@@ -18,7 +18,6 @@ export class LoginComponent {
     })
   }
   onSubmit(){
-    
     const value = this.loginForm.value;
     this.authService.login(value)
     console.log(this.loginForm.value)

@@ -6,13 +6,13 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 
+
   
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [MessageService]
 })
 
 export class RegisterComponent {  
@@ -42,6 +42,8 @@ export class RegisterComponent {
     })
     .catch(error => {console.error(error)})
     } 
-
+    show() {
+      this.mensaje.add({ severity: 'success', summary: 'Listo', detail: 'Bienvenido a Plantaso' });
+  }
 }
 

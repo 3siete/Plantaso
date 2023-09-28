@@ -20,6 +20,8 @@ import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,7 @@ import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+
 
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
