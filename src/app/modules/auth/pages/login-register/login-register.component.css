@@ -203,3 +203,10 @@ form.sign-in-form {
   padding: 3rem 12% 2rem 17%;
 }
 
+/* Estilos para el contenido dentro de los paneles */
+.panel .content {
+  color: #fff;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+}
+
