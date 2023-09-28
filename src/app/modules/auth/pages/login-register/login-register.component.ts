@@ -15,6 +15,11 @@ export class LoginRegisterComponent {
 
   // Este método se ejecuta después de que los elementos del componente se inicializan
   ngAfterViewInit() {
+    // Agregar un event listener al botón de inicio de sesión
+    this.signInBtn.nativeElement.addEventListener('click', () => {
+
+    });
+
 
   }
 }
