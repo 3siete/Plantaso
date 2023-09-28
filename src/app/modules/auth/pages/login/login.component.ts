@@ -20,16 +20,21 @@ export class LoginComponent {
 
   ngOnInit(): void{
     this.loginForm = this.fb.group({
-      name: ['', [Validators.required]],
+      email: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(7)]]
     })
   }
   onSubmit(){
     const value = this.loginForm.value;
-    this.authService.login(value)
-    console.log(this.loginForm.value)
-  }
+    this.authService.login(value).then(res => {
+      console.log(res)
+      this.router.navigate(['/inicio'])
+    })
+    .catch(error => {console.error(error)})
+    }
+
   show() {
     this.mensaje.add({ severity: 'success', summary: 'Hola', detail: 'Bienvenido', life:3000 });
   }
+
 }
