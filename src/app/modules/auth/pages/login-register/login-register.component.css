@@ -128,3 +128,9 @@ form.sign-in-form {
   transition: 0.3s; /* Transición de 0.3 segundos */
 }
 
+/* Estilos cuando se pasa el ratón sobre los iconos de redes sociales */
+.social-icon:hover {
+  color: #ffffff; /* Cambio de color al pasar el ratón */
+  border-color: #197c26; /* Cambio de color del borde al pasar el ratón */
+}
+
