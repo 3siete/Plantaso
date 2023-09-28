@@ -44,6 +44,6 @@ export class RegisterComponent {
     } 
     show() {
       this.mensaje.add({ severity: 'success', summary: 'Listo', detail: 'Bienvenido a Plantaso', life:3000 });
-  }
+    }
 }
 
