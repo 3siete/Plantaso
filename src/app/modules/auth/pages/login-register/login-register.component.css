@@ -94,3 +94,9 @@ form.sign-in-form {
   color: #ffffff; /* Color del texto */
 }
 
+/* Estilos para el texto de marcador de posición en el campo de entrada */
+.input-field input::placeholder {
+  color: #fff7f7; /* Color del marcador de posición */
+  font-weight: 500;
+}
+
