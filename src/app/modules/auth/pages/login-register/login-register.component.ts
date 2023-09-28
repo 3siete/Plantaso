@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login-register',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-register.component.css']
 })
 export class LoginRegisterComponent {
-
+  // Obtener una referencia al elemento con la clase 'container' en el HTML
+  @ViewChild('container') container!: ElementRef;
+ 
 }
