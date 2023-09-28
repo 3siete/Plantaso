@@ -1,0 +1,49 @@
+.login{
+	height:100%;
+    width: 100%;
+	position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-html{
+	position:absolute;
+	padding:90px 70px 50px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+	min-height:375px;
+	position:relative;
+}
+.group{
+	padding:.8rem;
+}
+
+.button{
+	border:solid 1px #fff;
+	padding:15px 50px;
+	border-radius:25px;
+	background:rgba(200,200,200,.1);
+	color:#aaa;
+	font-size:12px;
+	width: 100%;
+}
+.hr{
+	height:2px;
+	margin:40px 0 40px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+input{
+	width: 100%;
+}
+
+#password{
+	border-radius:25px
+}
