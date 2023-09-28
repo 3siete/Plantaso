@@ -35,11 +35,8 @@
                     </div>
                     <div class="group">
                         <span class="p-float-label">
-                            <input pInputText 
-                                id="password" 
-                                formControlName="password" 
-                                />
-                            <label htmlFor="password">Contraseña*</label>
+                            <p-password formControlName="password"  [feedback]="false" [toggleMask]="true"></p-password>
+                            <label for="password">Password</label>
                         </span>
                     </div>
                     <div class="group">

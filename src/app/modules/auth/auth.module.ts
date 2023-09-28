@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -18,7 +19,8 @@ import { InputTextModule } from 'primeng/inputtext';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    InputTextModule
+    InputTextModule,
+    PasswordModule
 
   ]
 })
