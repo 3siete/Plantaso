@@ -13,5 +13,8 @@ export class LoginRegisterComponent {
   // Obtener una referencia al elemento con el id 'sign-up-btn' en el HTML
   @ViewChild('sign_up_btn') signUpBtn!: ElementRef;
 
- 
+  // Este método se ejecuta después de que los elementos del componente se inicializan
+  ngAfterViewInit() {
+
+  }
 }
