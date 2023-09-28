@@ -1,0 +1,222 @@
+/* Estilos para la sección de inicio (.landing) */
+.landing {
+    background-color: #AFD3F1;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* Estilos para las imágenes (.img) */
+.img {
+    object-fit: fill;
+    width: 100%;
+    /* Haz que las imágenes ocupen todo el ancho del contenedor */
+    height: auto;
+    /* Mantén la proporción original de la imagen */
+    max-width: 100vw;
+    max-height: 100vh;
+    /* Evita que las imágenes sean más altas que la pantalla */
+    position: absolute;
+    /* Permite superponer las imágenes */
+
+}
+
+/* Estilos para el texto (.text) */
+.text {
+    z-index: 90;
+    /* Establece el valor de z-index a 90 para controlar la superposición de elementos */
+    position: absolute;
+    /* Establece la posición del elemento como absoluta para un posicionamiento preciso */
+    top: 33%;
+    /* Coloca el elemento 33% desde la parte superior del contenedor principal */
+    left: 50%;
+    /* Coloca el elemento en el centro horizontal del contenedor principal */
+    transform: translate(-50%, -50%);
+    /* Centra el elemento vertical y horizontalmente */
+    text-align: center;
+    /* Alinea el texto en el centro horizontalmente */
+    text-transform: uppercase;
+    /* Convierte el texto en mayúsculas */
+    color: #fff;
+    /* Establece el color del texto en blanco (#fff) */
+    pointer-events: auto;
+    /* Habilita la interacción con el cursor del mouse en el elemento */
+    padding: 20px;
+    /* Agrega un relleno interno de 20 píxeles alrededor del contenido del elemento */
+}
+
+/* Estilos para elementos <h2> dentro de elementos con la clase ".text" */
+
+.text h2 {
+    font-weight: 100;
+    /* Establece el peso de la fuente a 100, lo que la hace muy ligera */
+    font-size: 6.5rem;
+    /* Establece el tamaño de la fuente en 6.5 unidades rem */
+    margin: 10px 0;
+    /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
+}
+
+/* Estilos para elementos <h1> dentro de elementos con la clase ".text" */
+
+.text h1 {
+    font-weight: 800;
+    /* Establece el peso de la fuente a 800, lo que la hace muy negrita */
+    font-size: 8rem;
+    /* Establece el tamaño de la fuente en 8 unidades rem */
+    line-height: 0.33;
+    /* Establece la altura de línea a 0.33, lo que puede ajustar el espaciado entre líneas */
+    margin: 10px 0;
+    /* Agrega un margen de 10 píxeles arriba y abajo, sin margen en los lados */
+}
+
+/* Estilos para los elementos con clase .bro-N (reemplaza N por el número correspondiente) */
+.bro-11 {
+    z-index: 45;
+}
+
+
+.bro-9 {
+    z-index: 30;
+}
+
+.bro-8 {
+    z-index: 40;
+}
+
+.bro-7 {
+    z-index: 50;
+}
+
+.bro-6 {
+    z-index: 60;
+}
+
+.bro-5 {
+    z-index: 70;
+}
+
+.bro-4 {
+    z-index: 80;
+}
+
+.bro-3 {
+    z-index: 89;
+}
+
+.bro-2 {
+    z-index: 110;
+}
+
+.bro-1 {
+    z-index: 120;
+}
+
+.contenedor {
+    background-color: #B0D28D;
+    height: 90vh;
+    width: 88vw;
+    border-radius: 25px;
+    display: grid;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0.9rem;
+    box-shadow: 0 5px 15px;
+}
+
+.sub-contenedor {
+    background-color: #99C66F;
+    height: 40vh;
+    width: 83vw;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px;
+    box-shadow: 0 5px 15px;
+}
+h5{
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 4px;
+}
+
+/*contenedor promo*/
+h3 {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: solid 1px #fff;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    /* Centra el elemento vertical y horizontalmente */
+
+}
+
+.promo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.svg {
+
+    position: absolute;
+    max-width: 50%;
+    max-height: 50%;
+
+}
+
+/*contenedor quienes somos*/
+p {
+    color: #fff;
+    font-size: 20px;
+    /* Tamaño de fuente */
+    line-height: 25px;
+    /* Altura de línea */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    font-weight: 400;
+    /* Peso de fuente */
+    padding: 10%;
+    /* Relleno inferior */
+}
+
+h4 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: solid 1px #fff;
+}
+
+.mini-contenedor {
+    background-color: #99C66F;
+    height: 83vh;
+    width: 35vw;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 5% 20px;
+    box-shadow: 0 5px 15px;
+}
+
+.who {
+    display: flex;
+}

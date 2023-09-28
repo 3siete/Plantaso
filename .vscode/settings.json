@@ -1,14 +1,3 @@
 {
-    "conventionalCommits.scopes": [
-        "icons",
-        "articles-html",
-        "articles-css",
-        "products-page-html",
-        "products-page-css",
-        "auth",
-        "auth-login-html",
-        "auth-register-html",
-        "auth-register",
-        "auth-login"
-    ]
+    "conventionalCommits.scopes": []
 }
