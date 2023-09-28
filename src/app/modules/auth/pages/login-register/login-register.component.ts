@@ -23,7 +23,8 @@ export class LoginRegisterComponent {
 
     // Agregar un event listener al botón de registro
     this.signUpBtn.nativeElement.addEventListener('click', () => {
-
+      // Cuando se hace clic en el botón de registro, se agrega la clase 'sign-up-mode' al contenedor
+      this.container.nativeElement.classList.add('sign-up-mode');
     });
   }
 }
