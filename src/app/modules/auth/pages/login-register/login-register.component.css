@@ -106,3 +106,9 @@ form.sign-in-form {
   font-size: 1rem;
 }
 
+/* Estilos para los iconos de redes sociales */
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
