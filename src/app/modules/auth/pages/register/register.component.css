@@ -41,5 +41,9 @@
 	text-align:center;
 }
 input{
-	border-radius:25px;
+	width: 100%;
+}
+
+#password{
+	border-radius:25px
 }

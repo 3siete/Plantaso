@@ -5,7 +5,7 @@
             <div class="login-form">
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="sign-in-htm">
                     <div class="group">
-                        <span class="p-float-label">
+                        <span class="p-float-label input_span">
                             <input pInputText 
                                 id="name" 
                                 formControlName="name" 
@@ -14,7 +14,7 @@
                         </span>
                     </div>
                     <div class="group">
-                        <span class="p-float-label">
+                        <span class="p-float-label input_span">
                             <input pInputText 
                                 id="lasname" 
                                 formControlName="lastname" 
@@ -24,7 +24,7 @@
                         
                     </div>
                     <div class="group">
-                        <span class="p-float-label">
+                        <span class="p-float-label input_span">
                             <input pInputText 
                                 id="email" 
                                 formControlName="email" 
@@ -34,13 +34,21 @@
                         
                     </div>
                     <div class="group">
-                        <span class="p-float-label">
-                            <p-password formControlName="password"  [feedback]="false" [toggleMask]="true"></p-password>
+                        <span class="p-float-label input_span">
+                            <p-password formControlName="password"
+                                [feedback]="false" 
+                                [toggleMask]="true" 
+                                id="password"
+                            ></p-password>
                             <label for="password">Password</label>
                         </span>
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Regístrate" [disabled]="registerForm.invalid">
+                        <input 
+                            type="submit" 
+                            class="button" 
+                            value="Regístrate" 
+                            [disabled]="registerForm.invalid">
                     </div>
                     <div class="hr" ></div>
                     <div class="foot-lnk">
