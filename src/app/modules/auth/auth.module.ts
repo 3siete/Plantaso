@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -20,7 +21,8 @@ import { PasswordModule } from 'primeng/password';
     FormsModule,
     ReactiveFormsModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+    ToastModule
 
   ]
 })
