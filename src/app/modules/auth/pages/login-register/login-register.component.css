@@ -150,3 +150,8 @@ form.sign-in-form {
   transition: 0.5s; /* Transición de medio segundo */
 }
 
+/* Estilos cuando se pasa el ratón sobre el botón */
+.btn:hover {
+  background-color: #0b7716; /* Cambio de color de fondo al pasar el ratón */
+}
+
