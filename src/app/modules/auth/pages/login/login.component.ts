@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Message, MessageService } from 'primeng/api';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +14,8 @@ import { Message, MessageService } from 'primeng/api';
 export class LoginComponent {
   constructor(private fb:FormBuilder,
     private authService:AuthService,
-    private mensaje: MessageService){}
+    private mensaje: MessageService,
+    public router: Router){}
   loginForm!:FormGroup;
 
   ngOnInit(): void{
