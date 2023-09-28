@@ -25,4 +25,7 @@ export class LoginComponent {
     this.authService.login(value)
     console.log(this.loginForm.value)
   }
+  show() {
+    this.mensaje.add({ severity: 'success', summary: 'Hola', detail: 'Bienvenido', life:3000 });
+  }
 }
