@@ -197,3 +197,9 @@ form.sign-in-form {
   padding: 3rem 17% 2rem 12%;
 }
 
+/* Estilos específicos para el panel derecho */
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
