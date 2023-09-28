@@ -10,5 +10,8 @@ export class LoginRegisterComponent {
   @ViewChild('container') container!: ElementRef;
   // Obtener una referencia al elemento con el id 'sign-in-btn' en el HTML
   @ViewChild('sign_in_btn') signInBtn!: ElementRef;
+  // Obtener una referencia al elemento con el id 'sign-up-btn' en el HTML
+  @ViewChild('sign_up_btn') signUpBtn!: ElementRef;
+
  
 }
