@@ -181,3 +181,13 @@ form.sign-in-form {
   z-index: 6;
 }
 
+/* Estilos generales para los paneles */
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
