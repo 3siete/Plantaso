@@ -43,7 +43,7 @@ export class RegisterComponent {
     .catch(error => {console.error(error)})
     } 
     show() {
-      this.mensaje.add({ severity: 'success', summary: 'Listo', detail: 'Bienvenido a Plantaso' });
+      this.mensaje.add({ severity: 'success', summary: 'Listo', detail: 'Bienvenido a Plantaso', life:3000 });
   }
 }
 

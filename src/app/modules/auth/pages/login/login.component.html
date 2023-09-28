@@ -23,7 +23,13 @@
                         </span>
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Regístrate" [disabled]="loginForm.invalid">
+                        <p-toast></p-toast>
+                        <input type="submit"
+                        class="button" 
+                        value="Regístrate" 
+                        [disabled]="loginForm.invalid"
+                        pButton pRipple 
+                        (click)="show()">
                     </div>
                     <div class="hr" ></div>
                     <div class="foot-lnk">
