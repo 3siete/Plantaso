@@ -155,3 +155,14 @@ form.sign-in-form {
   background-color: #0b7716; /* Cambio de color de fondo al pasar el ratón */
 }
 
+/* Contenedor de paneles para alternar entre inicio de sesión y registro */
+.panels-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en el grid */
+}
+
