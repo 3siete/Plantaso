@@ -191,3 +191,9 @@ form.sign-in-form {
   z-index: 6;
 }
 
+/* Estilos específicos para el panel izquierdo */
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
