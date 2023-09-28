@@ -14,12 +14,13 @@
                         </span>
                     </div>
                     <div class="group">
-                        <span class="p-float-label">
-                            <input pInputText 
-                                id="password" 
-                                formControlName="password" 
-                                />
-                            <label htmlFor="password">Contraseña*</label>
+                        <span class="p-float-label input_span">
+                            <p-password formControlName="password"
+                                [feedback]="false" 
+                                [toggleMask]="true" 
+                                id="password"
+                            ></p-password>
+                            <label for="password">Contraseña*</label>
                         </span>
                     </div>
                     <div class="group">
