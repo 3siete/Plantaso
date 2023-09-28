@@ -33,7 +33,10 @@ export class RegisterComponent {
     const value = this.registerForm.value;
     
     this.authService.register(value)
-    .then(res => {console.log(res)})
+    .then(res => {
+      console.log(res)
+      this.router.navigate(['/inicio'])
+    })
     .catch(error => {console.error(error)})
     } 
 }
