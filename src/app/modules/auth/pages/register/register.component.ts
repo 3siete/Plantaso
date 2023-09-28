@@ -18,7 +18,8 @@ import { Router } from '@angular/router';
 export class RegisterComponent {  
   constructor(private fb:FormBuilder,
     private authService: AuthService,
-    public router: Router ){}
+    public router: Router,
+    private mensaje: MessageService ){}
 
   registerForm!:FormGroup;
 
