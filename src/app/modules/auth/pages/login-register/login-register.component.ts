@@ -17,7 +17,8 @@ export class LoginRegisterComponent {
   ngAfterViewInit() {
     // Agregar un event listener al botón de inicio de sesión
     this.signInBtn.nativeElement.addEventListener('click', () => {
-
+      // Cuando se hace clic en el botón de inicio de sesión, se elimina la clase 'sign-up-mode' del contenedor
+      this.container.nativeElement.classList.remove('sign-up-mode');
     });
 
 
