@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
+  providers: [MessageService]
 })
 
 export class RegisterComponent {  
@@ -40,5 +41,6 @@ export class RegisterComponent {
     })
     .catch(error => {console.error(error)})
     } 
+
 }
 

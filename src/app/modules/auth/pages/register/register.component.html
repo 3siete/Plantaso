@@ -44,11 +44,14 @@
                         </span>
                     </div>
                     <div class="group">
+                        <p-toast></p-toast>
                         <input 
                             type="submit" 
                             class="button" 
                             value="Regístrate" 
-                            [disabled]="registerForm.invalid">
+                            [disabled]="registerForm.invalid"
+                            pButton pRipple 
+                            (click)="show()">
                     </div>
                     <div class="hr" ></div>
                     <div class="foot-lnk">
