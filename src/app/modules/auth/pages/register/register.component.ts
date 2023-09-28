@@ -3,6 +3,7 @@ import { User } from '../../models/user.model';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import { Message, MessageService } from 'primeng/api';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
   
 
@@ -13,7 +14,9 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class RegisterComponent {  
-  constructor(private fb:FormBuilder,private authService: AuthService ){}
+  constructor(private fb:FormBuilder,
+    private authService: AuthService,
+    public router: Router ){}
 
   registerForm!:FormGroup;
 
