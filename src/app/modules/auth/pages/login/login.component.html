@@ -1,5 +1,44 @@
 
 <app-container>
-    <p>login works!</p>
+    <div class="login">
+        <div class="login-html">
+            <div class="login-form">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="sign-in-htm">
+                    <div class="group">
+                        <span class="p-float-label">
+                            <input pInputText 
+                                id="email" 
+                                formControlName="email" 
+                                />
+                            <label htmlFor="email">Email*</label>
+                        </span>
+                    </div>
+                    <div class="group">
+                        <span class="p-float-label input_span">
+                            <p-password formControlName="password"
+                                [feedback]="false" 
+                                [toggleMask]="true" 
+                                id="password"
+                            ></p-password>
+                            <label for="password">Contraseña*</label>
+                        </span>
+                    </div>
+                    <div class="group">
+                        <p-toast></p-toast>
+                        <input type="submit"
+                        class="button" 
+                        value="Regístrate" 
+                        [disabled]="loginForm.invalid"
+                        pButton pRipple 
+                        (click)="show()">
+                    </div>
+                    <div class="hr" ></div>
+                    <div class="foot-lnk">
+                        <a routerLink="/registrarte">Registrate</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </app-container>
 
