@@ -234,3 +234,18 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
+/* Animaciones para cambiar entre modos de inicio de sesión y registro */
+.container.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
+
