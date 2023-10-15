@@ -66,3 +66,10 @@
     align-items: center; /* Centra los elementos hijos verticalmente */
 }
 
+/* Estilos para el ícono dentro del enlace de usuario */
+.user i {
+    color: #bbbbbb; /* Color del ícono */
+    font-size: 28px; /* Tamaño del ícono */
+    margin-right: 7px; /* Espaciado externo a la derecha */
+}
+
