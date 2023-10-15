@@ -3,9 +3,10 @@ import { CardPost } from 'src/app/models/card-post';
 @Component({
   selector: 'app-carrusel',
   template: `
-  <p-carousel [value]="items">
-    
-  </p-carousel>
+    <p-carousel [value]="items">
+      <ng-template pTemplate="item" let-item>
+        </ng-template>
+    </p-carousel>
 `,
 })
 export class CarruselComponent {
