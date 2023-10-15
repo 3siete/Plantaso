@@ -13,6 +13,9 @@ export class NavbarComponent implements AfterViewInit {
   private menuIcon?: HTMLElement;
   private navbar?: HTMLElement;
 
+  // Constructor del componente, inyectando la referencia al elemento del componente
+  constructor(private el: ElementRef) {}
+
 
 }
 
