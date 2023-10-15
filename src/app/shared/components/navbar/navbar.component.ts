@@ -16,7 +16,12 @@ export class NavbarComponent implements AfterViewInit {
   // Constructor del componente, inyectando la referencia al elemento del componente
   constructor(private el: ElementRef) {}
 
+  // Método del ciclo de vida de Angular que se ejecuta después de que la vista del componente ha sido inicializada
+  ngAfterViewInit(): void {
+ 
+  }
 
+ 
 }
 
 
