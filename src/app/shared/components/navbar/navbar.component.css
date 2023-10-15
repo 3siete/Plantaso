@@ -44,3 +44,9 @@
     color: #bbbbbb; /* Cambia el color del enlace activo */
 }
 
+/* Estilos para el contenedor principal */
+.main {
+    display: flex; /* Usa flexbox para organizar los elementos hijos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+}
+
