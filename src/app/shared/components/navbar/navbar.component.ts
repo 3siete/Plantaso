@@ -9,7 +9,11 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 })
 // Clase del componente Navbar
 export class NavbarComponent implements AfterViewInit {
-  
+  // Propiedades privadas para almacenar referencias al icono del menú y a la barra de navegación
+  private menuIcon?: HTMLElement;
+  private navbar?: HTMLElement;
+
+
 }
 
 
