@@ -22,7 +22,8 @@ export class NavbarComponent implements AfterViewInit {
     this.menuIcon = this.el.nativeElement.querySelector('#menu-icon');
     this.navbar = this.el.nativeElement.querySelector('.navbar');
 
-
+    // Agregando un evento de clic al icono del menú para llamar a la función toggleMenu
+    this.menuIcon?.addEventListener('click', this.toggleMenu.bind(this));
   }
 
  
