@@ -3,4 +3,5 @@ export interface CardPost{
     subtitle: string;
     description: string;
     imgURL: string;
+    alt:string;
 }
