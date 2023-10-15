@@ -10,6 +10,11 @@ export class CardPostComponent {
   @Input() cardData: CardPost;
 
   constructor(){
-    
+    this.cardData = {
+      title: '',
+      subtitle:'',
+      imgURL:'',
+      description:'', 
+    }
   }
 }
