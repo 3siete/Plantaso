@@ -50,3 +50,13 @@
     align-items: center; /* Centra los elementos hijos verticalmente */
 }
 
+/* Estilos para los enlaces del contenedor principal */
+.main a {
+    margin-right: 25px; /* Espaciado externo a la derecha */
+    margin-left: 10px; /* Espaciado externo a la izquierda */
+    color: #fff; /* Color del texto */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    font-weight: 500; /* Peso de fuente */
+    transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
+}
+
