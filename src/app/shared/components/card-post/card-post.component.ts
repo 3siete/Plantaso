@@ -9,4 +9,7 @@ import { CardPost } from 'src/app/models/card-post';
 export class CardPostComponent {
   @Input() cardData: CardPost;
 
+  constructor(){
+    
+  }
 }
