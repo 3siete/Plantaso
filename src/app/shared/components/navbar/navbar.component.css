@@ -60,3 +60,9 @@
     transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
 }
 
+/* Estilos para el icono de usuario */
+.user {
+    display: flex; /* Usa flexbox para organizar los elementos hijos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+}
+
