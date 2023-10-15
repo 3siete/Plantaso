@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { CardPost } from 'src/app/models/card-post';
 @Component({
   selector: 'app-carrusel',
@@ -11,5 +11,5 @@ import { CardPost } from 'src/app/models/card-post';
 `,
 })
 export class CarruselComponent {
-  items=[]
+  @Input() items=[]
 }
