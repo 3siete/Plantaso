@@ -102,5 +102,10 @@
 
 /* Estilos para pantallas con un ancho máximo de 1090px */
 @media (max-width: 1090px) {
+    /* Muestra el ícono del menú */
+    #menu-icon {
+        display: block;
+    }
 
+    
 }
