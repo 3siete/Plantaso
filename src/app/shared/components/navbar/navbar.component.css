@@ -73,3 +73,8 @@
     margin-right: 7px; /* Espaciado externo a la derecha */
 }
 
+/* Estilos para el efecto hover de los enlaces del contenedor principal */
+.main a:hover {
+    color: #bbbbbb; /* Cambia el color del texto al pasar el cursor */
+}
+
