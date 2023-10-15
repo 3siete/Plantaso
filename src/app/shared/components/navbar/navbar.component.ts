@@ -7,5 +7,9 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
   templateUrl: './navbar.component.html', // Ruta al archivo HTML del componente
   styleUrls: ['./navbar.component.css'] // Ruta al archivo CSS del componente
 })
+// Clase del componente Navbar
+export class NavbarComponent implements AfterViewInit {
+  
+}
 
 
