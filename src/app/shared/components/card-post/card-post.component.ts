@@ -7,10 +7,10 @@ import { CardPost } from 'src/app/models/card-post';
   styleUrls: ['./card-post.component.css']
 })
 export class CardPostComponent {
-  @Input() cardData: CardPost;
+  @Input() cardPostData: CardPost;
 
   constructor(){
-    this.cardData = {
+    this.cardPostData = {
       title: '',
       subtitle: '',
       imgURL: '',
