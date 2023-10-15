@@ -24,3 +24,13 @@
     display: flex; /* Usa flexbox para organizar los elementos hijos */
 }
 
+/* Estilos para los enlaces de la barra de navegación */
+.navbar a {
+    color: #fff; /* Color del texto */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    font-weight: 500; /* Peso de fuente */
+    padding: 5px 0; /* Espaciado interno */
+    margin: 0px 30px; /* Espaciado externo */
+    transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
+}
+
