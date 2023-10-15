@@ -14,7 +14,8 @@ export class CardPostComponent {
       title: '',
       subtitle:'',
       imgURL:'',
-      description:'', 
+      description:'',
+      
     }
   }
 }

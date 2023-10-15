@@ -1,11 +1,10 @@
 <div class="card">
-    <img src="https://images.pexels.com/photos/797793/pexels-photo-797793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    <img [src]= "cardData.imgURL"
         class="card-img" alt="">
     <div class="card-body">
-        <h4 class="card-title">Lengua de suegra</h4>
-        <p class="card-sub-title">Sansevieria Trifasciata</p>
-        <p class="card-info">La lengua de suegra es conocida como sansevieria por su nombre científico Sansevieria
-            trifasciata.</p>
-        <button class="card-btn">Info</button>
+        <h4 class="card-title">{{ cardData.title }}</h4>
+        <p class="card-sub-title">{{ cardData.subtitle }}</p>
+        <p class="card-info">{{ cardData.description }}</p>
+        <button class="card-btn">Mas info</button>
     </div>
 </div>
