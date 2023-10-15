@@ -18,7 +18,11 @@ export class NavbarComponent implements AfterViewInit {
 
   // Método del ciclo de vida de Angular que se ejecuta después de que la vista del componente ha sido inicializada
   ngAfterViewInit(): void {
- 
+    // Obteniendo referencias a los elementos del icono del menú y la barra de navegación
+    this.menuIcon = this.el.nativeElement.querySelector('#menu-icon');
+    this.navbar = this.el.nativeElement.querySelector('.navbar');
+
+
   }
 
  
