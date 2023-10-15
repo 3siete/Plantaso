@@ -8,15 +8,25 @@
     display: flex; /* Usa flexbox para organizar los elementos hijos */
     align-items: center; /* Centra los elementos hijos verticalmente */
     justify-content: space-between; /* Distribuye los elementos hijos uniformemente a lo largo del eje horizontal */
-    background: rgba(0, 0, 0, .1); /* Color de fondo semitransparente */
+    background: rgba(0, 0, 0, .3); /* Color de fondo semitransparente */
     padding: 28px 12%; /* Espaciado interno */
     transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
 }
 
 /* Estilos para el logo */
-.logo {
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img {
     width: 3rem; /* Ancho del logo */
     height: 3rem; /* Alto del logo */
+    margin-right: 3px;
+}
+.logo span{
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 /* Estilos para la barra de navegación */
@@ -89,12 +99,13 @@
 
 /* Estilos para pantallas con un ancho máximo de 1280px */
 @media (max-width: 1280px) {
-    header {
+    .header {
         padding: 14px 2%; /* Reduce el espaciado interno del encabezado */
         transition: .2s; /* Transición más rápida */
     }
 
     .navbar a {
+        font-size: 0.9rem;
         padding: 5px 0; /* Espaciado interno */
         margin: 0px 20px; /* Espaciado externo */
     }
@@ -114,7 +125,7 @@
         right: 2%; /* Alinea la barra de navegación a la derecha */
         width: 270px; /* Ancho de la barra de navegación */
         height: 29vh; /* Alto de la barra de navegación */
-        background: #bbbbbb; /* Color de fondo */
+        background : #4D5057; /* Color de fondo */
         display: flex; /* Usa flexbox para organizar los elementos hijos */
         flex-direction: column; /* Organiza los elementos hijos en una columna */
         justify-content: flex-start; /* Alinea los elementos hijos al inicio */

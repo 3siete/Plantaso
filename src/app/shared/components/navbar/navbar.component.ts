@@ -29,7 +29,7 @@ export class NavbarComponent implements AfterViewInit {
   // Método para alternar (mostrar/ocultar) el menú
   toggleMenu(): void {
     // Alternando la clase 'bx-x' en el icono del menú (para cambiar su apariencia)
-    this.menuIcon?.classList.toggle('bx-x');
+    this.menuIcon?.classList.toggle('fa-solid fa-xmark');
     // Alternando la clase 'open' en la barra de navegación (para mostrar/ocultar el menú)
     this.navbar?.classList.toggle('open');
   }
