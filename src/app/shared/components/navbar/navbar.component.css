@@ -87,3 +87,20 @@
     display: none; /* Oculta el ícono por defecto */
 }
 
+/* Estilos para pantallas con un ancho máximo de 1280px */
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%; /* Reduce el espaciado interno del encabezado */
+        transition: .2s; /* Transición más rápida */
+    }
+
+    .navbar a {
+        padding: 5px 0; /* Espaciado interno */
+        margin: 0px 20px; /* Espaciado externo */
+    }
+}
+
+/* Estilos para pantallas con un ancho máximo de 1090px */
+@media (max-width: 1090px) {
+
+}
