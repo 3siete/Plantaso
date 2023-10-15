@@ -122,5 +122,13 @@
         transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
     }
 
-   
+    /* Estilos para los enlaces de la barra de navegación en modo móvil */
+    .navbar a {
+        display: block; /* Muestra los enlaces en bloques */
+        margin: 12px 0; /* Espaciado externo */
+        padding: 0px 25px; /* Espaciado interno */
+        transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
+    }
+
+  
 }
