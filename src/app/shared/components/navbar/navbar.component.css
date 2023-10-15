@@ -141,5 +141,8 @@
         color: #bbbbbb; /* Cambia el color del enlace activo */
     }
 
-
+    /* Estilos para la barra de navegación abierta en modo móvil */
+    .navbar.open {
+        right: 2%; /* Alinea la barra de navegación abierta a la derecha */
+    }
 }
