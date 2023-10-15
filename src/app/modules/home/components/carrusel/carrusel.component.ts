@@ -5,7 +5,7 @@ import { CardPost } from 'src/app/models/card-post';
   template: `
     <p-carousel [value]="items">
       <ng-template pTemplate="item" let-item>
-        
+        <app-card-post  />
       </ng-template>
     </p-carousel>
 `,
