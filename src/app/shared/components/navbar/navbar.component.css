@@ -1,114 +1,15 @@
-li{
-    list-style: none;
-    line-height: 1rem;
-}
-a{
-    text-decoration: none;
-    color: #E8FCCF;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.1s;
-    position: relative;
-    text-shadow: 1px;
-}
-a:active{
-    transform: scale(1.2);
-    z-index: 1;
+/* Estilos para el encabezado */
+.header {
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    z-index: 9999999999; /* Asegura que el encabezado esté siempre en la parte superior de otros elementos */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    right: 0; /* Alinea el encabezado a la derecha */
+    display: flex; /* Usa flexbox para organizar los elementos hijos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    justify-content: space-between; /* Distribuye los elementos hijos uniformemente a lo largo del eje horizontal */
+    background: rgba(0, 0, 0, .1); /* Color de fondo semitransparente */
+    padding: 28px 12%; /* Espaciado interno */
+    transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
 }
 
-/*HEADER*/
-.header{
-    position: absolute;
-    z-index: 9999;
-    width: 100%;
-    padding: 0rem 0;
-    top: 0;
-    left: 0;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(8px);
-    border-bottom: solid 1px #E8FCCF;
-    height: 4rem;
-}
-.logo img{
-    width: 3rem;
-    height: 3rem;
-}
-
-.left{
-    width: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
-}
-
-
-.right{
-    width: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-/*Hamburger menu*/
-.burger_btn{
-    display: none;
-}
-.burger_btn img{
-    max-width: 2rem;
-}
-
-/*DROPDOWN MENU*/
-.dropdown_menu{
-    position: absolute;
-    border-top: solid 1px #E8FCCF;
-    margin-top: 2px;
-    left: 2rem;
-    top: 70px;
-    width: 300px;
-    height: 205px;
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(8px);
-    transition:cubic-bezier(0.165, 0.84, 0.44, 1);
-    
-}
-
-.dropdown_menu li{
-    line-height: 2rem;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/*RESPONSIVE DESING*/
-
-@media(max-width:900px){
-    nav .right,
-    nav .left{
-        display: none;
-    }
-    nav{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    nav .burger_btn{
-        display: block;
-    }
-    nav .dropdown_menu{
-        transition: 1s;
-    }
-}
-@media(max-width:768px){
-    .dropdown_menu{
-        right: 2rem;
-        width: unset;
-    }
-}
