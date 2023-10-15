@@ -78,3 +78,12 @@
     color: #bbbbbb; /* Cambia el color del texto al pasar el cursor */
 }
 
+/* Estilos para el ícono del menú */
+#menu-icon {
+    font-size: 35px; /* Tamaño del ícono */
+    color: #fff; /* Color del ícono */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el ícono */
+    z-index: 99999; /* Asegura que el ícono esté siempre en la parte superior de otros elementos */
+    display: none; /* Oculta el ícono por defecto */
+}
+
