@@ -39,3 +39,8 @@
     color: #bbbbbb; /* Cambia el color del texto al pasar el cursor */
 }
 
+/* Estilos para el enlace activo de la barra de navegación */
+.navbar a.active {
+    color: #bbbbbb; /* Cambia el color del enlace activo */
+}
+
