@@ -13,3 +13,10 @@
     transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
 }
 
+/* Estilos para el logo */
+.logo {
+    width: 3rem; /* Ancho del logo */
+    height: 3rem; /* Alto del logo */
+}
+
+
