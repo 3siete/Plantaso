@@ -26,7 +26,10 @@ export class NavbarComponent implements AfterViewInit {
     this.menuIcon?.addEventListener('click', this.toggleMenu.bind(this));
   }
 
- 
+  // Método para alternar (mostrar/ocultar) el menú
+  toggleMenu(): void {
+
+  }
 }
 
 
