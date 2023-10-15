@@ -12,10 +12,10 @@ export class CardPostComponent {
   constructor(){
     this.cardData = {
       title: '',
-      subtitle:'',
-      imgURL:'',
-      description:'',
-      
+      subtitle: '',
+      imgURL: '',
+      description: '',
+      alt: '',
     }
   }
 }
