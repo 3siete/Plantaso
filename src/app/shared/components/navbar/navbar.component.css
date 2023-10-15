@@ -19,4 +19,8 @@
     height: 3rem; /* Alto del logo */
 }
 
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex; /* Usa flexbox para organizar los elementos hijos */
+}
 
