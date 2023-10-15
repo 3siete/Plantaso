@@ -34,3 +34,8 @@
     transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
 }
 
+/* Estilos para el efecto hover de los enlaces de la barra de navegación */
+.navbar a:hover {
+    color: #bbbbbb; /* Cambia el color del texto al pasar el cursor */
+}
+
