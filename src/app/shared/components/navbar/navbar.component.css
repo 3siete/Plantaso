@@ -107,5 +107,20 @@
         display: block;
     }
 
-    
+    /* Estilos para la barra de navegación en modo móvil */
+    .navbar {
+        position: absolute; /* Posicionamiento absoluto */
+        top: 100%; /* Posiciona la barra de navegación debajo del encabezado */
+        right: 2%; /* Alinea la barra de navegación a la derecha */
+        width: 270px; /* Ancho de la barra de navegación */
+        height: 29vh; /* Alto de la barra de navegación */
+        background: #bbbbbb; /* Color de fondo */
+        display: flex; /* Usa flexbox para organizar los elementos hijos */
+        flex-direction: column; /* Organiza los elementos hijos en una columna */
+        justify-content: flex-start; /* Alinea los elementos hijos al inicio */
+        border-radius: 10px; /* Borde redondeado */
+        transition: all .50s ease; /* Transición suave para todos los cambios de estilo */
+    }
+
+   
 }
