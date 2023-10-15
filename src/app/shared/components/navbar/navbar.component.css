@@ -122,7 +122,7 @@
     .navbar {
         position: absolute; /* Posicionamiento absoluto */
         top: 100%; /* Posiciona la barra de navegación debajo del encabezado */
-        right: 2%; /* Alinea la barra de navegación a la derecha */
+        right: -100%; /* Alinea la barra de navegación a la derecha */
         width: 270px; /* Ancho de la barra de navegación */
         height: 29vh; /* Alto de la barra de navegación */
         background : #4D5057; /* Color de fondo */
