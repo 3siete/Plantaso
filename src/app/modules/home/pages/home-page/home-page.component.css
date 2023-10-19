@@ -347,11 +347,8 @@ h4 {
 }
 @media (min-width:1025px) and (max-width: 1920px){
     .img{
-        right: auto;
         height: 150%;
-        width: 180%;
-        max-width: 300%;
-        width: initial;
+        width: 100%;
     }
 
 }
