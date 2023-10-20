@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CardPost } from 'src/app/models/card-post';
 
 @Component({
   selector: 'app-card-post',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-post.component.css']
 })
 export class CardPostComponent {
+  @Input() cardPostData: CardPost;
 
+  constructor(){
+    this.cardPostData = {
+      title: '',
+      subtitle: '',
+      imgURL: '',
+      description: '',
+      alt: '',
+    }
+  }
 }

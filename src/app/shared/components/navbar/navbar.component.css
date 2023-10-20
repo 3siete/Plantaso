@@ -18,7 +18,7 @@ a:active{
 
 /*HEADER*/
 .header{
-    position: absolute;
+    position: relative;
     z-index: 9999;
     width: 100%;
     padding: 0rem 0;
