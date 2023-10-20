@@ -1,15 +1,22 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
 
+:root {
+    --main-color: #99C66F;
+    --main-color-dark: #99C66F;
+    --main-color-light: #B0D28D;
+    --text-color: #cfcde7;
+}
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-
+body {
+    font-family: "poppins", sans-serif;
     background-color: #1B4622;
     background-position: center center;
     background-attachment: fixed;
