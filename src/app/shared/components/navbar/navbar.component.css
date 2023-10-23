@@ -1,5 +1,6 @@
 /* Estilos para el encabezado */
 .header {
+    height: 8%;
     position: fixed; /* Fija el encabezado en la parte superior de la página */
     z-index: 9999999999; /* Asegura que el encabezado esté siempre en la parte superior de otros elementos */
     width: 100%; /* Ocupa todo el ancho de la página */

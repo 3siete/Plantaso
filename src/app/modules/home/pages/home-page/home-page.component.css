@@ -163,31 +163,32 @@ h3 {
     position: absolute;
     text-transform: uppercase;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-    border-bottom: solid 1px #fff;
     z-index: 1;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
+    top: 5%;
+    left: 45%;
     /* Centra el elemento vertical y horizontalmente */
 
 }
-
+.promo-app{
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+.img-promo{
+    position: absolute;
+    left: 2%;
+}
 .promo {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.svg {
-
-    position: absolute;
-    max-width: 50%;
-    max-height: 50%;
-
 }
 
 /*contenedor quienes somos*/
@@ -236,13 +237,16 @@ h4 {
         width: 180%;
         max-width: 300%;
         width: initial;
+        transition: all .50s ease; 
     }
     
     .text h1 {
         font-size: 3.5rem;
+        transition: all .50s ease; 
     }
     .text h2 {
         font-size: 2.5rem;
+        transition: all .50s ease; 
     }
     .logo {
         height: 4rem;
@@ -250,27 +254,35 @@ h4 {
     }
     .contenedor {
         width: 95vw;
+        transition: all .50s ease; 
     }
     .sub-contenedor{
         width: 90vw;
+        transition: all .50s ease; 
     }
     .mini-contenedor {
         width: 90vw;
         margin-bottom: 20px;
+        transition: all .50s ease; 
     }
     h3 {
         font-size: 2rem;
+        transition: all .50s ease; 
     }
     h4, h5 {
         font-size: 1.2rem;
+        transition: all .50s ease; 
     }
     p {
         font-size: 16px;
         line-height: 20px;
+        transition: all .50s ease; 
     }
+    
     .who {
         flex-direction: column;
         height: 90svh;
+        transition: all .50s ease; 
     }
 }
 
@@ -282,41 +294,53 @@ h4 {
         width: 200%;
         max-width: 300%;
         width: initial;
+        transition: all .50s ease; 
     }
     .text h1 {
         font-size: 5rem;
+        transition: all .50s ease; 
     }
     .text h2 {
         font-size: 3.5rem;
+        transition: all .50s ease; 
     }
     .logo {
         height: 5rem;
         width: 5rem;
+        transition: all .50s ease; 
     }
     .contenedor{
         width: 90vw;
+        transition: all .50s ease; 
     }
     .sub-contenedor{
         width: 85vw;
+        transition: all .50s ease; 
     }
     .mini-contenedor {
         width: 85vw;
         margin-bottom: 20px;
+        transition: all .50s ease; 
     }
     .who {
         flex-direction: column;
         height: 90svh;
+        transition: all .50s ease; 
     }
     h3 {
         font-size: 2.5rem;
+        transition: all .50s ease; 
     }
     h4, h5 {
         font-size: 1.5rem;
+        transition: all .50s ease; 
     }
     p {
         font-size: 18px;
         line-height: 22px;
+        transition: all .50s ease; 
     }
+ 
 }
 
 /* Para tablets */
@@ -327,28 +351,36 @@ h4 {
         width: 180%;
         max-width: 300%;
         width: initial;
+        transition: all .50s ease; 
     }
     .contenedor{
         width: 90vw;
+        transition: all .50s ease; 
     }
     .sub-contenedor{
         width: 85vw;
+        transition: all .50s ease; 
     }
     .mini-contenedor {
         width: 40vw;
+        transition: all .50s ease; 
     }
     h4, h5 {
         font-size: 1.8rem;
+        transition: all .50s ease; 
     }
     p {
         font-size: 19px;
         line-height: 24px;
+        transition: all .50s ease; 
     }
+  
 }
 @media (min-width:1025px) and (max-width: 1920px){
     .img{
         height: 150%;
         width: 100%;
+        transition: all .50s ease; 
     }
 
 }
