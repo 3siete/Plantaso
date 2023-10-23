@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
-import { CardPostComponent } from 'src/app/shared/components/card-post/card-post.component';
-
+import { Component,Input } from '@angular/core';
+import { CardPost } from 'src/app/models/card-post';
 @Component({
   selector: 'app-carrusel',
-  templateUrl: './carrusel.component.html',
-  styleUrls: ['./carrusel.component.css']
+  template: `
+    <p-carousel [value]="items">
+      <ng-template pTemplate="item" let-item>
+        <app-card-post [cardPostData]="item" />
+      </ng-template>
+    </p-carousel>
+`,
 })
 export class CarruselComponent {
-  cards = [
-    {
-      title:'',
-      subtitle:'',
-      description:'',
-      img:''
-    }
-  ]
+  @Input() items=[]
 }
