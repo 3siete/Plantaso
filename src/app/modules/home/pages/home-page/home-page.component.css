@@ -23,15 +23,24 @@
     /* Permite superponer las imágenes */
 
 }
-
+.logo {
+    position: absolute;
+    /* Establece la posición del elemento como absoluta para un posicionamiento preciso */
+    top: 33%;
+    /* Coloca el elemento 33% desde la parte superior del contenedor principal */
+    left: 50%;
+    /* Coloca el elemento en el centro horizontal del contenedor principal */
+    transform: translate(-50%, -50%);
+    /* Centra el elemento vertical y horizontalmente */
+    height: 6.5rem;
+    width: 6.5rem;
+}
 /* Estilos para el texto (.text) */
 .text {
     z-index: 90;
     /* Establece el valor de z-index a 90 para controlar la superposición de elementos */
     position: absolute;
     /* Establece la posición del elemento como absoluta para un posicionamiento preciso */
-    top: 33%;
-    /* Coloca el elemento 33% desde la parte superior del contenedor principal */
     left: 50%;
     /* Coloca el elemento en el centro horizontal del contenedor principal */
     transform: translate(-50%, -50%);
@@ -116,8 +125,8 @@
 
 .contenedor {
     background-color: #B0D28D;
-    height: 90vh;
-    width: 88vw;
+    height: 90svh;
+    width: 88svw;
     border-radius: 25px;
     display: grid;
     margin: auto;
@@ -129,8 +138,8 @@
 
 .sub-contenedor {
     background-color: #99C66F;
-    height: 40vh;
-    width: 83vw;
+    height: 40svh;
+    width: 83svw;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -158,31 +167,32 @@ h3 {
     position: absolute;
     text-transform: uppercase;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-    border-bottom: solid 1px #fff;
     z-index: 1;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
+    top: 5%;
+    left: 45%;
     /* Centra el elemento vertical y horizontalmente */
 
 }
-
+.promo-app{
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+.img-promo{
+    position: absolute;
+    left: 2%;
+}
 .promo {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.svg {
-
-    position: absolute;
-    max-width: 50%;
-    max-height: 50%;
-
 }
 
 /*contenedor quienes somos*/
@@ -210,8 +220,8 @@ h4 {
 
 .mini-contenedor {
     background-color: #99C66F;
-    height: 83vh;
-    width: 35vw;
+    height: 83svh;
+    width: 35svw;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -223,4 +233,158 @@ h4 {
 
 .who {
     display: flex;
+}
+@media (max-width: 480px) {
+    .img{
+        left: -60%;
+        height: 150%;
+        width: 180%;
+        max-width: 300%;
+        width: initial;
+        transition: all .50s ease; 
+    }
+    
+    .text h1 {
+        font-size: 3.5rem;
+        transition: all .50s ease; 
+    }
+    .text h2 {
+        font-size: 2.5rem;
+        transition: all .50s ease; 
+    }
+    .logo {
+        height: 4rem;
+        width: 4rem;
+    }
+    .contenedor {
+        width: 95vw;
+        transition: all .50s ease; 
+    }
+    .sub-contenedor{
+        width: 90vw;
+        transition: all .50s ease; 
+    }
+    .mini-contenedor {
+        width: 90vw;
+        margin-bottom: 20px;
+        transition: all .50s ease; 
+    }
+    h3 {
+        font-size: 2rem;
+        transition: all .50s ease; 
+    }
+    h4, h5 {
+        font-size: 1.2rem;
+        transition: all .50s ease; 
+    }
+    p {
+        font-size: 16px;
+        line-height: 20px;
+        transition: all .50s ease; 
+    }
+    
+    .who {
+        flex-direction: column;
+        height: 90svh;
+        transition: all .50s ease; 
+    }
+}
+
+/* Para dispositivos móviles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .img{
+        left: -60%;
+        height: 150%;
+        width: 200%;
+        max-width: 300%;
+        width: initial;
+        transition: all .50s ease; 
+    }
+    .text h1 {
+        font-size: 5rem;
+        transition: all .50s ease; 
+    }
+    .text h2 {
+        font-size: 3.5rem;
+        transition: all .50s ease; 
+    }
+    .logo {
+        height: 5rem;
+        width: 5rem;
+        transition: all .50s ease; 
+    }
+    .contenedor{
+        width: 90vw;
+        transition: all .50s ease; 
+    }
+    .sub-contenedor{
+        width: 85vw;
+        transition: all .50s ease; 
+    }
+    .mini-contenedor {
+        width: 85vw;
+        margin-bottom: 20px;
+        transition: all .50s ease; 
+    }
+    .who {
+        flex-direction: column;
+        height: 90svh;
+        transition: all .50s ease; 
+    }
+    h3 {
+        font-size: 2.5rem;
+        transition: all .50s ease; 
+    }
+    h4, h5 {
+        font-size: 1.5rem;
+        transition: all .50s ease; 
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+        transition: all .50s ease; 
+    }
+ 
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .img{
+        left: -30%;
+        height: 150%;
+        width: 180%;
+        max-width: 300%;
+        width: initial;
+        transition: all .50s ease; 
+    }
+    .contenedor{
+        width: 90vw;
+        transition: all .50s ease; 
+    }
+    .sub-contenedor{
+        width: 85vw;
+        transition: all .50s ease; 
+    }
+    .mini-contenedor {
+        width: 40vw;
+        transition: all .50s ease; 
+    }
+    h4, h5 {
+        font-size: 1.8rem;
+        transition: all .50s ease; 
+    }
+    p {
+        font-size: 19px;
+        line-height: 24px;
+        transition: all .50s ease; 
+    }
+  
+}
+@media (min-width:1025px) and (max-width: 1920px){
+    .img{
+        height: 150%;
+        width: 100%;
+        transition: all .50s ease; 
+    }
+
 }
