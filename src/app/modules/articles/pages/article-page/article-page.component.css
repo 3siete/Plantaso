@@ -1,0 +1,42 @@
+.padre {
+    max-height: 90vh;
+    max-width: 95vw;
+    height: 88vh;
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row; /* Cambio importante aquí */
+    justify-content: flex-start;
+    align-items: center;
+    background: #B0D28D;
+    border-radius: 50px;
+    border: solid 10px #99C66F;
+    box-shadow: -10px 10px 50px;
+}
+
+.contenedor {
+    height: 75vh;
+    border-radius: 30px;
+    display: flex;
+    width: 100%; /* Para que ocupe todo el espacio disponible dentro de .padre */
+    flex-grow: 1;
+    background-color: #99C66F;
+    
+}
+
+.img {
+    width: 300px; /* Ajusta según tus necesidades */
+    height: auto;
+    object-fit: cover;
+    padding-left: 50px;
+}
+
+.sub-contenedor {
+    overflow-y: scroll;
+    max-height: 600px; /* Ajusta según tus necesidades */
+    width: calc(100% - 350px); /* Restar el ancho de la imagen */
+    margin: .4rem 1rem;
+    flex-grow: 0;
+    padding: 20px;
+    text-align: justify;
+}
