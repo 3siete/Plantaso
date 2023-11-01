@@ -5,20 +5,21 @@ const routes: Routes = [
   //lazyloading
   {
     path: '',
-    loadChildren:()=>import('./modules/auth/auth.module').then(m=>m.AuthModule),
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule),
   },
   {
-    path:'inicio',
-    loadChildren:()=>import('./modules/home/home.module').then(m=>m.HomeModule),
+    path: 'inicio',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
   },
   {
-    path:'productos',
-    loadChildren:()=>import('./modules/products/products.module').then(m=>m.ProductsModule),
+    path: 'productos',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule),
   },
   {
-    path:'articulos',
-    loadChildren:()=>import('./modules/articles/articles.module').then(m=>m.ArticlesModule),
+    path: 'articulos',
+    loadChildren: () => import('./modules/articles/articles.module').then(m => m.ArticlesModule),
   }
+
 ];
 
 @NgModule({
