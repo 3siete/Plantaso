@@ -1,32 +1,34 @@
+<!-- Contenedor principal del encabezado -->
 <div class="header">
-    <nav>
-        <div class="burger_btn" >
-            <img src="../../../../assets/hamburger_menu_icon.png" alt="hamburger_icon" id="burger_btn" (click)="responsiveMenu()">
+
+    <!-- Logo del sitio web, al hacer clic redirige a la página de inicio -->
+    <a routerLink="/inicio" class="logo">
+        <img src="../../../../assets/LOGOPLANTASO1.png" alt="logo">
+        <span>Plantaso</span>
+    </a>
+
+    <!-- Barra de navegación principal -->
+    <ul class="navbar">
+        <!-- Elemento de la barra de navegación para la página de inicio -->
+        <li><a routerLink="/inicio">Inicio</a></li>
+        <!-- Elemento de la barra de navegación para la página de artículos -->
+        <li><a routerLink="/articulos">Artículos</a></li>
+        <!-- Elemento de la barra de navegación para la página de productos -->
+        <li><a routerLink="/productos">Productos</a></li>
+
+    </ul>
+
+    <!-- Contenedor de las opciones de usuario y el icono del menú -->
+    <div class="main">
+        <!-- Opción para iniciar sesión -->
+        <a href="#" class="user">
+            Iniciar Sesión
+        </a>
+        <!-- Opción para registrarse -->
+        <a href="#">Registrarse</a>
+        <!-- Icono del menú (generalmente utilizado para dispositivos móviles) -->
+        <div class="fa-solid fa-bars" id="menu-icon">
         </div>
-
-        <ul class="left"> 
-            <li><a routerLink="/inicio">INICIO</a></li>
-            <li><a routerLink="/articulos">ARTÍCULOS</a></li>
-            <li><a routerLink="/productos">PRODUCTOS</a></li>
-        </ul>
-
-        <div class="logo"><a href="/inicio"><img src="../../../../assets/LOGOPLANTASO1.png" alt="logo"></a></div>
-
-        <ul class="right">
-            <li><a routerLink="/iniciarsesion">INICIAR SESIÓN</a></li>
-            <li><a routerLink="/registrarte">REGISTRARTE</a></li>
-        </ul>
-    </nav>
-
-    <div *ngIf="burgerBtn">
-
-        <ul [ngClass]="'dropdown_menu'" (click)="responsiveMenu()">
-            
-            <li><a routerLink="/inicio" >INICIO</a></li>
-            <li><a routerLink="/productos">PRODUCTOS</a></li>
-            <li><a routerLink="/articulos">ARTÍCULOS</a></li>
-            <li><a routerLink="/iniciarsesion">INICIAR SESIÓN</a></li>
-            <li><a routerLink="/registrarte">REGÍSTRATE</a></li>
-        </ul>
     </div>
+
 </div>
