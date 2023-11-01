@@ -72,7 +72,7 @@ export class HomePageComponent {
   // Animación del subtítulo
   private animateSubtitle(): void {
     // Selecciona el elemento del subtítulo 'h2'
-    const textH2 = this.elementRef.nativeElement.querySelector('.text h2') as HTMLElement;
+    const textH2 = this.elementRef.nativeElement.querySelector('.text logo') as HTMLElement;
 
     // Verifica si el elemento existe
     if (textH2) {
