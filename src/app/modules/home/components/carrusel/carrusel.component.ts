@@ -11,5 +11,5 @@ import { CardPost } from 'src/app/models/card-post';
 `,
 })
 export class CarruselComponent {
-  @Input() items=[]
+  @Input() items:CardPost[]=[]
 }
