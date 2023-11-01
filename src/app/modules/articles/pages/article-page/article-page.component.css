@@ -1,0 +1,13 @@
+.padre{
+    max-height: 90svh;
+    max-width: 95svw;
+    height: 88svh;
+    width: 95svw;
+    margin: auto ;
+    margin-top: 5%;
+    display: flex;
+    background: #B0D28D;
+    border-radius: 50px;
+    border: solid 10px #99C66F;
+    box-shadow: -10px 10px 50px;
+}
