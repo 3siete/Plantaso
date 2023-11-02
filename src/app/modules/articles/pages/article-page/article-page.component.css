@@ -8,10 +8,11 @@
     flex-direction: row; /* Cambio importante aquí */
     justify-content: flex-start;
     align-items: center;
-    background: #B0D28D;
+    background: #82A065;
     border-radius: 50px;
     border: solid 10px #99C66F;
     box-shadow: -10px 10px 50px;
+    margin-top: 5%;
 }
 
 .contenedor {
