@@ -8,10 +8,11 @@
     flex-direction: row; /* Cambio importante aquí */
     justify-content: flex-start;
     align-items: center;
-    background: #B0D28D;
+    background: #82A065;
     border-radius: 50px;
     border: solid 10px #99C66F;
     box-shadow: -10px 10px 50px;
+    margin-top: 5%;
 }
 
 .contenedor {
@@ -21,22 +22,29 @@
     width: 100%; /* Para que ocupe todo el espacio disponible dentro de .padre */
     flex-grow: 1;
     background-color: #99C66F;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
     
 }
 
 .img {
     width: 300px; /* Ajusta según tus necesidades */
-    height: auto;
+    height: 90%;
     object-fit: cover;
-    padding-left: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
 }
 
 .sub-contenedor {
     overflow-y: scroll;
-    max-height: 600px; /* Ajusta según tus necesidades */
+    max-height: 450px; /* Ajusta según tus necesidades */
     width: calc(100% - 350px); /* Restar el ancho de la imagen */
     margin: .4rem 1rem;
     flex-grow: 0;
     padding: 20px;
     text-align: justify;
+}
+.mini-contenedor{
+        margin-top: 10px;
 }
