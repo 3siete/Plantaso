@@ -5,7 +5,8 @@
     width: 95vw;
     margin: auto;
     display: flex;
-    flex-direction: row; /* Cambio importante aquí */
+    flex-direction: row;
+    /* Cambio importante aquí */
     justify-content: flex-start;
     align-items: center;
     background: #82A065;
@@ -19,17 +20,19 @@
     height: 75vh;
     border-radius: 30px;
     display: flex;
-    width: 100%; /* Para que ocupe todo el espacio disponible dentro de .padre */
+    width: 100%;
+    /* Para que ocupe todo el espacio disponible dentro de .padre */
     flex-grow: 1;
     background-color: #99C66F;
     margin-left: 20px;
     margin-right: 20px;
     align-items: center;
-    
+
 }
 
 .img {
-    width: 300px; /* Ajusta según tus necesidades */
+    width: 300px;
+    /* Ajusta según tus necesidades */
     height: 90%;
     object-fit: cover;
     margin-left: 20px;
@@ -38,13 +41,19 @@
 
 .sub-contenedor {
     overflow-y: scroll;
-    max-height: 450px; /* Ajusta según tus necesidades */
-    width: calc(100% - 350px); /* Restar el ancho de la imagen */
+    max-height: 450px;
+    /* Ajusta según tus necesidades */
+    width: calc(100% - 350px);
+    /* Restar el ancho de la imagen */
     margin: .4rem 1rem;
     flex-grow: 0;
     padding: 20px;
     text-align: justify;
 }
-.mini-contenedor{
-        margin-top: 10px;
+
+.mini-contenedor {
+    background-color: rgba(255, 255, 255, .3);
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
 }
