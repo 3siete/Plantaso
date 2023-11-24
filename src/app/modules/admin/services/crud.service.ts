@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { Article } from 'src/app/models/articles.model';
 import { CardPost } from 'src/app/models/card-post';
 
 @Injectable({
@@ -8,7 +9,10 @@ import { CardPost } from 'src/app/models/card-post';
 })
 export class CrudService {
 
-  constructor(private ads: AngularFirestore) { }
+  constructor(
+    private afs: AngularFirestore,
+    private articlesCollection: AngularFirestoreCollection<Article>) {
+  }
 
   //READ
   getCardPost(): Observable<CardPost[]>{
