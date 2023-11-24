@@ -22,11 +22,13 @@ export class NavbarComponent implements AfterViewInit {
   constructor(
     private el: ElementRef,
     private authService: AuthService) {
-
     //Se suscribe para saber si esta logeado o no
     this.authService.userData.subscribe(user => {
       this.userAuth = !!user
     })
+  }
+  signOut(){
+    this.authService.signOut();
   }
 
   // Método del ciclo de vida de Angular que se ejecuta después de que la vista del componente ha sido inicializada
