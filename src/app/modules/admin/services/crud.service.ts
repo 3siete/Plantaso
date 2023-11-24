@@ -17,6 +17,13 @@ export class CrudService {
 
   //READ
   getCardPost(): Observable<CardPost[]>{
-    
+    return this.articlesCollection.valueChanges({ idField: 'id' }).pipe(
+      map(articles => articles.map(article => this.mapToCardPost(article))),
+      catchError((error) => {
+        console.error('Error al obtener los artículos (observable):', error);
+        return throwError(error);
+      })
+    );
+  }
   }
 }
