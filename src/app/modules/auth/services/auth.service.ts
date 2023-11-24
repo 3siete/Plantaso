@@ -65,10 +65,10 @@ export class AuthService {
   }
   
   signOut(): void {
-    this.afAuth.signOut() 
-    .then((res) => {localStorage.removeItem('user');
-    this.router.navigate(['/iniciarsesion'])
-  })
+    this.afAuth.signOut().then(() => {
+      this.userData.next(null);
+      this.router.navigate(['/iniciarsesion']);
+    });
   }
 
 }
