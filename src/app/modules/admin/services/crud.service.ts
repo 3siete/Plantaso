@@ -12,6 +12,7 @@ export class CrudService {
   constructor(
     private afs: AngularFirestore,
     private articlesCollection: AngularFirestoreCollection<Article>) {
+      this.articlesCollection = afs.collection<Article>('articles');
   }
 
   //READ
