@@ -38,10 +38,13 @@ export class AuthService {
       });
   }
 
-  register({email, password}: any){
-    return this.afAuth.createUserWithEmailAndPassword(email, password)
-    .then((res) => {this.SetUserData(res.user)})
-    .catch((error) => {console.error(error)})
+  register({ email, password }: any) {
+    return this.afAuth
+      .createUserWithEmailAndPassword(email, password)
+      .catch((error) => {
+        console.error(error);
+        throw error;
+      });
   }
 
   SetUserData(user: any) {
