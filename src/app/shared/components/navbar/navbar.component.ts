@@ -1,5 +1,6 @@
 // Importando módulos necesarios de Angular
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 // Decorador @Component que define las propiedades del componente
 @Component({
@@ -9,12 +10,20 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 })
 // Clase del componente Navbar
 export class NavbarComponent implements AfterViewInit {
+
   // Propiedades privadas para almacenar referencias al icono del menú y a la barra de navegación
   private menuIcon?: HTMLElement;
   private navbar?: HTMLElement;
 
+  //
+  
+
   // Constructor del componente, inyectando la referencia al elemento del componente
-  constructor(private el: ElementRef) {}
+  constructor(
+    private el: ElementRef,
+    private authService: AuthService) {
+     
+    }
 
   // Método del ciclo de vida de Angular que se ejecuta después de que la vista del componente ha sido inicializada
   ngAfterViewInit(): void {
