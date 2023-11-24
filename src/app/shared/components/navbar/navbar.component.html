@@ -19,7 +19,7 @@
     </ul>
 
     <!-- Contenedor de las opciones de usuario y el icono del menú -->
-    <div class="main">
+    <div class="main" *ngIf="!userAuth">
         <!-- Opción para iniciar sesión -->
         <a href="iniciarsesion" class="user">
             Iniciar Sesión
@@ -29,6 +29,8 @@
         <!-- Icono del menú (generalmente utilizado para dispositivos móviles) -->
         <div class="fa-solid fa-bars" id="menu-icon">
         </div>
+    </div>
+    <div class="main" *ngIf="userAuth">
     </div>
 
 </div>
