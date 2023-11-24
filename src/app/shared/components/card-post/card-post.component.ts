@@ -13,7 +13,7 @@ export class CardPostComponent {
     this.cardPostData = {
       title: '',
       subtitle: '',
-      imgURL: '',
+      imgurl: '',
       description: '',
       alt: '',
     }
