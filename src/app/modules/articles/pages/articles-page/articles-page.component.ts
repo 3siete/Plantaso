@@ -13,7 +13,7 @@ export class ArticlesPageComponent {
   constructor(private crudService: CrudService) {}
 
   ngOnInit(): void {
-    this.crudService.getCardPost().subscribe(
+    this.crudService.getCardPosts().subscribe(
       (cardPosts: CardPost[]) => {
         console.log('Datos recibidos:', cardPosts);
         this.cardPosts = cardPosts;
