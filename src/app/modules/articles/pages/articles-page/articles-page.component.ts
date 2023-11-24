@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./articles-page.component.css']
 })
 export class ArticlesPageComponent {
+  cardPosts: CardPost[] = [];
 
+  constructor(private crudService: CrudService) {}
+
+  ngOnInit(): void {
+   
+  }
 }
