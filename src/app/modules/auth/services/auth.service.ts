@@ -47,13 +47,19 @@ export class AuthService {
       });
   }
 
-  SetUserData(user: any) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc( `users/${ user.uid }` );
+  SetUserData(user: any, formData: any) {
+    if (!user) {
+      console.error("User is undefined or null.");
+      return;
+    }
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+  
+    // Verificar que los campos necesarios no sean undefined
     const userData: User = {
       uid: user.uid,
-      email: user.email,
-      name: user.name,
-      lastname: user.lastname,
+      email: formData.email, // Usar el email del formulario, no del objeto user
+      name: formData.name,
+      lastname: formData.lastname,
     };
     return userRef.set(userData, { merge: true });
   }
