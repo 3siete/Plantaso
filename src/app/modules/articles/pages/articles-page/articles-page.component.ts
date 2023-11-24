@@ -22,6 +22,5 @@ export class ArticlesPageComponent {
         console.error('Error al obtener las CardPosts en la página de artículos:', error);
       }
     );
-    
   }
 }
