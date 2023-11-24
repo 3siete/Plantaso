@@ -28,16 +28,14 @@ export class AuthService {
   }
 
   login({email, password}: any) {
-    return this.afAuth.signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.SetUserData(result.user);
-        this.afAuth.authState.subscribe((user) => {
-          if (user) {
-            this.router.navigate(['/inicio']);
-          }
-        });
-      })
-      .catch((error) => {console.error(error)})
+    return this.afAuth
+    .signInWithEmailAndPassword(email, password)
+    .then((result) => {
+          this.router.navigate(['/inicio']);
+        })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   register({email, password}: any){
