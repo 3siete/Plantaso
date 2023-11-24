@@ -16,14 +16,18 @@ export class NavbarComponent implements AfterViewInit {
   private navbar?: HTMLElement;
 
   //
-  
+  userAuth: boolean = false
 
   // Constructor del componente, inyectando la referencia al elemento del componente
   constructor(
     private el: ElementRef,
     private authService: AuthService) {
-     
-    }
+
+    //Se suscribe para saber si esta logeado o no
+    this.authService.userData.subscribe(user => {
+      this.userAuth = !!user
+    })
+  }
 
   // Método del ciclo de vida de Angular que se ejecuta después de que la vista del componente ha sido inicializada
   ngAfterViewInit(): void {
