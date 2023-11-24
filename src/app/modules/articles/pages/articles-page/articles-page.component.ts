@@ -13,6 +13,15 @@ export class ArticlesPageComponent {
   constructor(private crudService: CrudService) {}
 
   ngOnInit(): void {
-   
+    this.crudService.getCardPost().subscribe(
+      (cardPosts: CardPost[]) => {
+        console.log('Datos recibidos:', cardPosts);
+        this.cardPosts = cardPosts;
+      },
+      error => {
+        console.error('Error al obtener las CardPosts en la página de artículos:', error);
+      }
+    );
+    
   }
 }
