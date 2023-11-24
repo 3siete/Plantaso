@@ -36,7 +36,7 @@ export class RegisterComponent {
   onSubmit(){
     const { name, lastname, email, password } = this.registerForm.value;
     
-    this.authService.register(value)
+    this.authService.register({email, password})
     .then(res => {
       console.log(res)
       this.router.navigate(['/inicio'])
