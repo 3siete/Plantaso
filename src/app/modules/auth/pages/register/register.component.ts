@@ -37,8 +37,8 @@ export class RegisterComponent {
     const { name, lastname, email, password } = this.registerForm.value;
     
     this.authService.register({email, password})
-    .then(res => {
-      console.log(res)
+    .then((res) => {
+      this.authService.SetUserData(res.user, {name, lastname, email});
       this.router.navigate(['/inicio'])
     })
     .catch(error => {console.error(error)})
