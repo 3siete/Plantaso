@@ -25,5 +25,17 @@ export class CrudService {
       })
     );
   }
+  private mapToCardPost(article: Article): CardPost {
+    console.log('Mapeando artículo:', article);
+    console.log('URL antes de devolverla:', article.imgurl);
+  
+    return {
+      title: article.title,
+      subtitle: article.subtitle,
+      description: article.description,
+      imgurl: article.imgurl,
+      alt: article.alt,
+    };
+  }
 }
 
