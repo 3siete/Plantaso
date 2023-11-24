@@ -34,7 +34,7 @@ export class RegisterComponent {
   }
   
   onSubmit(){
-    const value = this.registerForm.value;
+    const { name, lastname, email, password } = this.registerForm.value;
     
     this.authService.register(value)
     .then(res => {

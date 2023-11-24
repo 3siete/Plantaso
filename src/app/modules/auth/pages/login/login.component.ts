@@ -16,8 +16,9 @@ export class LoginComponent {
     private authService:AuthService,
     private mensaje: MessageService,
     public router: Router){}
+  
   loginForm!:FormGroup;
-
+  
   ngOnInit(): void{
     this.loginForm = this.fb.group({
       email: ['', [Validators.required]],
