@@ -10,6 +10,8 @@
 }
 
 
+
+
 /* Estilos para las imágenes (.img) */
 .img {
     object-fit: fill;
@@ -181,7 +183,7 @@ h3 {
     left: 30%;
     top: 5%;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 35px;
 }
 .img-promo{
