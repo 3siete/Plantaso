@@ -1,0 +1,127 @@
+.padre {
+    max-height: 90vh;
+    max-width: 95vw;
+    height: 88vh;
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    /* Cambio importante aquí */
+    justify-content: flex-start;
+    align-items: center;
+    background: #82A065;
+    border-radius: 50px;
+    border: solid 10px #99C66F;
+    box-shadow: -10px 10px 50px;
+    margin-top: 5%;
+}
+
+.contenedor {
+    height: 75vh;
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    /* Para que ocupe todo el espacio disponible dentro de .padre */
+    flex-grow: 1;
+    background-color: #99C66F;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+
+}
+img {
+    width: 300px;
+    /* Ajusta según tus necesidades */
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+.rating span {
+    font-weight: bold;
+}
+
+.price {
+    font-size: 24px;
+    color: #000;
+}
+
+.price span {
+    font-size: 16px;
+}
+
+.cont {
+    overflow-y: scroll;
+    max-height: 450px;
+    /* Ajusta según tus necesidades */
+    width: calc(100% - 250px);
+    /* Restar el ancho de la imagen */
+    margin: .4rem 1rem;
+    flex-grow: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info {
+    list-style: none;
+    padding: 0;
+
+}
+
+.product-info li {
+    margin-bottom: 5px;
+    list-style: disc;
+}
+
+.product-container {
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 300px;
+}
+
+.shipping-info {
+    margin-bottom: 16px;
+}
+
+.shipping-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.calculate-shipping {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.stock-info {
+    margin-bottom: 16px;
+}
+
+.quantity-selector {
+    margin-top: 8px;
+}
+
+.actions button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-now {
+    background-color: #007bff;
+    color: white;
+}
+
+.add-to-cart {
+    background-color: #6c757d;
+    color: white;
+}
