@@ -29,6 +29,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
    //primeng
     DialogModule
+  ],
+  exports:[
+    
   ]
 })
 export class ArticlesModule { }
