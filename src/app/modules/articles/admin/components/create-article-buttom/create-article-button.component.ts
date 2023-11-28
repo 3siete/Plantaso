@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-article-button.component.css']
 })
 export class CreateArticleButtomComponent {
+  visible: boolean = false;
 
+  showDialog() {
+    this.visible = true;
+}
 }
