@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CreateArticleButtomComponent {
   visible: boolean = false;
 
-  constructor(){}
+  constructor(private fb:FormBuilder){}
   showDialog() {
     this.visible = true;
 }
