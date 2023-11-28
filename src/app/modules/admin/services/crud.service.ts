@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
-import { Observable, from, throwError } from 'rxjs';
-import { catchError, filter, map, switchMap, tap } from 'rxjs/operators'; // mapea valores -> similar a la función de un arreglo
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, switchMap, tap } from 'rxjs/operators'; // mapea valores -> similar a la función de un arreglo
 import { Article } from 'src/app/models/articles.model';
 import { CardPost } from 'src/app/models/card-post';
 
