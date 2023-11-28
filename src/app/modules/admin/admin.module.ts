@@ -26,6 +26,10 @@ import { DialogModule } from 'primeng/dialog';
     //primeng
     DialogModule
   ],
-  exports: []
+  exports: [
+    CreateComponent,
+    UpdateComponent,
+    DeleteComponent
+  ]
 })
 export class AdminModule { }
