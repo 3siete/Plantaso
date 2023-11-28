@@ -31,7 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DialogModule
   ],
   exports:[
-    
+    CreateArticleButtomComponent
   ]
 })
 export class ArticlesModule { }
