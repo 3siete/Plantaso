@@ -40,6 +40,13 @@ onSubmit(){
   console.log(value);
   this.visible=false
   this.crudService.createArticle(value)
-  
+  .subscribe(
+    () => {
+      alert('Ha agregado un nuevo producto con éxito :)');
+    },
+    (error) => {
+      alert('Hubo un error al cargar nuevo producto :( \n' + error);
+    }
+  );
 }
 }
