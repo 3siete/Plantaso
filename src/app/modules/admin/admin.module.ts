@@ -6,6 +6,9 @@ import { CreateComponent } from './components/articles-components/create/create.
 import { UpdateComponent } from './components/articles-components/update/update.component';
 import { DeleteComponent } from './components/articles-components/delete/delete.component';
 
+//primeng
+import { DialogModule } from 'primeng/dialog';
+
 
 
 @NgModule({
@@ -16,8 +19,12 @@ import { DeleteComponent } from './components/articles-components/delete/delete.
   ],
   imports: [
     CommonModule,
+    //firebase
     AngularFireModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
+    //primeng
+    DialogModule
   ]
 })
 export class AdminModule { }
