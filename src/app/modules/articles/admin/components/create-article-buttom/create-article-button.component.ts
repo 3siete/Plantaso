@@ -26,9 +26,11 @@ export class CreateArticleButtomComponent {
       pests: ['', [Validators.required]],
       insecticides: ['', [Validators.required]],
     });
-
   }
+
   showDialog() {
     this.visible = true;
 }
+
+onSubmit(){}
 }
