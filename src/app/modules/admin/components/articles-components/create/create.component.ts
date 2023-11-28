@@ -30,7 +30,9 @@ export class CreateComponent {
     });
   }
   onSubmit(){
-    
+    const value = this.createForm.value;
+    console.log(value);
+    this.visible=false
   }
   
   showDialog() {
