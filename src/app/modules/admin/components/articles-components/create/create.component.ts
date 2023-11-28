@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -8,6 +8,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CreateComponent {
   visible: boolean = false;
+  
+  createForm!: FormGroup;
 
 
   constructor(private fb:FormBuilder,){}
