@@ -37,7 +37,9 @@ export class CreateArticleButtomComponent {
 
 onSubmit(){
   const value = this.createForm.value;
-    console.log(value);
-    this.visible=false
+  console.log(value);
+  this.visible=false
+  this.crudService.createArticle(value)
+  
 }
 }
