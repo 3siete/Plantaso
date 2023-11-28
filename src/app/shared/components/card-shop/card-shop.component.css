@@ -2,7 +2,7 @@
 .card {
     padding: .8em;
     /* Relleno interno de la tarjeta */
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.666);
     /* Color de fondo de la tarjeta */
     position: relative;
     /* Posicionamiento relativo */
