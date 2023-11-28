@@ -29,7 +29,9 @@ export class CreateComponent {
       insecticides: ['', [Validators.required]],
     });
   }
-  
+  onSubmit(){
+    
+  }
   
   showDialog() {
       this.visible = true;
