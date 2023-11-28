@@ -11,6 +11,7 @@ import { CreateArticleButtomComponent } from './admin/components/create-article-
 //primeng
 
 import { DialogModule } from 'primeng/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +22,8 @@ import { DialogModule } from 'primeng/dialog';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     ArticlesRoutingModule,
     SharedModule,
 
