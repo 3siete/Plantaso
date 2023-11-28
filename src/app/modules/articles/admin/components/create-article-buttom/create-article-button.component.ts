@@ -7,7 +7,7 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
   templateUrl: './create-article-button.component.html',
   styleUrls: ['./create-article-button.component.css']
 })
-export class CreateArticleButtomComponent {
+export class CreateArticleButtonComponent {
   visible: boolean = false;
 
   createForm!: FormGroup;
