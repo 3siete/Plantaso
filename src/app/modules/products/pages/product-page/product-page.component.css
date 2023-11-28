@@ -59,7 +59,7 @@ img {
     /* Ajusta según tus necesidades */
     width: calc(100% - 320px);
     /* Restar el ancho de la imagen */
-    margin: .4rem 1rem;
+    margin: .4rem 1rem .4rem .1rem;
     flex-grow: 0;
     padding: 20px;
     text-align: left;
@@ -80,6 +80,7 @@ img {
 }
 
 .product-container {
+    margin: auto;
     font-family: 'Arial', sans-serif;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
