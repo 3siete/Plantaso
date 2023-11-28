@@ -8,6 +8,11 @@ import { ArticlePageComponent } from './pages/article-page/article-page.componen
 import { CreateArticleButtomComponent } from './admin/components/create-article-buttom/create-article-button.component';
 
 
+//primeng
+
+import { DialogModule } from 'primeng/dialog';
+
+
 @NgModule({
   declarations: [
     ArticlesPageComponent,
@@ -17,7 +22,10 @@ import { CreateArticleButtomComponent } from './admin/components/create-article-
   imports: [
     CommonModule,
     ArticlesRoutingModule,
-    SharedModule
+    SharedModule,
+
+   //primeng
+    DialogModule
   ]
 })
 export class ArticlesModule { }
