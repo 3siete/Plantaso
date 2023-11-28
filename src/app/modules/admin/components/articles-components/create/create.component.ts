@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -9,7 +10,7 @@ export class CreateComponent {
   visible: boolean = false;
 
 
-  constructor(){}
+  constructor(private fb:FormBuilder){}
   
   
   showDialog() {
