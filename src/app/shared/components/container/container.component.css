@@ -9,10 +9,12 @@
     background: #82A065;
     border-radius: 50px;
     border: solid 10px #99C66F;
+    align-items: center;
     box-shadow: -10px 10px 50px;
 }
 
 .subcontainer{
+    height: 90%;
     overflow-y: scroll;
     width: 100%;
     margin: .4rem 1rem;

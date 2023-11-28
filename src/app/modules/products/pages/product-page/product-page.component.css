@@ -54,12 +54,15 @@ img {
     overflow-y: scroll;
     max-height: 450px;
     /* Ajusta según tus necesidades */
-    width: calc(100% - 250px);
+    width: calc(100% - 320px);
     /* Restar el ancho de la imagen */
     margin: .4rem 1rem;
     flex-grow: 0;
     padding: 20px;
     text-align: left;
+    flex-direction: row;
+    /* Cambio importante aquí */
+    justify-content: flex-start;
 }
 
 .product-info {
