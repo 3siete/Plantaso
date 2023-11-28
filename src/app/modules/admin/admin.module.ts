@@ -8,6 +8,7 @@ import { DeleteComponent } from './components/articles-components/delete/delete.
 
 //primeng
 import { DialogModule } from 'primeng/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,6 +20,9 @@ import { DialogModule } from 'primeng/dialog';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+
     //firebase
     AngularFireModule,
     AngularFirestoreModule,
