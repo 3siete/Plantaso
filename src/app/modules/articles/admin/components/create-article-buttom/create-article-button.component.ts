@@ -10,6 +10,10 @@ export class CreateArticleButtomComponent {
   visible: boolean = false;
 
   constructor(private fb:FormBuilder){}
+
+  ngOnInit():void{
+
+  }
   showDialog() {
     this.visible = true;
 }
