@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { CrudArticlesService } from '../../services/crud-articles.service';
 
 @Component({
@@ -8,5 +8,10 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
   styleUrls: ['./create-article-button.component.css']
 })
 export class CreateArticleButtonComponent {
+
+  createForm!:FormGroup;
+
+
+
   constructor(private fb:FormBuilder, private crudService:CrudArticlesService){}
 }
