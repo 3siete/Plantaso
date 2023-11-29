@@ -8,15 +8,13 @@ import { CardPost } from 'src/app/models/card-post';
   providedIn: 'root'
 })
 export class CrudArticlesService {
-  
   private articlesCollection: AngularFirestoreCollection<Article>;
 
   constructor(private afs: AngularFirestore) {
-    this.articlesCollection = this.afs.collection<Article>('articles');
+    this.articlesCollection = afs.collection<Article>('articles');
   }
 
   //CREATE
-
   createArticle(article: Article): Observable<void> {
     const idArticle = this.afs.createId();
     article.id = idArticle;
@@ -32,6 +30,7 @@ export class CrudArticlesService {
       })
     );
   }
+
 
 
   //REED
@@ -57,6 +56,8 @@ export class CrudArticlesService {
       alt: article.alt,
     };
   }
+
+  
 
 }
 

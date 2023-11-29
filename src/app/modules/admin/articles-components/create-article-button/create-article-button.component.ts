@@ -21,7 +21,7 @@ export class CreateArticleButtonComponent {
 
   ngOnInit():void{
     this.createForm = this.fb.group({
-      imgURL: ['', [Validators.required,]],
+      imgurl: ['', [Validators.required,]],
       alt: ['', [Validators.required]],
       title: ['', [Validators.required]],
       subtitle: ['', [Validators.required]],
