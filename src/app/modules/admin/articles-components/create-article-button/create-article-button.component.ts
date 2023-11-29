@@ -11,9 +11,11 @@ export class CreateArticleButtonComponent {
 
   createForm!:FormGroup;
 
+  visible: boolean = false;
+  
   showDialog() {
-    this.visible = true;
-}
+    this.visible = true;  
+  }
 
   constructor(private fb:FormBuilder, private crudService:CrudArticlesService){}
 }
