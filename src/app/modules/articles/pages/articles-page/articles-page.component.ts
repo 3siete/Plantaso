@@ -9,7 +9,7 @@ import { CardPost } from 'src/app/models/card-post';
 export class ArticlesPageComponent {
 
   cardPosts: CardPost[] = [];
-/*
+
   constructor(private crudService: CrudService) {}
 
   ngOnInit(): void {
@@ -23,5 +23,5 @@ export class ArticlesPageComponent {
       }
     );
   }
-*/
+
 }
