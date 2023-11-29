@@ -48,6 +48,5 @@ export class CreateArticleButtonComponent {
         console.error('error al añadir un articulo '+error)
       }
     )
-  
   }
 }
