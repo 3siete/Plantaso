@@ -7,9 +7,9 @@ import { CardPost } from 'src/app/models/card-post';
   styleUrls: ['./articles-page.component.css']
 })
 export class ArticlesPageComponent {
-/*
-  cardPosts: CardPost[] = [];
 
+  cardPosts: CardPost[] = [];
+/*
   constructor(private crudService: CrudService) {}
 
   ngOnInit(): void {
