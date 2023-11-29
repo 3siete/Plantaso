@@ -14,9 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    CreateComponent,
-    UpdateComponent,
-    DeleteComponent
+    
   ],
   imports: [
     CommonModule,
@@ -31,9 +29,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DialogModule
   ],
   exports: [
-    CreateComponent,
-    UpdateComponent,
-    DeleteComponent
   ]
 })
 export class AdminModule { }
