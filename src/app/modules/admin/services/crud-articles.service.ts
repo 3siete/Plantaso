@@ -34,6 +34,25 @@ export class CrudArticlesService {
 
 
   //REED
+
+  getArticle(articleId: string): Observable<Article | null> {
+    const articleDoc = this.articlesCollection.doc<Article>(articleId);
+
+    return articleDoc.get().pipe(
+      map((doc) => {
+        if (doc.exists) {
+          return { id: doc.id, ...(doc.data() as Article) };
+        } else {
+          return null; // Devuelve null si no se encuentra el artículo
+        }
+      }),
+      catchError((error) => {
+        console.error('Error al obtener el artículo por ID', error);
+        return throwError(error);
+      })
+    );
+  }
+
   getCardPosts(): Observable<CardPost[]> {
     return this.articlesCollection.valueChanges({ idField: 'id' }).pipe(
       map(articles => articles.map(article => this.mapToCardPost(article))),
@@ -56,6 +75,8 @@ export class CrudArticlesService {
       alt: article.alt,
     };
   }
+
+  
 
   
 
