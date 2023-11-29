@@ -1,0 +1,136 @@
+.padre {
+    max-height: 90vh;
+    max-width: 95vw;
+    height: 88vh;
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    /* Cambio importante aquí */
+    justify-content: flex-start;
+    align-items: center;
+    background: #82A065;
+    border-radius: 50px;
+    border: solid 10px #99C66F;
+    box-shadow: -10px 10px 50px;
+    margin-top: 5%;
+}
+
+
+.blanco{
+    display: flex;
+    height: 400px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.666);
+    text-align: left;
+    flex-direction: row;
+    /* Cambio importante aquí */
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    border-radius: 15px;
+}
+img {
+    height: 400px;
+    width: 300px;
+    /* Ajusta según tus necesidades */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.rating span {
+    font-weight: bold;
+}
+
+.price {
+    margin: 10px;
+    font-size: 24px;
+    color: #676767;
+}
+
+.price span {
+    font-size: 16px;
+}
+
+.cont {
+    overflow-y: scroll;
+    height: 400px;
+    /* Ajusta según tus necesidades */
+    width: calc(100% - 320px);
+    /* Restar el ancho de la imagen */
+    margin: .4rem 1rem .4rem .1rem;
+    flex-grow: 0;
+    padding: 20px;
+    text-align: left;
+    flex-direction: row;
+    /* Cambio importante aquí */
+    justify-content: flex-start;
+}
+
+.product-info {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.product-info li {
+    margin-bottom: 10px;
+    list-style: disc;
+}
+
+.product-container {
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 300px;
+}
+
+.shipping-info {
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.shipping-info a {
+    color: #99C66F;
+    text-decoration: none;
+}
+
+.calculate-shipping {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.stock-info {
+    margin-bottom: 16px;
+    font-size: 13.3px;
+}
+
+.quantity-selector {
+    margin-top: 8px;
+}
+
+.actions button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-now {
+    background-color: #99C66F;
+    color: white;
+}
+
+.add-to-cart {
+    background-color: #6c757d;
+    color: white;
+}

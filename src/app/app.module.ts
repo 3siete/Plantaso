@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
@@ -33,7 +34,7 @@ import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
