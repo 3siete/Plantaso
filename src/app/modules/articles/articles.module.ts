@@ -6,12 +6,14 @@ import { ArticlesPageComponent } from './pages/articles-page/articles-page.compo
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
 import { CreateArticleButtonComponent } from './admin/components/create-article-buttom/create-article-button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { DialogModule } from 'primeng/dialog';
 
 
 //primeng
 
-import { DialogModule } from 'primeng/dialog';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,14 +26,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+
     ArticlesRoutingModule,
     SharedModule,
 
-   //primeng
-    DialogModule
+
+        //firebase
+        AngularFireModule,
+        AngularFirestoreModule,
+    
+        //primeng
+        DialogModule
+    
   ],
   exports:[
-    CreateArticleButtonComponent
   ]
 })
 export class ArticlesModule { }

@@ -9,8 +9,6 @@ import { ContainerComponent } from './components/container/container.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { SpeedDialModule } from 'primeng/speeddial';
-import { AdminModule } from '../modules/admin/admin.module';
-import { ArticlesModule } from '../modules/articles/articles.module';
 
 @NgModule({
   declarations: [
@@ -25,10 +23,7 @@ import { ArticlesModule } from '../modules/articles/articles.module';
   ],
   imports: [
     CommonModule,
-    SpeedDialModule,
-    AdminModule,
-
-    ArticlesModule,
+    SpeedDialModule
   ],
   exports: [
     FooterComponent,

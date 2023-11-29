@@ -9,8 +9,10 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
 })
 export class CreateArticleButtonComponent {
   visible: boolean = false;
-
+  
   createForm!: FormGroup;
+
+
   constructor(
     private fb:FormBuilder,
     private crudService: CrudArticlesService){}
@@ -30,23 +32,23 @@ export class CreateArticleButtonComponent {
       insecticides: ['', [Validators.required]],
     });
   }
-
+  onSubmit(): void {
+    const value = this.createForm.value;
+    console.log(value);
+    this.visible=false
+    this.crudService.createArticle(value)
+      .subscribe(
+        () => {
+          alert('Ha agregado un nuevo producto con éxito :)');
+        },
+        (error) => {
+          alert('Hubo un error al cargar nuevo producto :( \n' + error);
+        }
+      );
+  }
+  
   showDialog() {
-    this.visible = true;
-}
+      this.visible = true;
+  }
 
-onSubmit(){
-  const value = this.createForm.value;
-  console.log(value);
-  this.visible=false
-  this.crudService.createArticle(value)
-  .subscribe(
-    () => {
-      alert('Ha agregado un nuevo producto con éxito :)');
-    },
-    (error) => {
-      alert('Hubo un error al cargar nuevo producto :( \n' + error);
-    }
-  );
-}
 }
