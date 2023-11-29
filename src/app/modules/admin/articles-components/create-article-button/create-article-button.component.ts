@@ -34,4 +34,8 @@ export class CreateArticleButtonComponent {
       insecticides: ['', [Validators.required]],
     });
   }
+
+  onSubmit(){
+    
+  }
 }
