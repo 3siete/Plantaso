@@ -36,6 +36,10 @@ export class CreateArticleButtonComponent {
   }
 
   onSubmit(){
+    const value = this.createForm.value;
+    console.log(value);
+    this.visible=false
     
+  
   }
 }
