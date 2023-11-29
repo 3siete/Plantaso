@@ -11,7 +11,6 @@ import { CreateArticleButtonComponent } from './articles-components/create-artic
 
 @NgModule({
   declarations: [
-  
     CreateArticleButtonComponent
   ],
   imports: [
