@@ -10,11 +10,13 @@ import { DialogModule } from 'primeng/dialog';
 
 
 import { CreateArticleButtonComponent } from './articles-components/create-article-button/create-article-button.component';
+import { UpdateArticleButtonComponent } from './articles-components/update-article-button/update-article-button.component';
 
 
 @NgModule({
   declarations: [
-  CreateArticleButtonComponent
+  CreateArticleButtonComponent,
+  UpdateArticleButtonComponent
   ],
   imports: [
     CommonModule,
