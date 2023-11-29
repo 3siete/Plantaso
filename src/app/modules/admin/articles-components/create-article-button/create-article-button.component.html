@@ -1,0 +1,80 @@
+
+<i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Create"></i>
+
+<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="group">
+            <br>
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgurl"></textarea>
+                <label htmlFor="imgURL">URL de la imagen*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="alt" formControlName="alt"></textarea>
+                <label htmlFor="email">alt*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="title"></textarea>
+                <label htmlFor="email">TITULO*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="subtitle"></textarea>
+                <label htmlFor="email">SUBTITULO*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="description"></textarea>
+                <label htmlFor="email">DESCRICION*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="reproduction"></textarea>
+                <label htmlFor="email">REPRODUCCION*</label>
+            </span>
+        </div>
+
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="care"></textarea>
+                <label htmlFor="email">CUIDADOS*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="tips"></textarea>
+                <label htmlFor="email">CONSEJOS*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="characteristic"></textarea>
+                <label htmlFor="email">CARACTERISTICAS*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="pests"></textarea>
+                <label htmlFor="email">PESTES*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="insecticides"></textarea>
+                <label htmlFor="email">INSECTICIDAS*</label>
+            </span>
+        </div>
+
+
+        <div class="group">
+            <input type="submit" class="button" value="createForm" pButton pRipple>
+        </div>
+    </form>
+</p-dialog>

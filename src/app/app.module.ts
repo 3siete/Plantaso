@@ -38,6 +38,7 @@ import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    
 
 
     // provideFirebaseApp(() => initializeApp(environment.firebase)),

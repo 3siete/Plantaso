@@ -9,6 +9,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { SpeedDialModule } from 'primeng/speeddial';
+import { DialogModule } from 'primeng/dialog';
+import { AdminModule } from '../modules/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,13 @@ import { SpeedDialModule } from 'primeng/speeddial';
     CardShopComponent,
     
     ContainerComponent,
-    SidebarComponent
+    SidebarComponent,
+
 
   ],
   imports: [
     CommonModule,
-    SpeedDialModule
+    AdminModule
   ],
   exports: [
     FooterComponent,
