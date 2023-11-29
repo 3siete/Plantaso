@@ -35,19 +35,20 @@ export class CrudArticlesService {
 
   //REED
 
-  getArticle(articleId: string): Observable<Article | null> {
-    const articleDoc = this.articlesCollection.doc<Article>(articleId);
-
+  getArticleById(articleId: string): Observable<Article | null> {
+    const articleDoc = this.afs.collection('articles').doc(articleId);
+  
     return articleDoc.get().pipe(
-      map((doc) => {
-        if (doc.exists) {
-          return { id: doc.id, ...(doc.data() as Article) };
+      map((snapshot) => {
+        if (snapshot.exists) {
+          const data = snapshot.data() as Article;
+          return { ...data, id: articleId };
         } else {
-          return null; // Devuelve null si no se encuentra el artículo
+          return null; // Retorna null si no se encuentra el artículo
         }
       }),
       catchError((error) => {
-        console.error('Error al obtener el artículo por ID', error);
+        console.error('Error al obtener el artículo por ID:', error);
         return throwError(error);
       })
     );
