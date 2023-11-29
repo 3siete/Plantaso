@@ -26,6 +26,7 @@ import { CreateArticleButtonComponent } from './articles-components/create-artic
     DialogModule
   ],
   exports: [
+    CreateArticleButtonComponent
   ]
 })
 export class AdminModule { }
