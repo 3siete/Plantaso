@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection, DocumentData, DocumentReference } from '@angular/fire/compat/firestore';
 import { Observable, catchError, from, switchMap, throwError } from 'rxjs';
 import { Article } from 'src/app/models/articles.model';
 
@@ -14,21 +14,20 @@ export class CrudArticlesService {
 
 
 
-     //CREATE
-  createArticle(article: Article): Observable<void> {
-    const idArticle = this.afs.createId();
-    article.id = idArticle;
-
-    return from(this.articlesCollection.add(article)).pipe(
-      switchMap((docRef: DocumentReference<Article>) => {
-        // Actualizar el artículo con el ID asignado por Firestore
-        return from(docRef.set({ ...article, id: docRef.id }));
-      }),
-      catchError((error) => {
-        console.error('Error desconocido al crear el artículo', error);
-        return throwError(error);
-      })
-    );
-  }
+    createArticle(article: Article): Observable<void> {
+      const idArticle = this.afs.createId();
+      article.id = idArticle;
+    
+      return from(this.articlesCollection.add(article)).pipe(
+        switchMap((docRef: DocumentReference<DocumentData>) => {
+          // Actualizar el artículo con el ID asignado por Firestore
+          return from(docRef.set({ ...article, id: docRef.id }));
+        }),
+        catchError((error) => {
+          console.error('Error desconocido al crear el artículo', error);
+          return throwError(error);
+        })
+      );
+    }
 }
 
