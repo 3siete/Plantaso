@@ -13,6 +13,7 @@ import { CreateArticleButtonComponent } from './articles-components/create-artic
 import { UpdateArticleButtonComponent } from './articles-components/update-article-button/update-article-button.component';
 import { DeleteArticleButtonComponent } from './articles-components/delete-article-button/delete-article-button.component';
 import { CreateProductButtonComponent } from './products-components/create-product-button/create-product-button.component';
+import { UpdateProductButtonComponent } from './products-components/update-product-button/update-product-button.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CreateProductButtonComponent } from './products-components/create-produ
   CreateArticleButtonComponent,
   UpdateArticleButtonComponent,
   DeleteArticleButtonComponent,
-  CreateProductButtonComponent
+  CreateProductButtonComponent,
+  UpdateProductButtonComponent
   ],
   imports: [
     CommonModule,
