@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-article-button',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-article-button.component.css']
 })
 export class CreateArticleButtonComponent {
-  constructor(){}
+  constructor(private fb:FormBuilder){}
 }
