@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-article-button.component.css']
 })
 export class CreateArticleButtonComponent {
-
+  constructor(){}
 }
