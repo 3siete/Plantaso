@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
-//primeng
-import { DialogModule } from 'primeng/dialog';
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { SpeedDialModule } from 'primeng/speeddial';
+import { DialogModule } from 'primeng/dialog';
+
+
 import { CreateArticleButtonComponent } from './articles-components/create-article-button/create-article-button.component';
 
 
 @NgModule({
   declarations: [
-    CreateArticleButtonComponent
+  CreateArticleButtonComponent
   ],
   imports: [
     CommonModule,
+    SpeedDialModule,
+    DialogModule,
+
     ReactiveFormsModule,
     FormsModule,
 
-    //firebase
-    AngularFireModule,
-    AngularFirestoreModule,
 
-    //primeng
-    DialogModule
   ],
-  exports: [
+  exports:[
+    CreateArticleButtonComponent
   ]
+
 })
 export class AdminModule { }

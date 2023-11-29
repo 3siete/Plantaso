@@ -7,19 +7,15 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
 
 
-
-
 @NgModule({
   declarations: [
     ArticlesPageComponent,
-    ArticlePageComponent,
+    ArticlePageComponent
   ],
   imports: [
     CommonModule,
     ArticlesRoutingModule,
-    SharedModule,
-  ],
-  exports:[
+    SharedModule
   ]
 })
 export class ArticlesModule { }
