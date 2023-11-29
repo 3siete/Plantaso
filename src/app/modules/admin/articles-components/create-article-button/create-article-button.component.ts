@@ -18,4 +18,20 @@ export class CreateArticleButtonComponent {
   }
 
   constructor(private fb:FormBuilder, private crudService:CrudArticlesService){}
+
+  ngOnInit():void{
+    this.createForm = this.fb.group({
+      imgURL: ['', [Validators.required,]],
+      alt: ['', [Validators.required]],
+      title: ['', [Validators.required]],
+      subtitle: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      reproduction: ['', [Validators.required]],
+      care: ['', [Validators.required]],
+      tips: ['', [Validators.required]],
+      characteristic: ['', [Validators.required]],
+      pests: ['', [Validators.required]],
+      insecticides: ['', [Validators.required]],
+    });
+  }
 }
