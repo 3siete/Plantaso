@@ -39,7 +39,15 @@ export class CreateArticleButtonComponent {
     const value = this.createForm.value;
     console.log(value);
     this.visible=false
-    
+    this.crudService.createArticle(value)
+    .subscribe(
+      ()=>{
+        alert('Se añadió el articulo correctamente')
+      },
+      (error)=>{
+        console.error('error al añadir un articulo '+error)
+      }
+    )
   
   }
 }
