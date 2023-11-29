@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CardPost } from 'src/app/models/card-post';
+import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
 
 @Component({
   selector: 'app-articles-page',
@@ -10,7 +11,7 @@ export class ArticlesPageComponent {
 
   cardPosts: CardPost[] = [];
 
-  constructor(private crudService: CrudService) {}
+  constructor(private crudService: CrudArticlesService) {}
 
   ngOnInit(): void {
     this.crudService.getCardPosts().subscribe(
