@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentData, DocumentReference } from '@angular/fire/compat/firestore';
 import { Observable, catchError, from, map, switchMap, throwError } from 'rxjs';
 import { Article } from 'src/app/models/articles.model';
+import { CardPost } from 'src/app/models/card-post';
 
 @Injectable({
   providedIn: 'root'
