@@ -9,6 +9,7 @@ import { DeleteComponent } from './components/articles-components/delete/delete.
 //primeng
 import { DialogModule } from 'primeng/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateArticleButtonComponent } from './articles-components/create-article-buttom/create-article-button.component';
 
 
 
