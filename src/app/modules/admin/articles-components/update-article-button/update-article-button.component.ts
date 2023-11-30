@@ -46,4 +46,22 @@ export class UpdateArticleButtonComponent {
       }
     );
   }
+
+  onSubmit(): void {
+    if (this.updateForm.valid) {
+      this.isLoading = true;
+      const updatedArticle: Article = this.updateForm.value;
+      this.crudService.updateArticle(this.articleId, updatedArticle).subscribe(
+        () => {
+          console.log('Article updated successfully');
+          this.isLoading = false;
+          // Agrega aquí cualquier lógica adicional necesaria
+        },
+        error => {
+          console.error('Error updating article', error);
+          this.isLoading = false;
+        }
+      );
+    }
+  }
 }
