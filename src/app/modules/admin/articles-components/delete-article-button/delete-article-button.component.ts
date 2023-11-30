@@ -10,4 +10,14 @@ export class DeleteArticleButtonComponent {
   @Input() articleId!: string;
 
   constructor(private crudService:CrudArticlesService){}
+
+  confirmDelete(): void {
+    const confirmation = window.confirm('¿Estás seguro de que quieres eliminar este artículo?');
+    if (confirmation) {
+      this.crudService.deleteArticle(this.articleId).subscribe(
+        () => console.log('Artículo eliminado con éxito'),
+        error => console.error('Error al eliminar el artículo', error)
+      );
+    }
+  }
 }
