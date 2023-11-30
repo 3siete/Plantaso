@@ -9,7 +9,7 @@ import { CardPost } from 'src/app/models/card-post';
 export class CardPostComponent {
   @Input() cardPostData: CardPost;
 
-  constructor(){
+  constructor(private router: Router){
     this.cardPostData = {
       title: '',
       subtitle: '',
