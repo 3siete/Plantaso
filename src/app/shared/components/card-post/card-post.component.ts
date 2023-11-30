@@ -21,6 +21,20 @@ export class CardPostComponent {
     }
   }
   seeMore(): void {
-    this.redireccion.navigateToArticle}
+    this.redireccion.navigateToArticle
+    const slug = this.slugify(this.cardPostData.title);
+    
+  console.log('Slug antes de la navegación:', slug);
+    if (slug) {
+      this.router.navigate(['/articulo', slug]);
+    } else {
+      console.error('El slug no es válido:', slug);
+    }
+  }
+  
+
+  private slugify(text: string): string {
+    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+  }
 }
 

@@ -10,6 +10,19 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
 })
 export class ArticlesPageComponent {
 
+  cardPosts: CardPost[] = [];
+
+  ngOnInit(): void {
+    this.crudService.getCardPosts().subscribe(
+      (cardPosts: CardPost[]) => {
+        console.log('Datos recibidos:', cardPosts);
+        this.cardPosts = cardPosts;
+      },
+      error => {
+        console.error('Error al obtener las CardPosts en la página de artículos:', error);
+      }
+    );
+  }
   constructor(
     private router: Router,
     private route: ActivatedRoute,
