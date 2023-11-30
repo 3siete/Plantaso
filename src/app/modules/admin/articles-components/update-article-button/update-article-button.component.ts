@@ -30,5 +30,19 @@ export class UpdateArticleButtonComponent {
   }
   
 
-  loadArticleData(){}
+  loadArticleData(articleId: string): void {
+    this.isLoading = true;
+    this.crudService.getArticleById(articleId).subscribe(
+      (article: Article | null) => {
+        if (article) {
+          this.updateForm.patchValue(article);
+        }
+        this.isLoading = false;
+      },
+      error => {
+        console.error('Error loading article', error);
+        this.isLoading = false;
+      }
+    );
+  }
 }
