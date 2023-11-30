@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class DeleteArticleButtonComponent {
 
-  constructor(){}
+  constructor(private crudService:CrudArticlesService){}
 }
