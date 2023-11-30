@@ -9,7 +9,7 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
   styleUrls: ['./article-page.component.css']
 })
 export class ArticlePageComponent {
-  article: Article | null = null; // Inicialízalo como nulo
+  article: Article | null = null; // Inicialízalo como nulo// Asegúrate de tener un modelo de artículo importado y definido correctamente
 
   constructor(private route: ActivatedRoute, private articleService: CrudArticlesService) {}
 
