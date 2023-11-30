@@ -35,20 +35,25 @@ export class CrudArticlesService {
 
   //REED
 
-  getArticleById(articleId: string): Observable<Article | null> {
-    const articleDoc = this.afs.collection('articles').doc(articleId);
+  getArticleBySlug(slug: string): Observable<Article | null> {
+    // Asumiendo que 'slug' es un campo en tus documentos de 'articles'
+    const articlesCollection = this.afs.collection<Article>('articles', ref => ref.where('slug', '==', slug));
   
-    return articleDoc.get().pipe(
-      map((snapshot) => {
-        if (snapshot.exists) {
-          const data = snapshot.data() as Article;
-          return { ...data, id: articleId };
-        } else {
-          return null; // Retorna null si no se encuentra el artículo
-        }
+    return articlesCollection.get().pipe(
+      map(querySnapshot => {
+        let articleData = null;
+  
+        querySnapshot.forEach(doc => {
+          if (doc.exists) {
+            const data = doc.data();
+            articleData = { ...data, id: doc.id }; // Agrega el ID del documento
+          }
+        });
+  
+        return articleData; // Retorna el artículo encontrado o null
       }),
       catchError((error) => {
-        console.error('Error al obtener el artículo por ID:', error);
+        console.error('Error al obtener el artículo por slug:', error);
         return throwError(error);
       })
     );
