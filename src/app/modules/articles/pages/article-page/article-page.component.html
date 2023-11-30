@@ -1,7 +1,7 @@
 <div class="padre">
     <app-sidebar></app-sidebar>
     <div class="contenedor">
-        <img src="../../../../../assets/planta_rosario_cuidados_2437_600.jpg" alt="">
+        <img [src]= "article.imgurl" alt="{{ article.alt }}">
         <div class="sub-contenedor">
             <div class="mini-contenedor">
                 <h2 class="titulo">{{ article.title }}</h2>
