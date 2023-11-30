@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Article } from 'src/app/models/articles.model';
 
 @Component({
   selector: 'app-article-page',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./article-page.component.css']
 })
 export class ArticlePageComponent {
-  
+articleData:Article
 
 }
