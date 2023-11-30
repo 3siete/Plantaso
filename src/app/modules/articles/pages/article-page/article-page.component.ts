@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Article } from 'src/app/models/articles.model';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
   styleUrls: ['./article-page.component.css']
 })
 export class ArticlePageComponent {
-  article: any; // Ajusta el tipo según tu modelo de datos
+  article!: Article; // Ajusta el tipo según tu modelo de datos
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +29,7 @@ export class ArticlePageComponent {
       // Por ejemplo, puedes llamar a un servicio que haga una solicitud HTTP para obtener los datos del artículo
       this.articleService.getArticleBySlug(slug).subscribe(
         data => {
-          this.article = data;
+          this.article = data!;
         },
         error => {
           console.error('Error al cargar el artículo', error);
