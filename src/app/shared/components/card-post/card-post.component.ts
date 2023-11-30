@@ -18,5 +18,14 @@ export class CardPostComponent {
       alt: '',
     }
   }
-  seeMore(){}
+  seeMore(): void {
+    // Asegúrate de que el título se pueda usar en una URL (por ejemplo, convirtiéndolo en un slug)
+    const slug = this.slugify(this.cardPostData.title);
+    this.router.navigate(['/articulo', slug]);
+  }
+
+  private slugify(text: string): string {
+    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+  }
+}
 }
