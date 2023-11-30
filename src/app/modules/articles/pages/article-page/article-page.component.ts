@@ -9,16 +9,24 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
   styleUrls: ['./article-page.component.css']
 })
 export class ArticlePageComponent {
-  article!: Article; // Define tu modelo de artículo aquí
+  article: Article | null = null; // Inicialízalo como nulo
 
   constructor(private route: ActivatedRoute, private articleService: CrudArticlesService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('slug');
-      this.articleService.getArticleBySlug(slug!).subscribe(article => {
-        this.article = article!;
-      });
+      if (slug) {
+        this.articleService.getArticleBySlug(slug).subscribe(
+          article => {
+            this.article = article;
+          },
+          error => {
+            console.error('Error al obtener el artículo:', error);
+            // Puedes manejar el error según tus necesidades
+          }
+        );
+      }
     });
   }
 }
