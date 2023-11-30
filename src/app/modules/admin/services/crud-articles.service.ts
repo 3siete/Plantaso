@@ -79,6 +79,16 @@ export class CrudArticlesService {
 
 
 //UPDATE
-updateArticle(){}
+updateArticle(articleId: string, article: Article): Observable<void> {
+  const articleDoc = this.afs.doc<Article>(`articles/${articleId}`);
+  return from(articleDoc.update(article)).pipe(
+    catchError((error) => {
+      console.error('Error al actualizar el artículo', error);
+      return throwError(error);
+    })
+  );
+}
+
+
 }
 
