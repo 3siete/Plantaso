@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudArticlesService } from '../../services/crud-articles.service';
+import { Article } from 'src/app/models/articles.model';
 
 @Component({
   selector: 'app-update-article-button',
