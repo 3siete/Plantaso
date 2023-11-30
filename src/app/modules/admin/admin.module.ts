@@ -41,7 +41,9 @@ import { DeleteProductButtonComponent } from './products-components/delete-produ
 
   ],
   exports:[
+    //ARTICULOS
     CreateArticleButtonComponent,
+
   ]
 
 })
