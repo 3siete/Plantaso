@@ -19,6 +19,7 @@ import { DeleteProductButtonComponent } from './products-components/delete-produ
 
 @NgModule({
   declarations: [
+    //ARTICULOS
   CreateArticleButtonComponent,
   UpdateArticleButtonComponent,
   DeleteArticleButtonComponent,
@@ -37,7 +38,7 @@ import { DeleteProductButtonComponent } from './products-components/delete-produ
 
   ],
   exports:[
-    CreateArticleButtonComponent
+    CreateArticleButtonComponent,
   ]
 
 })
