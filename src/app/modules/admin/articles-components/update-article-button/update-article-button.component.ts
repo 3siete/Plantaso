@@ -28,6 +28,5 @@ export class UpdateArticleButtonComponent {
       insecticides: ['', [Validators.required]],
     });
   }
-  if(this.articleId){
-      }
+  
 }
