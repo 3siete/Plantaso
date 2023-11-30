@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
+import { ArticlesPageComponent } from 'src/app/modules/articles/pages/articles-page/articles-page.component';
 
 @Component({
   selector: 'app-card-post',
@@ -10,7 +11,7 @@ import { CardPost } from 'src/app/models/card-post';
 export class CardPostComponent {
   @Input() cardPostData: CardPost;
 
-  constructor(private router: Router){
+  constructor(private router: Router, private redireccion:ArticlesPageComponent){
     this.cardPostData = {
       title: '',
       subtitle: '',
@@ -20,19 +21,6 @@ export class CardPostComponent {
     }
   }
   seeMore(): void {
-    const slug = this.slugify(this.cardPostData.title);
-    
-  console.log('Slug antes de la navegación:', slug);
-    if (slug) {
-      this.router.navigate(['/articulo', slug]);
-    } else {
-      console.error('El slug no es válido:', slug);
-    }
-  }
-  
-
-  private slugify(text: string): string {
-    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-  }
+    this.redireccion.navigateToArticle}
 }
 
