@@ -35,24 +35,34 @@ export class CrudArticlesService {
 
   //REED
 
-  getArticleById(articleId: string): Observable<Article | null> {
-    const articleDoc = this.afs.collection('articles').doc(articleId);
-  
-    return articleDoc.get().pipe(
-      map((snapshot) => {
-        if (snapshot.exists) {
-          const data = snapshot.data() as Article;
-          return { ...data, id: articleId };
-        } else {
-          return null; // Retorna null si no se encuentra el artículo
-        }
-      }),
+  // Búsqueda por ID
+  getArticleById(id: string): Observable<Article | null> {
+    return this.afs.doc<Article>(`articles/${id}`).valueChanges().pipe(
+      map(article => article ? { ...article, id } : null),
       catchError((error) => {
         console.error('Error al obtener el artículo por ID:', error);
         return throwError(error);
       })
     );
   }
+
+  // Búsqueda por Slug
+  getArticleBySlug(slug: string): Observable<Article | null> {
+    return this.afs.collection<Article>('articles', ref => ref.where('slug', '==', slug))
+      .get()
+      .pipe(
+        map(querySnapshot => {
+          const articleDoc = querySnapshot.docs[0]; // Tomar el primer documento si existe
+          return articleDoc ? { ...(articleDoc.data() as Article), id: articleDoc.id } : null;
+        }),
+        catchError((error) => {
+          console.error('Error al obtener el artículo por slug:', error);
+          return throwError(error);
+        })
+      );
+  }
+
+  
 
   getCardPosts(): Observable<CardPost[]> {
     return this.articlesCollection.valueChanges({ idField: 'id' }).pipe(
@@ -77,9 +87,27 @@ export class CrudArticlesService {
     };
   }
 
-  
 
-  
+//UPDATE
+updateArticle(articleId: string, article: Article): Observable<void> {
+  return from(this.afs.doc<Article>(`articles/${articleId}`).update(article)).pipe(
+    catchError((error) => {
+      console.error('Error al actualizar el artículo completo', error);
+      return throwError(error);
+    })
+  );
+}
+
+//DELETE
+deleteArticle(articleId: string): Observable<void> {
+  return from(this.afs.doc<Article>(`articles/${articleId}`).delete()).pipe(
+    catchError((error) => {
+      console.error('Error al eliminar el artículo', error);
+      return throwError(error);
+    })
+  );
+}
+
 
 }
 
