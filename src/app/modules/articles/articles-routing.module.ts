@@ -6,7 +6,7 @@ import { ArticlePageComponent } from './pages/article-page/article-page.componen
 const routes: Routes = [
   //ruta secundaria
   { path: '', component: ArticlesPageComponent },
-  { path: 'articulos/:slug', component: ArticlePageComponent },
+  { path: 'articulo/:slug', component: ArticlePageComponent },
 
 ];
 

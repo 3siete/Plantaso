@@ -1,37 +1,37 @@
 <div class="padre">
     <app-sidebar></app-sidebar>
-    <div class="contenedor">
-        <img [src]= "article?.imgurl" alt="{{ article?.alt }}">
+    <div class="contenedor" *ngIf="article">
+        <img [src]= "article.imgurl" alt="{{ article.alt }}">
         <div class="sub-contenedor">
             <div class="mini-contenedor">
-                <h2 class="titulo">{{ article?.title }}</h2>
-                <p class="descripcion">{{ article?.description }}</p>
+                <h2 class="titulo">{{ article.title }}</h2>
+                <p class="descripcion">{{ article.description }}</p>
             </div>
             <div class="mini-contenedor">
                 <h3>Reproduccion</h3>
-                <p>{{ article?.reproduction  }}</p>
+                <p>{{ article.reproduction  }}</p>
             </div>
             <div class="mini-contenedor">
                 <h3>Cuidados</h3>
-                <p>{{ article?.care }}</p>
+                <p>{{ article.care }}</p>
             </div>
             <div class="mini-contenedor">
                 <h3>Consejos</h3>
-                <p>{{ article?.tips }}</p>
+                <p>{{ article.tips }}</p>
             </div>
             <div class="mini-contenedor">
                 <h3>Caracteristicas</h3>
                 <ul>
-                    {{ article?.characteristics }}
+                    {{ article.characteristics }}
                 </ul>
             </div>
             <div class="mini-contenedor">
                 <h3>Plagas</h3>
-                <p>{{ article?.pests}}</p>
+                <p>{{ article.pests}}</p>
             </div>
             <div class="mini-contenedor">
                 <h3>Insecticidas</h3>
-                <p>{{article?.insecticides}}
+                <p>{{article.insecticides}}
                 </p>
             </div>
         </div>

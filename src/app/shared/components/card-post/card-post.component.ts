@@ -21,6 +21,8 @@ export class CardPostComponent {
   }
   seeMore(): void {
     const slug = this.slugify(this.cardPostData.title);
+    
+  console.log('Slug antes de la navegación:', slug);
     if (slug) {
       this.router.navigate(['/articulo', slug]);
     } else {
