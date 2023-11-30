@@ -1,0 +1,119 @@
+ /* Estilos para la tarjeta */
+ .card {
+    border-radius: 25px;
+    /* Radio de borde */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    border: 3px solid #fff;
+    /* Borde sólido blanco */
+    position: relative;
+    /* Posicionamiento relativo */
+}
+
+/* Estilos para la imagen de la tarjeta */
+.card-img {
+    width: 100%;
+    /* Ocupa todo el espacio disponible */
+    height: 100%;
+    /* Ocupa todo el espacio disponible */
+    object-fit: cover;
+    /* Ajusta la imagen al contenedor */
+    border-radius: 15px;
+    /* Radio de borde de la imagen */
+}
+
+/* Estilos para el contenido de la tarjeta que se muestra al hacer hover */
+.card-body {
+    width: 100%;
+    /* Ocupa todo el espacio disponible */
+    height: 100%;
+    /* Ocupa todo el espacio disponible */
+    top: 0;
+    /* Coloca el contenido en la parte superior */
+    right: -100%;
+    /* Inicialmente, fuera de la vista */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    background: #07101352;
+    /* Fondo semi-transparente */
+    backdrop-filter: blur(5px);
+    /* Desenfoque de fondo */
+    border-radius: 15px;
+    /* Radio de borde */
+    color: #fff;
+    /* Color del texto */
+    padding: 10px;
+    /* Relleno interno */
+    display: flex;
+    /* Activa el modelo de diseño flexbox */
+    flex-direction: column;
+    /* Organiza el contenido verticalmente */
+    justify-content: center;
+    /* Centra verticalmente el contenido */
+    transition: 1s;
+    /* Transición suave de 1 segundo */
+}
+
+/* Estilos para el contenido de la tarjeta al hacer hover */
+.card:hover .card-body {
+    right: 0;
+    /* Muestra el contenido desplazándolo hacia la derecha */
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+    font-size: 18px;
+    /* Tamaño de fuente */
+    font-weight: 500;
+    /* Peso de fuente */
+    line-height: 15px;
+    /* Altura de línea */
+}
+
+/* Estilos para el subtítulo de la tarjeta */
+.card-sub-title {
+    text-transform: capitalize;
+    /* Primera letra de cada palabra en mayúscula */
+    font-size: 10px;
+    /* Tamaño de fuente */
+    font-weight: 300;
+    /* Peso de fuente */
+}
+
+/* Estilos para la información adicional de la tarjeta */
+.card-info {
+    font-size: 12px;
+    /* Tamaño de fuente */
+    line-height: 12px;
+    /* Altura de línea */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    font-weight: 400;
+    /* Peso de fuente */
+}
+
+/* Estilos para el botón de la tarjeta */
+.card-btn {
+    color: #4D5057;
+    /* Color del texto */
+    background: #73a4b4;
+    /* Fondo azul */
+    padding: 5px 10px;
+    /* Relleno interno */
+    width: 60px;
+    /* Ancho fijo del botón */
+    border-radius: 5px;
+    /* Radio de borde */
+    text-transform: capitalize;
+    /* Texto en mayúscula */
+    border: none;
+    /* Sin bordes */
+    outline: none;
+    /* Sin estilo de enfoque */
+    font-weight: 500;
+    /* Peso de fuente */
+    cursor: pointer;
+    /* Cambia el cursor a una mano */
+}

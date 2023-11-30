@@ -1,0 +1,6 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let cardPost  of cardPosts; let i = index" [class.active]="i === 0">
+        <app-card-post-carr *ngFor="let cardPost of cardPosts" [cardPostData]="cardPost"></app-card-post-carr>
+      </div>
+    </div>

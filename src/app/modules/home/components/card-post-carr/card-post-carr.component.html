@@ -1,0 +1,10 @@
+<div class="card">
+    <img [src]= "cardPostData.imgurl"
+        class="card-img" alt="{{ cardPostData.alt }}">
+    <div class="card-body">
+        <h4 class="card-title">{{ cardPostData.title }}</h4>
+        <p class="card-sub-title">{{ cardPostData.subtitle }}</p>
+        <p class="card-info">{{ cardPostData.description }}</p>
+        <button class="card-btn" routerLink="/articulos/articulo">Mas info</button>
+    </div>
+</div>

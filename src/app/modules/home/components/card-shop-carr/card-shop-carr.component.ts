@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { CardShop } from 'src/app/models/card-shop';
 
 @Component({
-  selector: 'app-card-shop',
-  templateUrl: './card-shop.component.html',
-  styleUrls: ['./card-shop.component.css']
+  selector: 'app-card-post',
+  templateUrl: './card-shop-carr.component.html',
+  styleUrls: ['./card-shop-carr.component.css']
 })
-export class CardShopComponent {
+export class CardShopCarrComponent {
   @Input() cardShopData: CardShop;
 
   constructor(){
