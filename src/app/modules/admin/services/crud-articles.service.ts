@@ -35,29 +35,29 @@ export class CrudArticlesService {
 
   //REED
 
-  getArticleBySlug(slug: string): Observable<Article | null> {
-    // Asumiendo que 'slug' es un campo en tus documentos de 'articles'
-    const articlesCollection = this.afs.collection<Article>('articles', ref => ref.where('slug', '==', slug));
-  
-    return articlesCollection.get().pipe(
-      map(querySnapshot => {
-        let articleData = null;
-  
-        querySnapshot.forEach(doc => {
-          if (doc.exists) {
-            const data = doc.data();
-            articleData = { ...data, id: doc.id }; // Agrega el ID del documento
-          }
-        });
-  
-        return articleData; // Retorna el artículo encontrado o null
-      }),
-      catchError((error) => {
-        console.error('Error al obtener el artículo por slug:', error);
-        return throwError(error);
-      })
-    );
-  }
+getArticleBySlug(slug: string): Observable<Article | null> {
+  // Asumiendo que 'slug' es un campo en tus documentos de 'articles'
+  const articlesCollection = this.afs.collection<Article>('articles', ref => ref.where('slug', '==', slug));
+
+  return articlesCollection.get().pipe(
+    map(querySnapshot => {
+      let articleData = null;
+
+      querySnapshot.forEach(doc => {
+        if (doc.exists) {
+          const data = doc.data();
+          articleData = { ...data, id: doc.id }; // Agrega el ID del documento
+        }
+      });
+
+      return articleData; // Retorna el artículo encontrado o null
+    }),
+    catchError((error) => {
+      console.error('Error al obtener el artículo por slug:', error);
+      return throwError(error);
+    })
+  );
+}
 
   getCardPosts(): Observable<CardPost[]> {
     return this.articlesCollection.valueChanges({ idField: 'id' }).pipe(

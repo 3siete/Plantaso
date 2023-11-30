@@ -6,10 +6,8 @@ import { ArticlePageComponent } from './pages/article-page/article-page.componen
 const routes: Routes = [
   //ruta secundaria
   { path: '', component: ArticlesPageComponent },
-  {
-    path: 'articulo/:slug',
-    component: ArticlePageComponent
-  }
+  { path: 'articulos/:slug', component: ArticlePageComponent },
+
 ];
 
 @NgModule({

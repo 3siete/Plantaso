@@ -20,12 +20,14 @@ export class CardPostComponent {
     }
   }
   seeMore(): void {
-    // Asegúrate de que el título se pueda usar en una URL (por ejemplo, convirtiéndolo en un slug)
     const slug = this.slugify(this.cardPostData.title);
-
-    // Navega a la ruta 'articulo' con el slug como parámetro
-    this.router.navigate(['/articulo', slug]);
+    if (slug) {
+      this.router.navigate(['/articulo', slug]);
+    } else {
+      console.error('El slug no es válido:', slug);
+    }
   }
+  
 
   private slugify(text: string): string {
     return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
