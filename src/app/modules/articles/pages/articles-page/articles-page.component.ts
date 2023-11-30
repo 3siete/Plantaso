@@ -26,7 +26,7 @@ export class ArticlesPageComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private articleService: CrudArticlesService
+    private crudService: CrudArticlesService
   ) {}
 
   // Ejemplo de cómo puedes navegar a una página de artículo
