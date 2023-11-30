@@ -35,6 +35,7 @@ import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    //fire
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
