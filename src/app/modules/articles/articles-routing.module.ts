@@ -7,7 +7,7 @@ const routes: Routes = [
   //ruta secundaria
   { path: '', component: ArticlesPageComponent },
   {
-    path: 'articulo/:nombreArticulo',
+    path: 'articulo/:slug',
     component: ArticlePageComponent
   }
 ];

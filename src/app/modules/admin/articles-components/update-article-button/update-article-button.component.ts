@@ -38,7 +38,7 @@ export class UpdateArticleButtonComponent {
 
   loadArticleData(articleId: string): void {
     this.isLoading = true;
-    this.crudService.getArticleById(articleId).subscribe(
+    this.crudService.getArticleBySlug(articleId).subscribe(
       (article: Article | null) => {
         if (article) {
           this.updateForm.patchValue(article);
