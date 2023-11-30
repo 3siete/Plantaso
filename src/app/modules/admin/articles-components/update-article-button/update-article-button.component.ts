@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class UpdateArticleButtonComponent {
   @Input() articleId!: string; // ID del artículo a editar
 
-  constructor(){}
+  constructor(private fb: FormBuilder){}
 }
