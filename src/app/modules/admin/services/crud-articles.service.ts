@@ -89,6 +89,14 @@ updateArticle(articleId: string, article: Article): Observable<void> {
 }
 
 //DELETE
+deleteArticle(articleId: string): Observable<void> {
+  return from(this.afs.doc<Article>(`articles/${articleId}`).delete()).pipe(
+    catchError((error) => {
+      console.error('Error al eliminar el artículo', error);
+      return throwError(error);
+    })
+  );
+}
 
 
 }
