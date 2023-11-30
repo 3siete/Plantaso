@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CrudArticlesService } from '../../services/crud-articles.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
   styleUrls: ['./delete-article-button.component.css']
 })
 export class DeleteArticleButtonComponent {
+  @Input() articleId!: string;
 
   constructor(private crudService:CrudArticlesService){}
 }
