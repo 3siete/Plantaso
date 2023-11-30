@@ -9,4 +9,5 @@ import { Article } from 'src/app/models/articles.model';
 export class ArticlePageComponent {
 articleData:Article
 
+constructor(){}
 }
