@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
 import { CardPost } from 'src/app/models/card-post';
-import 'bootstrap';
-import '@popperjs/core';
 
 @Component({
   selector: 'app-carrusel-post',
