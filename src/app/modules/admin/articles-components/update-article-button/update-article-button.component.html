@@ -1,24 +1,72 @@
 <div *ngIf="isLoading">Cargando...</div>
 <form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
-    <div>
-        <label for="title">Título</label>
-        <input id="title" type="text" formControlName="title">
+    <div class="group">
+        <br>
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgurl"></textarea>
+            <label htmlFor="imgURL">URL de la imagen*</label>
+        </span>
     </div>
-    <div>
-        <label for="subtitle">Subtítulo</label>
-        <input id="subtitle" type="text" formControlName="subtitle">
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="alt" formControlName="alt"></textarea>
+            <label htmlFor="email">alt*</label>
+        </span>
     </div>
-    <div>
-        <label for="description">Descripción</label>
-        <textarea id="description" formControlName="description"></textarea>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="title"></textarea>
+            <label htmlFor="email">TITULO*</label>
+        </span>
     </div>
-    <div>
-        <label for="imgurl">URL de la Imagen</label>
-        <input id="imgurl" type="text" formControlName="imgurl">
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="subtitle"></textarea>
+            <label htmlFor="email">SUBTITULO*</label>
+        </span>
     </div>
-    <div>
-        <label for="alt">Texto Alternativo de la Imagen</label>
-        <input id="alt" type="text" formControlName="alt">
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="description"></textarea>
+            <label htmlFor="email">DESCRICION*</label>
+        </span>
+    </div>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="reproduction"></textarea>
+            <label htmlFor="email">REPRODUCCION*</label>
+        </span>
+    </div>
+
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="care"></textarea>
+            <label htmlFor="email">CUIDADOS*</label>
+        </span>
+    </div>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="tips"></textarea>
+            <label htmlFor="email">CONSEJOS*</label>
+        </span>
+    </div>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="characteristic"></textarea>
+            <label htmlFor="email">CARACTERISTICAS*</label>
+        </span>
+    </div>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="pests"></textarea>
+            <label htmlFor="email">PESTES*</label>
+        </span>
+    </div>
+    <div class="group">
+        <span class="p-float-label">
+            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="insecticides"></textarea>
+            <label htmlFor="email">INSECTICIDAS*</label>
+        </span>
     </div>
     <button type="submit" [disabled]="!updateForm.valid">Actualizar Artículo</button>
 </form>
