@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'articulos',
     loadChildren: () => import('./modules/articles/articles.module').then(m => m.ArticlesModule),
-  }
+  },
+
 
 ];
 

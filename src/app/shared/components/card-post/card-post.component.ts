@@ -29,4 +29,4 @@ export class CardPostComponent {
     return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
   }
 }
-}
+
