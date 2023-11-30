@@ -1,3 +1,6 @@
+<i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Create"></i>
+
+<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
 <div *ngIf="isLoading">Cargando...</div>
 <form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
     <div class="group">
@@ -70,3 +73,4 @@
     </div>
     <button type="submit" [disabled]="!updateForm.valid">Actualizar Artículo</button>
 </form>
+</p-dialog>
