@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 
 @Component({
