@@ -11,4 +11,8 @@ export class UpdateArticleButtonComponent {
   @Input() articleId!: string; // ID del artículo a editar
 
   constructor(private fb: FormBuilder, private crudService: CrudArticlesService){}
+
+  ngOnInit():void{
+    
+  }
 }
