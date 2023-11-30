@@ -9,10 +9,10 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
 })
 export class UpdateArticleButtonComponent {
   @Input() articleId!: string; // ID del artículo a editar
-
+  updateForm!: FormGroup
   constructor(private fb: FormBuilder, private crudService: CrudArticlesService){}
 
   ngOnInit():void{
-    
+
   }
 }
