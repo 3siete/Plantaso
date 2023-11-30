@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
 
