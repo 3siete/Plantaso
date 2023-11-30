@@ -3,7 +3,7 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
 import { CardPost } from 'src/app/models/card-post';
 
 @Component({
-  selector: 'app-carrusel-post',
+  selector: 'app-carrusel-post-unique',
   templateUrl: './carrusel-post.component.html',
   styleUrls: ['./carrusel-post.component.css']
 })
