@@ -1,0 +1,24 @@
+<div *ngIf="isLoading">Cargando...</div>
+<form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="title">Título</label>
+        <input id="title" type="text" formControlName="title">
+    </div>
+    <div>
+        <label for="subtitle">Subtítulo</label>
+        <input id="subtitle" type="text" formControlName="subtitle">
+    </div>
+    <div>
+        <label for="description">Descripción</label>
+        <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div>
+        <label for="imgurl">URL de la Imagen</label>
+        <input id="imgurl" type="text" formControlName="imgurl">
+    </div>
+    <div>
+        <label for="alt">Texto Alternativo de la Imagen</label>
+        <input id="alt" type="text" formControlName="alt">
+    </div>
+    <button type="submit" [disabled]="!updateForm.valid">Actualizar Artículo</button>
+</form>
