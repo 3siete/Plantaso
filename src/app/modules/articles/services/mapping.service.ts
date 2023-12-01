@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class MappingService {
   private slugToIdMap: { [slug: string]: string } = {};
+  addMapping(slug: string, articleId: string): void {
+    this.slugToIdMap[slug] = articleId;
+  }
+
 
 
 
