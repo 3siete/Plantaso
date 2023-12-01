@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CrudProductsService } from '../../services/crud-products.service';
 import { Router } from '@angular/router';
 
