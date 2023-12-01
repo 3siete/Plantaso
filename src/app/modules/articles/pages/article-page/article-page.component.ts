@@ -9,5 +9,5 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
   styleUrls: ['./article-page.component.css']
 })
 export class ArticlePageComponent {
-  
+  constructor(){}
 }
