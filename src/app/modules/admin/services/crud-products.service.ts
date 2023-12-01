@@ -73,6 +73,7 @@ export class CrudProductsService {
       description: product.description,
       imgURL: product.imgURL,
       price: product.price,
+      alt: product.alt
     };
     
   }

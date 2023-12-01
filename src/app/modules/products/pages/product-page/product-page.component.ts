@@ -30,28 +30,29 @@ export class ProductPageComponent {
       const slug = params['slug'];
       const id = this.slugMap.getProductIdFromSlug(slug);
       if (id) {
-        // Llamada al servicio para obtener el artículo por articleId
+        // Llamada al servicio para obtener el producto por productId
         this.crudService.getProductById(id).subscribe(
-          this.product => {
+          (product: Products | null) => {
             if (product) {
-              console.log('Artículo obtenido:', product);
-              // Resto de la lógica para manejar el artículo obtenido
+              console.log('Producto obtenido:', product);
+              // Resto de la lógica para manejar el producto obtenido
               this.product = product;
             } else {
-              console.warn(`No se encontró artículo para el slug: ${slug} y articleId: ${id}`);
+              console.warn(`No se encontró producto para el slug: ${slug} y productId: ${id}`);
               // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
             }
           },
           error => {
-            console.error('Error al obtener el artículo:', error);
+            console.error('Error al obtener el producto:', error);
             // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
           }
         );
       } else {
-        console.warn(`No se encontró articleId para el slug: ${slug}`);
+        console.warn(`No se encontró productId para el slug: ${slug}`);
       }
     });
-}
+  }
+  
 
 
 // Asegúrate de que estás manejando el evento de esta manera:
