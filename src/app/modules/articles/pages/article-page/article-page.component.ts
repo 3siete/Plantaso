@@ -18,6 +18,7 @@ export class ArticlePageComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
+      
       const slug = params['slug'];
       console.log('articleId:', slug);
       if (slug) {
