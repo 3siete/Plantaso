@@ -1,6 +1,10 @@
 <app-container>
     <div class="articles">
-        <app-card-post *ngFor="let cardPost of cardPosts" [cardPostData]="cardPost" (seeMoreButton)="SeeMore($event)"></app-card-post>
+        <app-card-post
+        *ngFor="let cardPost of cardPosts"
+        [cardPostData]="cardPost"
+        (seeMoreButton)="SeeMore($event)"
+      ></app-card-post>
     </div>
 </app-container>
 

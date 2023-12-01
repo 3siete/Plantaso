@@ -35,7 +35,7 @@ SeeMore(articleId: string): void {
     slug => {
       if (slug) {
         // Navegar a la página de artículo con slug y id
-        this.router.navigate(['/articulo', slug, articleId]);
+        this.router.navigate(['/articulo', slug]);
       } else {
         console.warn(`No se encontró slug para el articleId: ${articleId}`);
         // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
@@ -51,4 +51,3 @@ SeeMore(articleId: string): void {
 
 
 
-}
