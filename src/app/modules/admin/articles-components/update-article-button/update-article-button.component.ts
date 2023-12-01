@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudArticlesService } from '../../services/crud-articles.service';
 import { Article } from 'src/app/models/articles.model';
 import { Subject, takeUntil } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-article-button',
@@ -24,7 +25,8 @@ export class UpdateArticleButtonComponent {
     this.visible = true;  
   }
   constructor(private fb: FormBuilder,
-    private crudService: CrudArticlesService){}
+    private crudService: CrudArticlesService,
+    private router: Router){}
 
   ngOnInit():void{
     this.updateForm = this.fb.group({
