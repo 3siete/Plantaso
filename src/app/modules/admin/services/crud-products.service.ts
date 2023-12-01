@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
-import { Observable, catchError, from, switchMap, throwError } from 'rxjs';
+import { Observable, catchError, from, map, switchMap, throwError } from 'rxjs';
 import { Products } from 'src/app/models/products.model';
 
 @Injectable({
