@@ -7,7 +7,7 @@ const routes: Routes = [
   // Ruta principal (sin slug)
   { path: '', component: ArticlesPageComponent },
   // Ruta secundaria con slug
-  { path: ':slug', component: ArticlePageComponent },
+  { path: ':id/:slug', component: ArticlePageComponent },
 ];
 
 
