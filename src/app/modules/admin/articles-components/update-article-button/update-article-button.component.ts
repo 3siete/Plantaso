@@ -15,6 +15,8 @@ export class UpdateArticleButtonComponent {
   isLoading=false
   visible: boolean = false;
   
+  updatingForm = false;
+  
   private unsubscribe$ = new Subject<void>();
   
   showDialog() {
@@ -40,30 +42,36 @@ export class UpdateArticleButtonComponent {
       carrusel:['false',Validators.required]
     });
   }
-  updateCarruselValue(event: any) {
-    this.updateForm.get('carrusel')?.setValue(event ? 'true' : 'false');
-  }
   
-
-  loadArticleData(articleId: string): void {
-    this.isLoading = true;
-    this.crudService.getArticleById(articleId).subscribe(
-      (article: Article | null) => {
-        if (article) {
-          this.updateForm.patchValue(article);
-        }
-        this.isLoading = false;
-      },
-      error => {
-        console.error('Error loading article', error);
-        this.isLoading = false;
-        // Agrega aquí cualquier lógica adicional necesaria
-      }
-    );
-  }
+updateCarruselValue(event: any) {
+  this.updateForm.get('carrusel')?.setValue(event ? 'true' : 'false');
+}
+ 
+  
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+  }
+
+  loadArticleData(articleId: string): void {
+    this.isLoading = true;
+    this.crudService.getArticleById(articleId)
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(
+        (article: Article | null) => {
+          if (article) {
+            // Desactivar temporalmente el controlador de cambios
+            this.updatingForm = true;
+            this.updateForm.patchValue(article);
+            this.updatingForm = false;
+          }
+          this.isLoading = false;
+        },
+        error => {
+          console.error('Error loading article', error);
+          this.isLoading = false;
+        }
+      );
   }
 
   onSubmit(): void {
@@ -84,7 +92,5 @@ export class UpdateArticleButtonComponent {
           }
         );
     }
-  
-    this.visible = false;  
   }
 }

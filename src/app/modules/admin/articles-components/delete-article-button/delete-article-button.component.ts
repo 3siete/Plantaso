@@ -9,15 +9,14 @@ import { Router } from '@angular/router';
 export class DeleteArticleButtonComponent {
   @Input() articleId!: string;
 
-  constructor(private crudService:CrudArticlesService, router:Router){}
+  constructor(private crudService:CrudArticlesService, private router:Router){}
 
   confirmDelete(): void {
     const confirmation = window.confirm('¿Estás seguro de que quieres eliminar este artículo?');
     if (confirmation) {
       this.crudService.deleteArticle(this.articleId).subscribe(
         () => console.log('Artículo eliminado con éxito')
-        
-        ,
+        this.router.navigate['articulo'],
         error => console.error('Error al eliminar el artículo', error)
       );
     }
