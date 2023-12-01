@@ -10,7 +10,7 @@ import { ArticlesPageComponent } from 'src/app/modules/articles/pages/articles-p
 })
 export class CardPostComponent {
   @Input() cardPostData: CardPost;
-
+  @Output() seeMore: EventEmitter<string> = new EventEmitter<string>();
   constructor(private router: Router ){
     this.cardPostData = {
       title: '',
@@ -20,16 +20,13 @@ export class CardPostComponent {
       alt: '',
     }
   }
-  seeMore(): void {
-    const slug = this.slugify(this.cardPostData.title);
-    if (slug) {
-      this.router.navigate(['/articulo', slug]);
-    } else {
-      console.error('El slug no es válido:', slug);
-    }
-  }
-  private slugify(text: string): string {
-    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+
+  seeMoreClicked(): void {
+    // Aquí, deberías tener acceso al id del artículo asociado a esta tarjeta
+    const articleId = this.cardPostData.articleId;
+
+    // Emitir el evento seeMore con el id del artículo
+    this.seeMore.emit(articleId);
   }
 }
 
