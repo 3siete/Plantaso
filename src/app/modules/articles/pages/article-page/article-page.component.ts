@@ -13,33 +13,10 @@ export class ArticlePageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private crudService: CrudArticlesService
+    private crudService: CrudArticlesService,
+    
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      const id = params['id'];
-      const slug = params['slug'];
-
-      if (id && slug) {
-        // Validar el slug aquí si es necesario
-        this.crudService.getArticleById(id).subscribe(
-          article => {
-            // Verificar que el slug coincida
-            if (article && article.slug === slug) {
-              this.article = article;
-            } else {
-              console.warn('El slug no coincide con el artículo');
-              // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
-            }
-          },
-          error => {
-            console.error('Error al obtener el artículo:', error);
-            // Puedes manejar el error según tus necesidades
-          }
-        );
-      }
-    });
-  }
 }
-
+}
