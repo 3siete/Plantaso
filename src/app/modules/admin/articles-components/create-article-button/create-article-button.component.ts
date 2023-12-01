@@ -32,9 +32,14 @@ export class CreateArticleButtonComponent {
       characteristic: ['', [Validators.required]],
       pests: ['', [Validators.required]],
       insecticides: ['', [Validators.required]],
-      carrusel:['',[Validators.required, Validators.]]
+      carrusel:['false',Validators.required]
     });
   }
+
+  updateCarruselValue(event: any) {
+    this.createForm.get('carrusel')?.setValue(event ? 'true' : 'false');
+  }
+  
 
   onSubmit(){
     const value = this.createForm.value;
