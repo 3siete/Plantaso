@@ -15,6 +15,7 @@ export class UpdateArticleButtonComponent {
   visible: boolean = false;
   
   showDialog() {
+    this.loadArticleData(this.articleId);
     this.visible = true;  
   }
   constructor(private fb: FormBuilder, private crudService: CrudArticlesService){}
