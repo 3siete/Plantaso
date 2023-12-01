@@ -53,15 +53,21 @@ export class CrudArticlesService {
     );
   }
   getArticleBySlug(slug: string): Observable<Article | null> {
-    console.log('Slug recibido en el servicio:', slug);
-    return this.articlesCollection.doc<Article>(slug).valueChanges().pipe(
-      map(article => article ? { ...article, id: slug } : null),
+    return this.articlesCollection.doc<Article>(slug).get().pipe(
+      map(snapshot => {
+        if (snapshot.exists) {
+          return { ...snapshot.data(), id: slug } as Article;
+        } else {
+          return null;
+        }
+      }),
       catchError((error) => {
         console.error('Error al obtener el artículo por slug:', error);
         return throwError(error);
       })
     );
   }
+  
 
   getSlugForArticle(articleId: string): Observable<string | null> {
     return this.afs.doc<Article>(`articles/${articleId}`).valueChanges().pipe(
