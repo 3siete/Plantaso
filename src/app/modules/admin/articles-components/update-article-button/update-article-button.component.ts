@@ -74,5 +74,7 @@ export class UpdateArticleButtonComponent {
         }
       );
     }
+    
+    this.visible = false;  
   }
 }
