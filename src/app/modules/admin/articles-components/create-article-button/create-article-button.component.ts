@@ -32,6 +32,7 @@ export class CreateArticleButtonComponent {
       characteristic: ['', [Validators.required]],
       pests: ['', [Validators.required]],
       insecticides: ['', [Validators.required]],
+      carrusel:['',[Validators.required, Validators.]]
     });
   }
 
