@@ -35,15 +35,10 @@ SeeMore(articleId: string): void {
   console.log('ID del artículo emitido:', articleId);
 
   // Ejemplo de cómo puedes navegar a la página de artículo
-  const slug = this.getSlugForArticle(articleId);
-  this.router.navigate(['/articulo', slug, articleId]);
+  const slug = this.crudService.getSlugForArticle(articleId);
+  this.router.navigate(['/articulo', slug]);
+  console.log('lkadsjflkajsd: que hago: '+slug)
 }
 
-private getSlugForArticle(articleId: string): string {
-  // Implementa la lógica para obtener el slug según el articleId
-  // ...
-
-  return 'slug-for-' + articleId; // Esto es solo un ejemplo, ajusta según tus necesidades
-}
 
 }
