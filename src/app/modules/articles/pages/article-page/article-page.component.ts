@@ -19,5 +19,30 @@ export class ArticlePageComponent {
   ) {}
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const slug = params['slug'];
+      const id = this.slugMap.getArticleIdFromSlug(slug);
+      if (id) {
+        // Llamada al servicio para obtener el artículo por articleId
+        this.crudService.getArticleById(id).subscribe(
+          article => {
+            if (article) {
+              console.log('Artículo obtenido:', article);
+              // Resto de la lógica para manejar el artículo obtenido
+              this.article = article;
+            } else {
+              console.warn(`No se encontró artículo para el slug: ${slug} y articleId: ${id}`);
+              // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+            }
+          },
+          error => {
+            console.error('Error al obtener el artículo:', error);
+            // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+          }
+        );
+      } else {
+        console.warn(`No se encontró articleId para el slug: ${slug}`);
+      }
+    });
 }
 }
