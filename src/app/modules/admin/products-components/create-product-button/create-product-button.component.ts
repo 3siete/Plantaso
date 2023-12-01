@@ -42,7 +42,7 @@ export class CreateProductButtonComponent {
     const value = this.createForm.value;
     console.log(value);
     this.visible = false;
-    this.crudService.createArticle(value).subscribe(
+    this.crudService.createProduct(value).subscribe(
       () => {
         alert('Se añadió el artículo correctamente');
       },
