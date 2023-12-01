@@ -28,5 +28,52 @@ export class CrudProductsService {
         })
       );
     }
+      // READ
+  getProductById(id: string): Observable<Products | null> {
+    return this.afs.doc<Products>(`products/${id}`).valueChanges().pipe(
+      map(product => product ? { ...product, id } : null),
+      catchError((error) => {
+        console.error('Error al obtener el producto por ID:', error);
+        return throwError(error);
+      })
+    );
+  }
+
+  getSlugForProduct(productId: string): Observable<string | null> {
+    return this.afs.doc<Products>(`products/${productId}`).valueChanges().pipe(
+      map(product => {
+        if (product) {
+          return product.slug || null;
+        } else {
+          return null;
+        }
+      }),
+      catchError((error) => {
+        console.error('Error al obtener el slug para el producto:', error);
+        return throwError(error);
+      })
+    );
+  }
+
+  getCardShops(): Observable<CardShop[]> {
+    return this.productsCollection.valueChanges({ idField: 'id' }).pipe(
+      map(products => products.map(product => this.mapToCardShop(product))),
+      catchError((error) => {
+        console.error('Error al obtener los productos (observable):', error);
+        return throwError(error);
+      })
+    );
+  }
+
+  private mapToCardShop(product: Products): CardShop {
+    return {
+      productId: product.productId,
+      title: product.title,
+      description: product.description,
+      imgURL: product.imgURL,
+      price: product.price,
+    };
+    
+  }
   
 }
