@@ -21,7 +21,7 @@ export class CardPostComponent {
     }
   }
 
-  seeMoreClicked(): void {
+  seeMoreButton(): void {
     // Aquí, deberías tener acceso al id del artículo asociado a esta tarjeta
     const articleId = this.cardPostData.articleId;
 
