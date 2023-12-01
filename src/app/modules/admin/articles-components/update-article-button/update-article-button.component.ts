@@ -36,6 +36,9 @@ export class UpdateArticleButtonComponent {
       carrusel:['false',Validators.required]
     });
   }
+  updateCarruselValue(event: any) {
+    this.updateForm.get('carrusel')?.setValue(event ? 'true' : 'false');
+  }
   
 
   loadArticleData(articleId: string): void {

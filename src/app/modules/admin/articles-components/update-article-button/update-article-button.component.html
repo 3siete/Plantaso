@@ -71,6 +71,11 @@
             <label htmlFor="email">INSECTICIDAS*</label>
         </span>
     </div>
+    <div class="group">
+        <span class="p-float-label">
+            <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
+        </span>
+    </div>
     <button type="submit" [disabled]="isLoading || !updateForm.valid">Actualizar Artículo</button>
 </form>
 </p-dialog>
