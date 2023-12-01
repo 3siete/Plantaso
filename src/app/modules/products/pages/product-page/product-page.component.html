@@ -3,6 +3,7 @@
     <div class="contenedor">
         <div class="blanco" *ngIf="product">
             <app-update-product-button></app-update-product-button>
+            <app-delete-product-button></app-delete-product-button>
             <img [src]="product.imgURL" alt="{{product.alt}}">
             <div class="cont">
                 <h2>{{product.title}}</h2>
