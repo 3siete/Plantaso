@@ -11,5 +11,21 @@ export class CrudProductsService {
   constructor(private afs: AngularFirestore) {
     this.productsCollection = afs.collection<Products>('products');
   }
+   // CREATE
+    createProduct(product: Products): Observable<void> {
+      const idProduct = this.afs.createId();
+      product.productId = idProduct;
+      product.slug = this.slugify(product.title);
+
+      return from(this.productsCollection.add(product)).pipe(
+        switchMap((docRef: DocumentReference<Products>) => {
+          return from(docRef.set({ ...product, productId: docRef.id }));
+        }),
+        catchError((error) => {
+          console.error('Error desconocido al crear el producto', error);
+          return throwError(error);
+        })
+      );
+    }
   
 }
