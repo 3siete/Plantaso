@@ -15,7 +15,8 @@ export class ArticlesPageComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private crudService: CrudArticlesService
+    private crudService: CrudArticlesService,
+    private slugMap: MappingService
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export class ArticlesPageComponent implements OnInit {
       slug => {
         if (slug) {
           console.log('hasta aca llega bien no?: ' + slug);
+          
           // Navegar a la página de artículo con slug y id
           this.router.navigate(['/articulo', slug]);
         } else {
