@@ -11,17 +11,18 @@ import { ArticlesPageComponent } from 'src/app/modules/articles/pages/articles-p
 export class CardPostComponent {
   @Input() cardPostData: CardPost;
   @Output() seeMoreButton: EventEmitter<string> = new EventEmitter<string>();
-  
-  constructor(private router: Router ){
+
+  constructor(private router: Router) {
     this.cardPostData = {
-      articleId:'',
+      articleId: '',
       title: '',
       subtitle: '',
       imgURL: '',
       description: '',
       alt: '',
-      carrusel:''
-    }
+      carrusel: '',
+      slug: '' // Agregar el atributo slug
+    };
   }
 
   seeMore(): void {
@@ -30,8 +31,7 @@ export class CardPostComponent {
 
     // Emitir el evento seeMore con el id del artículo
     this.seeMoreButton.emit(articleId);
-    console.log('cuando se emite'+articleId)
+    console.log('cuando se emite' + articleId);
   }
-
 }
 

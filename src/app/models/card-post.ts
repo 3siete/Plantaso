@@ -6,4 +6,5 @@ export interface CardPost{
     imgURL: string;
     alt:string;
     carrusel:string;
+    slug:string;
 }
