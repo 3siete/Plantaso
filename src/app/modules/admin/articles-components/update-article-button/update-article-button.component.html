@@ -71,6 +71,6 @@
             <label htmlFor="email">INSECTICIDAS*</label>
         </span>
     </div>
-    <button type="submit" [disabled]="!updateForm.valid">Actualizar Artículo</button>
+    <button type="submit" [disabled]="isLoading || !updateForm.valid">Actualizar Artículo</button>
 </form>
 </p-dialog>
