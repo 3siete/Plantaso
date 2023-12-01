@@ -46,20 +46,22 @@ export class CrudArticlesService {
     );
   }
 
-  // Búsqueda por Slug
-  getArticleBySlug(slug: string): Observable<Article | null> {
-    return this.afs.collection<Article>('articles', ref => ref.where('slug', '==', slug))
-      .get()
-      .pipe(
-        map(querySnapshot => {
-          const articleDoc = querySnapshot.docs[0]; // Tomar el primer documento si existe
-          return articleDoc ? { ...(articleDoc.data() as Article), id: articleDoc.id } : null;
-        }),
-        catchError((error) => {
-          console.error('Error al obtener el artículo por slug:', error);
-          return throwError(error);
-        })
-      );
+  getSlugForArticle(articleId: string): Observable<string | null> {
+    return this.afs.doc<Article>(`articles/${articleId}`).valueChanges().pipe(
+      map(article => {
+        if (article) {
+          // Aquí deberías tener una propiedad slug en tu modelo Article
+          // Ajusta según la estructura de tu modelo
+          return article.slug || null;
+        } else {
+          return null;
+        }
+      }),
+      catchError((error) => {
+        console.error('Error al obtener el slug para el artículo:', error);
+        return throwError(error);
+      })
+    );
   }
 
   
