@@ -3,7 +3,7 @@ import { CrudArticlesService } from '../../services/crud-articles.service';
 
 @Component({
   selector: 'app-delete-article-button',
-  template: `<i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i>`,
+  template: `<i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;" (click)="confirmDelete()"></i>`,
 })
 export class DeleteArticleButtonComponent {
   @Input() articleId!: string;
