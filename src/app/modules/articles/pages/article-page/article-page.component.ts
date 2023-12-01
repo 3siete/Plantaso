@@ -18,19 +18,20 @@ export class ArticlePageComponent {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const slug = params.get('slug');
-
-      if (slug) {
-        this.crudService.getArticleBySlug(slug).subscribe(
+      const id = params.get('articleId');
+    
+      if (id) {
+        this.crudService.getArticleById(id).subscribe(
           article => {
             this.article = article;
           },
           error => {
             console.error('Error al obtener el artículo:', error);
+            // Puedes manejar el error según tus necesidades
           }
         );
       }
     });
-  }
 }
 
+}
