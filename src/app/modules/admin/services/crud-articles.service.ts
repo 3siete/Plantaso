@@ -53,6 +53,7 @@ export class CrudArticlesService {
     );
   }
   getArticleBySlug(slug: string): Observable<Article | null> {
+    console.log('Slug recibido en el servicio:', slug);
     return this.articlesCollection.doc<Article>(slug).valueChanges().pipe(
       map(article => article ? { ...article, id: slug } : null),
       catchError((error) => {

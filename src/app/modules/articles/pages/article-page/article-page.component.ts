@@ -19,10 +19,11 @@ export class ArticlePageComponent {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const slug = params['slug'];
-    
+      console.log('articleId:', slug);
       if (slug) {
-        this.crudService.getArticleById(slug).subscribe(
+        this.crudService.getArticleBySlug(slug).subscribe(
           article => {
+            console.log('Artículo obtenido:', article);
             this.article = article;
           },
           error => {
