@@ -7,5 +7,6 @@ import { CardShop } from 'src/app/models/card-shop';
   styleUrls: ['./products-page.component.css']
 })
 export class ProductsPageComponent {
-cardShop:CardShop
+cardShop:CardShop[] = [];
+constructor(){}
 }
