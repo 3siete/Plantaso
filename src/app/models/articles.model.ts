@@ -8,7 +8,7 @@ export interface Article{
     reproduction:string;
     care:string;
     tips:string;
-    characteristics:string;
+    characteristic:string;
     pests:string;
     insecticides:string;
     slug?:string;
