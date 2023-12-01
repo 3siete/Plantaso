@@ -15,9 +15,7 @@ export class UpdateArticleButtonComponent {
   updateForm!: FormGroup
   isLoading=false
   visible: boolean = false;
-  
   updatingForm = false;
-  
   private unsubscribe$ = new Subject<void>();
   
   showDialog() {
@@ -85,7 +83,7 @@ export class UpdateArticleButtonComponent {
           () => {
             console.log('Article updated successfully');
             this.isLoading = false;
-            this.router.navigate(['/articulos']);
+            this.router.navigate(['articulo']);
           },
           error => {
             console.error('Error updating article', error);
