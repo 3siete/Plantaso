@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class ProductsService {
   private slugToIdMap: { [slug: string]: string } = {};
   
-  addMapping(slug: string, articleId: string): void {
-    this.slugToIdMap[slug] = articleId;
+  addMapping(slug: string, productId: string): void {
+    this.slugToIdMap[slug] = productId;
   }
 
   getArticleIdFromSlug(slug: string): string | null {
