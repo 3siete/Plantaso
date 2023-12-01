@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
@@ -8,7 +8,7 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
   templateUrl: './articles-page.component.html',
   styleUrls: ['./articles-page.component.css']
 })
-export class ArticlesPageComponent {
+export class ArticlesPageComponent implements OnInit {
 
   cardPosts: CardPost[] = [];
 
@@ -33,10 +33,10 @@ export class ArticlesPageComponent {
 
   // Manejar el evento emitido desde CardPostComponent
   seeMore(articleId: string): void {
-    this.crudService.getArticleById(articleId).subscribe(
+    this.crudService.getSlugForArticle(articleId).subscribe(
       slug => {
         if (slug) {
-          console.log('hasta aca llega bien no?: '+ slug)
+          console.log('hasta aca llega bien no?: ' + slug);
           // Navegar a la página de artículo con slug y id
           this.router.navigate(['/articulo', slug]);
         } else {
