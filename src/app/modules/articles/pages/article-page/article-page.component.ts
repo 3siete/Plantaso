@@ -14,7 +14,7 @@ export class ArticlePageComponent {
   constructor(
     private route: ActivatedRoute,
     private crudService: CrudArticlesService,
-    
+    private slugMap:MappingService
   ) {}
 
   ngOnInit(): void {
