@@ -60,6 +60,7 @@ export class AuthService {
       email: formData.email, // Usar el email del formulario, no del objeto user
       name: formData.name,
       lastname: formData.lastname,
+      rol: formData.rol
     };
     return userRef.set(userData, { merge: true });
   }
