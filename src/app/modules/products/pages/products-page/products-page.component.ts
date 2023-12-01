@@ -11,7 +11,7 @@ import { MappingService } from 'src/app/modules/articles/services/mapping.servic
   styleUrls: ['./products-page.component.css']
 })
 export class ProductsPageComponent {
-cardShop:CardShop[] = [];
+cardShops:CardShop[] = [];
 constructor(
   private router: Router,
   private crudService: CrudProductsService,
@@ -19,7 +19,7 @@ constructor(
 ){
   this.crudService.getCardShops().subscribe(
     (cardShop:CardShop[])=>{
-      this.cardShop = cardShop
+      this.cardShops = cardShop
     },
     error=>{
       console.error(error)
