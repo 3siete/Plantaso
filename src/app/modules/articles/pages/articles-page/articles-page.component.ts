@@ -29,7 +29,15 @@ export class ArticlesPageComponent {
       }
     );
   }
-
+  seeMore(articleId:string):void{
+    this.crudService.getArticleById(articleId).subscribe(
+      id =>{
+        this.router.navigate(['/articulo',id])
+        console.log('id que llega a articles component: '+id)
+      }
+    )
+  }
+/*
   // Manejar el evento emitido desde CardPostComponent
   seeMore(articleId: string): void {
     this.crudService.getSlugForArticle(articleId).subscribe(
@@ -48,6 +56,7 @@ export class ArticlesPageComponent {
       }
     );
   }
+  */
 }
 
 

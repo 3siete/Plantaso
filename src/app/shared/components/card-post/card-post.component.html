@@ -5,8 +5,6 @@
         <h4 class="card-title">{{ cardPostData.title }}</h4>
         <p class="card-sub-title">{{ cardPostData.subtitle }}</p>
         <p class="card-info">{{ cardPostData.description }}</p>
-        <a class="card-btn" [routerLink]="'/articulo' + cardPostData.slug">
-            Mas info
-        </a>
+        <button class="card-btn"(click)="seeMore()">Mas info</button>
     </div>
 </div>
