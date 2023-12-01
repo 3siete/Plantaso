@@ -18,6 +18,7 @@ export class CrudArticlesService {
   createArticle(article: Article): Observable<void> {
     const idArticle = this.afs.createId();
     article.articleId = idArticle;
+    article.slug = this.slugify(article.title); // Agrega el slug durante la creación
 
     return from(this.articlesCollection.add(article)).pipe(
       switchMap((docRef: DocumentReference<Article>) => {
@@ -29,6 +30,12 @@ export class CrudArticlesService {
         return throwError(error);
       })
     );
+  }
+  private slugify(text: string): string {
+    return text
+      .toLowerCase()
+      .replace(/ /g, '-')          // Reemplaza espacios con guiones
+      .replace(/[^\w-]+/g, '');    // Elimina caracteres no alfanuméricos excepto guiones
   }
 
 
