@@ -17,12 +17,12 @@ export class CrudArticlesService {
   //CREATE
   createArticle(article: Article): Observable<void> {
     const idArticle = this.afs.createId();
-    article.id = idArticle;
+    article.articleId = idArticle;
 
     return from(this.articlesCollection.add(article)).pipe(
       switchMap((docRef: DocumentReference<Article>) => {
         // Actualizar el artículo con el ID asignado por Firestore
-        return from(docRef.set({ ...article, id: docRef.id }));
+        return from(docRef.set({ ...article, articleId: docRef.id }));
       }),
       catchError((error) => {
         console.error('Error desconocido al crear el artículo', error);
@@ -81,7 +81,7 @@ export class CrudArticlesService {
     console.log('URL antes de devolverla:', article.imgurl);
   
     return {
-      articleId:article.id,
+      articleId:article.articleId,
       title: article.title,
       subtitle: article.subtitle,
       description: article.description,
