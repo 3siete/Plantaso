@@ -76,5 +76,31 @@ export class CrudProductsService {
     };
     
   }
+    // UPDATE
+    updateProduct(productId: string, updatedProduct: Products): Observable<any> {
+      return this.afs.doc<Products>(`products/${productId}`).valueChanges().pipe(
+        switchMap((existingProduct: Products | undefined) => {
+          if (!existingProduct) {
+            console.warn(`No se encontró el producto con ID: ${productId}`);
+            return of();
+          }
+  
+          const newSlug = updatedProduct.title !== existingProduct.title
+            ? this.slugify(updatedProduct.title)
+            : existingProduct.slug;
+  
+          const updatedData: Products = {
+            ...updatedProduct,
+            slug: newSlug
+          };
+  
+          return this.afs.doc<Products>(`products/${productId}`).update(updatedData);
+        }),
+        catchError((error) => {
+          console.error('Error al actualizar el producto:', error);
+          return of();
+        })
+      );
+    }
   
 }
