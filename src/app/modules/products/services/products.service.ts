@@ -10,7 +10,7 @@ export class ProductsService {
     this.slugToIdMap[slug] = productId;
   }
 
-  getArticleIdFromSlug(slug: string): string | null {
+  getProductIdFromSlug(slug: string): string | null {
     return this.slugToIdMap[slug] || null;
   }
 }
