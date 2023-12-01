@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudProductsService } from 'src/app/modules/admin/services/crud-products.service';
 import { CardShop } from 'src/app/models/card-shop';
 @Component({
-  selector: 'app-carrusel-post',
+  selector: 'app-carrusel-shop',
   templateUrl: './carrusel-shop.component.html',
   styleUrls: ['./carrusel-shop.component.css']
 })

@@ -1,10 +1,11 @@
-<div class="card">
-    <img [src]= "cardPostData.imgurl"
-        class="card-img" alt="{{ cardPostData.alt }}">
+
+<div class="card" *ngFor="let producto of productos$ | async">
+    <img [src]= "producto.imgurl"
+        class="card-img" alt="{{ producto.alt }}">
     <div class="card-body">
-        <h4 class="card-title">{{ cardPostData.title }}</h4>
-        <p class="card-sub-title">{{ cardPostData.subtitle }}</p>
-        <p class="card-info">{{ cardPostData.description }}</p>
+        <h4 class="card-title">{{ producto.title }}</h4>
+        <p class="card-sub-title">{{ producto.subtitle }}</p>
+        <p class="card-info">{{ producto.description }}</p>
         <button class="card-btn" routerLink="/articulos/articulo">Mas info</button>
     </div>
 </div>

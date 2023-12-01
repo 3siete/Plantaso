@@ -8,6 +8,8 @@
     /* Borde sólido blanco */
     position: relative;
     /* Posicionamiento relativo */
+    height: 200px;
+    width: 120px;
 }
 
 /* Estilos para la imagen de la tarjeta */

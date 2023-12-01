@@ -1,4 +1,5 @@
 /* Estilos para la sección de inicio (.landing) */
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
 .landing {
     background-color: #AFD3F1;
     display: flex;
