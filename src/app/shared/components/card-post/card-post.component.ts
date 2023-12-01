@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 import { ArticlesPageComponent } from 'src/app/modules/articles/pages/articles-page/articles-page.component';
