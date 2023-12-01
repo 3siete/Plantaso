@@ -43,11 +43,10 @@ export class UpdateArticleButtonComponent {
     });
   }
   
-updateCarruselValue(event: any) {
-  this.updateForm.get('carrusel')?.setValue(event ? 'true' : 'false');
-}
- 
-  
+  updateCarruselValue(event: any) {
+    this.updateForm.get('carrusel')?.setValue(event ? 'true' : 'false');
+  }
+
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
@@ -84,7 +83,7 @@ updateCarruselValue(event: any) {
           () => {
             console.log('Article updated successfully');
             this.isLoading = false;
-            // Agrega aquí cualquier lógica adicional necesaria
+            this.router.navigate(['/articulos']);
           },
           error => {
             console.error('Error updating article', error);

@@ -15,8 +15,10 @@ export class DeleteArticleButtonComponent {
     const confirmation = window.confirm('¿Estás seguro de que quieres eliminar este artículo?');
     if (confirmation) {
       this.crudService.deleteArticle(this.articleId).subscribe(
-        () => console.log('Artículo eliminado con éxito')
-        this.router.navigate['articulo'],
+        () => {
+          console.log('Artículo eliminado con éxito');
+          this.router.navigate(['articulos']);
+      },
         error => console.error('Error al eliminar el artículo', error)
       );
     }
