@@ -31,13 +31,22 @@ export class ArticlesPageComponent {
 
 // Manejar el evento emitido desde CardPostComponent
 SeeMore(articleId: string): void {
-  // Aquí puedes hacer lo que necesites con el articleId, como navegar a la página del artículo
-  console.log('ID del artículo emitido:', articleId);
-
-  // Ejemplo de cómo puedes navegar a la página de artículo
-  const slug = this.crudService.getSlugForArticle(articleId);
-  this.router.navigate(['/articulo', slug]);
-  console.log('lkadsjflkajsd: que hago: '+slug)
+  this.crudService.getSlugForArticle(articleId).subscribe(
+    slug => {
+      if (slug) {
+        // Navegar a la página de artículo con slug y id
+        this.router.navigate(['/articulo', slug, articleId]);
+      } else {
+        console.warn(`No se encontró slug para el articleId: ${articleId}`);
+        // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+      }
+    },
+    error => {
+      console.error('Error al obtener el slug:', error);
+      // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+    }
+  );
+}
 }
 
 

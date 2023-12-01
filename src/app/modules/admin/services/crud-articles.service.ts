@@ -69,8 +69,6 @@ export class CrudArticlesService {
     );
   }
 
-  
-
   getCardPosts(): Observable<CardPost[]> {
     return this.articlesCollection.valueChanges({ idField: 'id' }).pipe(
       map(articles => articles.map(article => this.mapToCardPost(article))),
