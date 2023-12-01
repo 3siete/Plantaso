@@ -17,7 +17,8 @@ export class CardShopComponent {
     slug:'',
     description:'',
     imgURL:'',
-    price: ''
+    price: '',
+    alt:'',
     
     }
   }
