@@ -4,6 +4,7 @@
         <img [src]= "article.imgURL" alt="{{ article.alt }}">
         <div class="sub-contenedor">
             <app-update-article-button [articleId]="article.articleId"></app-update-article-button>
+            <app-delete-article-button [articleId]="article.articleId"></app-delete-article-button>
             <div class="mini-contenedor">
                 <h2 class="titulo">{{ article.title }}</h2>
                 <p class="descripcion">{{ article.description }}</p>
