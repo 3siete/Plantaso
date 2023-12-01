@@ -10,4 +10,7 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
 })
 export class ArticlePageComponent {
   constructor(crudService:CrudArticlesService){}
+  ngOnInit(): void {
+
+  }
 }
