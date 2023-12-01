@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-delete-product-button',
-  template: './delete-product-button.component.html',
+  template: `<i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;" (click)="confirmDelete()"></i>`,
 })
 export class DeleteProductButtonComponent {
 
