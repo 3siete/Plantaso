@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MappingService {
+  private slugToIdMap: { [slug: string]: string } = {};
 
-  constructor() { }
+
+
 }
