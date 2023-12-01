@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentData, DocumentReference } from '@angular/fire/compat/firestore';
-import { Observable, catchError, from, map, switchMap, throwError } from 'rxjs';
+import { Observable, catchError, from, map, of, switchMap, throwError } from 'rxjs';
 import { Article } from 'src/app/models/articles.model';
 import { CardPost } from 'src/app/models/card-post';
 
@@ -98,11 +98,30 @@ export class CrudArticlesService {
 
 
 //UPDATE
-updateArticle(articleId: string, article: Article): Observable<void> {
-  return from(this.afs.doc<Article>(`articles/${articleId}`).update(article)).pipe(
+updateArticle(articleId: string, updatedArticle: Article): Observable<any> {
+  return this.afs.doc<Article>(`articles/${articleId}`).valueChanges().pipe(
+    switchMap((existingArticle: Article | undefined) => {
+      if (!existingArticle) {
+        console.warn(`No se encontró el artículo con ID: ${articleId}`);
+        return of(); // Devolver un observable vacío si no se encuentra el artículo
+      }
+      // Generar un nuevo slug si el título ha cambiado
+      const newSlug = updatedArticle.title !== existingArticle.title
+        ? this.slugify(updatedArticle.title)
+        : existingArticle.slug;
+
+      // Actualizar el artículo con el nuevo slug solo si el título ha cambiado
+      const updatedData: any = {
+        ...updatedArticle,
+        slug: newSlug
+      };
+
+      // Actualizar el documento con los nuevos datos
+      return this.afs.doc<Article>(`articles/${articleId}`).update(updatedData);
+    }),
     catchError((error) => {
-      console.error('Error al actualizar el artículo completo', error);
-      return throwError(error);
+      console.error('Error al actualizar el artículo:', error);
+      return of(); // Devolver un observable vacío o manejar el error según tus necesidades
     })
   );
 }
