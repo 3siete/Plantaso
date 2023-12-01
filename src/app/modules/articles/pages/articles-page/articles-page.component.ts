@@ -31,9 +31,18 @@ export class ArticlesPageComponent {
   }
   seeMore(articleId:string):void{
     this.crudService.getArticleById(articleId).subscribe(
-      id =>{
-        this.router.navigate(['/articulo',id])
-        console.log('id que llega a articles component: '+id)
+      id => {
+        if (id) {
+          // Navegar a la página de artículo con slug y id
+          this.router.navigate(['/articulo', id]);
+        } else {
+          console.warn(`No se encontró slug para el articleId: ${articleId}`);
+          // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+        }
+      },
+      error => {
+        console.error('Error al obtener el slug:', error);
+        // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
       }
     )
   }
