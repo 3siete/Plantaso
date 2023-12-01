@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudArticlesService } from '../../services/crud-articles.service';
 import { Article } from 'src/app/models/articles.model';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-update-article-button',
@@ -70,18 +70,21 @@ export class UpdateArticleButtonComponent {
     if (this.updateForm.valid) {
       this.isLoading = true;
       const updatedArticle: Article = this.updateForm.value;
-      this.crudService.updateArticle(this.articleId, updatedArticle).subscribe(
-        () => {
-          console.log('Article updated successfully');
-          this.isLoading = false;
-          // Agrega aquí cualquier lógica adicional necesaria
-        },
-        error => {
-          console.error('Error updating article', error);
-          this.isLoading = false;
-        }
-      );
+      this.crudService.updateArticle(this.articleId, updatedArticle)
+        .pipe(takeUntil(this.unsubscribe$))
+        .subscribe(
+          () => {
+            console.log('Article updated successfully');
+            this.isLoading = false;
+            // Agrega aquí cualquier lógica adicional necesaria
+          },
+          error => {
+            console.error('Error updating article', error);
+            this.isLoading = false;
+          }
+        );
     }
+  
     this.visible = false;  
   }
 }
