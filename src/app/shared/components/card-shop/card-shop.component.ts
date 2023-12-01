@@ -10,6 +10,16 @@ export class CardShopComponent {
   
   @Input() cardShopData: CardShop;
   @Output() seeMoreButton: EventEmitter<string> = new EventEmitter<string>();
-  constructor(){}
+  constructor(){
+    this.cardShopData={
+    productId:'',
+    title:'',
+    slug:'',
+    description:'',
+    imgURL:'',
+    price: ''
+    
+    }
+  }
 
 }
