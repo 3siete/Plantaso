@@ -48,7 +48,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
   exports:[
     //ARTICULOS
     CreateArticleButtonComponent,
-    UpdateArticleButtonComponent
+    UpdateArticleButtonComponent,
+    DeleteArticleButtonComponent
 
   ]
 
