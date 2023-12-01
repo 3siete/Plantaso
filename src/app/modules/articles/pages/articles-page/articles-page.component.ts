@@ -38,7 +38,7 @@ export class ArticlesPageComponent implements OnInit {
         if (slug) {
           console.log('hasta aca llega bien no?: ' + slug);
           // Navegar a la página de artículo con slug y id
-          this.router.navigate(['/articulo', slug]);
+          this.router.navigate(['/articulo', { id: articleId, slug: slug }]);
         } else {
           console.warn(`No se encontró slug para el articleId: ${articleId}`);
           // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
