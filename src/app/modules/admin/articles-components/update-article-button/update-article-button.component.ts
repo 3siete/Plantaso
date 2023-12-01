@@ -15,9 +15,7 @@ export class UpdateArticleButtonComponent {
   updateForm!: FormGroup
   isLoading=false
   visible: boolean = false;
-  
   updatingForm = false;
-  
   private unsubscribe$ = new Subject<void>();
   
   showDialog() {
