@@ -8,10 +8,10 @@
     <div class="card-info">
         <!-- Div para la información del producto -->
 
-        <p class="text-title">Product title</p>
+        <p class="text-title">P{{ cardShopData.title }}</p>
         <!-- Párrafo que muestra el título del producto -->
 
-        <p class="text-body">Product description and details</p>
+        <p class="text-body">{{ cardShopData.description }}</p>
         <!-- Párrafo que muestra la descripción y detalles del producto -->
 
     </div>
@@ -19,13 +19,13 @@
     <div class="card-footer">
         <!-- Div para el pie de la tarjeta -->
 
-        <span class="text-title">$499.49</span>
+        <span class="text-title">{{cardShopData.price}}</span>
         <!-- Etiqueta de texto que muestra el precio del producto -->
 
         <div class="card-button" routerLink="/productos/producto">
             <!-- Div que podría contener un botón relacionado con la tarjeta -->
 
-            <svg class="svg-icon" viewBox="0 0 20 20">
+            <svg class="svg-icon" viewBox="0 0 20 20" (click)="seeMore()">
                 <!-- SVG que podría representar un ícono de carrito o similar -->
 
                 <!-- Código SVG de un ícono -->
