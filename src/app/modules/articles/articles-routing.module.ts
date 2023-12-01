@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: ArticlesPageComponent },
   { path: 'articulo/:slug', component: ArticlePageComponent },
 
+
 ];
 
 @NgModule({

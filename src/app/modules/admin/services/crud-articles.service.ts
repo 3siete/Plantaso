@@ -52,6 +52,15 @@ export class CrudArticlesService {
       })
     );
   }
+  getArticleBySlug(slug: string): Observable<Article | null> {
+    return this.articlesCollection.doc<Article>(slug).valueChanges().pipe(
+      map(article => article ? { ...article, id: slug } : null),
+      catchError((error) => {
+        console.error('Error al obtener el artículo por slug:', error);
+        return throwError(error);
+      })
+    );
+  }
 
   getSlugForArticle(articleId: string): Observable<string | null> {
     return this.afs.doc<Article>(`articles/${articleId}`).valueChanges().pipe(

@@ -12,6 +12,12 @@ export class ArticlesPageComponent {
 
   cardPosts: CardPost[] = [];
 
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private crudService: CrudArticlesService
+  ) {}
+
   ngOnInit(): void {
     this.crudService.getCardPosts().subscribe(
       (cardPosts: CardPost[]) => {
@@ -23,30 +29,25 @@ export class ArticlesPageComponent {
       }
     );
   }
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private crudService: CrudArticlesService
-  ) {}
 
-// Manejar el evento emitido desde CardPostComponent
-SeeMore(articleId: string): void {
-  this.crudService.getSlugForArticle(articleId).subscribe(
-    slug => {
-      if (slug) {
-        // Navegar a la página de artículo con slug y id
-        this.router.navigate(['/articulo', slug]);
-      } else {
-        console.warn(`No se encontró slug para el articleId: ${articleId}`);
+  // Manejar el evento emitido desde CardPostComponent
+  seeMore(articleId: string): void {
+    this.crudService.getSlugForArticle(articleId).subscribe(
+      slug => {
+        if (slug) {
+          // Navegar a la página de artículo con slug y id
+          this.router.navigate(['/articulo', slug]);
+        } else {
+          console.warn(`No se encontró slug para el articleId: ${articleId}`);
+          // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+        }
+      },
+      error => {
+        console.error('Error al obtener el slug:', error);
         // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
       }
-    },
-    error => {
-      console.error('Error al obtener el slug:', error);
-      // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
-    }
-  );
-}
+    );
+  }
 }
 
 

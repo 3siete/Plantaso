@@ -3,8 +3,9 @@
         <app-card-post
         *ngFor="let cardPost of cardPosts"
         [cardPostData]="cardPost"
-        (seeMoreButton)="SeeMore($event)"
+        (seeMoreButton)="seeMore($event)"
       ></app-card-post>
     </div>
 </app-container>
+
 
