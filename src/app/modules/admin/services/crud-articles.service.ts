@@ -111,7 +111,7 @@ updateArticle(articleId: string, updatedArticle: Article): Observable<any> {
         : existingArticle.slug;
 
       // Actualizar el artículo con el nuevo slug solo si el título ha cambiado
-      const updatedData: any = {
+      const updatedData: Article = {
         ...updatedArticle,
         slug: newSlug
       };
