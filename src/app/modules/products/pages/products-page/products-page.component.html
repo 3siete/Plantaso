@@ -4,7 +4,7 @@
     <div class="products">
         <app-card-shop 
         *ngFor="let cardShop of cardShops"
-        cardShopData="cardShop"
+        [cardShopData]="cardShop"
         (seeMoreButton)="seeMore($event)"/>
     </div>
 </app-container>
