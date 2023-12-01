@@ -29,13 +29,13 @@ export class LoginComponent {
     const value = this.loginForm.value;
     this.authService.login(value).then(res => {
       console.log(res)
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['inicio'])
     })
-    .catch(error => {console.error(error)})
+    .catch(error => {this.router.navigate(['register'])})
     }
 
-  show() {
-    this.mensaje.add({ severity: 'success', summary: 'Hola', detail: 'Bienvenido', life:3000 });
-  }
+    show() {
+      this.mensaje.add({ severity: 'success', summary: 'Hola', detail: 'Bienvenido', life:3000 });
+    }
 
 }

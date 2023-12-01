@@ -1,31 +1,24 @@
 <div class="padre">
     <app-sidebar></app-sidebar>
     <div class="contenedor">
-        <div class="blanco">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_740971-MLU72637066753_112023-O.webp" alt="Imagen del producto">
+        <div class="blanco" *ngIf="product">
+            <app-update-product-button [productId]="product.productId"></app-update-product-button>
+            <app-delete-product-button [productId]="product.productId"></app-delete-product-button>
+            <img [src]="product.imgURL" alt="{{product.alt}}">
             <div class="cont">
-                <h2>Maceta Plástica Premium N 18 Nórdica Decorativa Apt Extrior Color Blanco</h2>
+                <h2>{{product.title}}</h2>
                 <div class="price">
-                    $ 2.499
-                    <span>en 12x $662,27</span>
+                    $ {{product.price}}
+                    <span>en {{product.quotas}}</span>
                 </div>
                 <ul class="product-info">
                     <h4>Lo que tenés que saber de este producto</h4>
-                    <li>Diámetro de la base: 13cm.</li>
-                    <li>Diámetro de la boca: 18cm.</li>
-                    <li>Capacidad de 3L.</li>
-                    <li>Hecho en plástico.</li>
-                    <li>Forma redonda.</li>
-                    <li>Es apto para huertas.</li>
+                    <p>{{product.info}}</p>
                     <!-- Más ítems de información -->
                 </ul>
                 <div class="product-description">
                     <h4>descripcion</h4>
-                    <p>Disfruta de tus platas con la maceta T-Design N°18 que te ofrece calidad y durabilidad, gracias a
-                        su
-                        grosor es un producto muy duradero y de calidad que te permitira disfrutas de tus plantas tanto
-                        en
-                        casa como al aire libre. No te quedes sin tus macetas T-Design!</p>
+                    <p>{{product.description}}</p>
                 </div>
             </div>
             <div class="product-container">

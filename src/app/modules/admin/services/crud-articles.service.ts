@@ -38,10 +38,7 @@ export class CrudArticlesService {
       .replace(/[^\w-]+/g, '');    // Elimina caracteres no alfanuméricos excepto guiones
   }
 
-
-
   //REED
-
   // Búsqueda por ID
   getArticleById(id: string): Observable<Article | null> {
     return this.afs.doc<Article>(`articles/${id}`).valueChanges().pipe(
