@@ -79,6 +79,7 @@ export class CrudArticlesService {
     console.log('URL antes de devolverla:', article.imgurl);
   
     return {
+      articleId:article.id,
       title: article.title,
       subtitle: article.subtitle,
       description: article.description,
