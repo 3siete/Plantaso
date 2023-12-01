@@ -32,6 +32,7 @@ seeMore(productId:string){
 
     slug=>{
       if(slug){
+        this.slugMap.addMapping(slug, productId);
         this.router.navigate(['/producto',slug])
       }else {
         console.warn(`No se encontró slug para el productId: ${productId}`);
