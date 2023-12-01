@@ -10,7 +10,8 @@ import { ArticlesPageComponent } from 'src/app/modules/articles/pages/articles-p
 })
 export class CardPostComponent {
   @Input() cardPostData: CardPost;
-  @Output() seeMore: EventEmitter<string> = new EventEmitter<string>();
+  @Output() seeMoreButton: EventEmitter<string> = new EventEmitter<string>();
+  
   constructor(private router: Router ){
     this.cardPostData = {
       articleId:'',
@@ -22,12 +23,13 @@ export class CardPostComponent {
     }
   }
 
-  seeMoreButton(): void {
+  seeMore(): void {
     // Aquí, deberías tener acceso al id del artículo asociado a esta tarjeta
     const articleId = this.cardPostData.articleId;
 
     // Emitir el evento seeMore con el id del artículo
-    this.seeMore.emit(articleId);
+    this.seeMoreButton.emit(articleId);
   }
+
 }
 
