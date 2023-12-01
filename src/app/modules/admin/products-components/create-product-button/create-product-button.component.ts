@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { CrudProductsService } from '../../services/crud-products.service';
 
 @Component({
   selector: 'app-create-product-button',
@@ -10,7 +11,7 @@ export class CreateProductButtonComponent {
   createForm!: FormGroup;
   visible: boolean = false;
 
-  constructor(private fb: FormBuilder, private crudService: CrudArticlesService) {}
+  constructor(private fb: FormBuilder, private crudService: CrudProductsService) {}
 
   ngOnInit(): void {
     this.createForm = this.fb.group({
