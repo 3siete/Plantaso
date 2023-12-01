@@ -22,7 +22,6 @@ export class ArticlesPageComponent {
         console.error('Error al obtener las CardPosts en la página de artículos:', error);
       }
     );
-      console.log('el id que llega aca es: '+ )
   }
   constructor(
     private router: Router,
@@ -30,23 +29,21 @@ export class ArticlesPageComponent {
     private crudService: CrudArticlesService
   ) {}
 
+// Manejar el evento emitido desde CardPostComponent
+SeeMore(articleId: string): void {
+  // Aquí puedes hacer lo que necesites con el articleId, como navegar a la página del artículo
+  console.log('ID del artículo emitido:', articleId);
 
-
- // Método para navegar a la página de artículo completo
-  navigateToArticle(articleId: string): void {
-  // Obtener el slug para la URL legible (puedes obtener esto desde el servicio o donde sea necesario)
+  // Ejemplo de cómo puedes navegar a la página de artículo
   const slug = this.getSlugForArticle(articleId);
-
-  // Navegar a la página de artículo con slug y campo único
   this.router.navigate(['/articulo', slug, articleId]);
 }
 
-// Método de ejemplo para obtener el slug para un artículo (ajusta según tus necesidades)
 private getSlugForArticle(articleId: string): string {
-  // Aquí puedes llamar a tu servicio o lógica para obtener el slug correspondiente al campo único
-  // Por ejemplo, puedes hacer otra llamada al servicio para obtener el artículo y luego extraer el slug
-  // Aquí, solo estoy devolviendo un slug básico para propósitos de demostración
-  return 'slug-for-' + articleId;
+  // Implementa la lógica para obtener el slug según el articleId
+  // ...
+
+  return 'slug-for-' + articleId; // Esto es solo un ejemplo, ajusta según tus necesidades
 }
 
 }
