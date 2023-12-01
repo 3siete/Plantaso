@@ -21,5 +21,12 @@ export class CardShopComponent {
     
     }
   }
+  seeMore(): void {
+    // Aquí, deberías tener acceso al id del artículo asociado a esta tarjeta
+    const productId = this.cardShopData.productId;
 
+    // Emitir el evento seeMore con el id del artículo
+    this.seeMoreButton.emit(productId);
+    console.log('cuando se emite' + productId);
+  }
 }
