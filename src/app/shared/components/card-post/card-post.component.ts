@@ -13,6 +13,7 @@ export class CardPostComponent {
   @Output() seeMore: EventEmitter<string> = new EventEmitter<string>();
   constructor(private router: Router ){
     this.cardPostData = {
+      articleId:'',
       title: '',
       subtitle: '',
       imgurl: '',
