@@ -1,6 +1,6 @@
 export interface Article{
     articleId:string;
-    imgurl:string;
+    imgURL:string;
     alt:string;
     title:string;
     subtitle:string;

@@ -17,9 +17,10 @@ export class CardPostComponent {
       articleId:'',
       title: '',
       subtitle: '',
-      imgurl: '',
+      imgURL: '',
       description: '',
       alt: '',
+      carrusel:''
     }
   }
 

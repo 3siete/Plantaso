@@ -3,6 +3,7 @@ export interface CardPost{
     title: string;
     subtitle: string;
     description: string;
-    imgurl: string;
+    imgURL: string;
     alt:string;
+    carrusel:string;
 }

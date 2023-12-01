@@ -21,7 +21,7 @@ export class UpdateArticleButtonComponent {
 
   ngOnInit():void{
     this.updateForm = this.fb.group({
-      imgurl: ['', [Validators.required,]],
+      imgURL: ['', [Validators.required,]],
       alt: ['', [Validators.required]],
       title: ['', [Validators.required]],
       subtitle: ['', [Validators.required]],

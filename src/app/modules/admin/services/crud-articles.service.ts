@@ -76,15 +76,16 @@ export class CrudArticlesService {
   
   private mapToCardPost(article: Article): CardPost {
     console.log('Mapeando artículo:', article);
-    console.log('URL antes de devolverla:', article.imgurl);
+    console.log('URL antes de devolverla:', article.imgURL);
   
     return {
       articleId:article.articleId,
       title: article.title,
       subtitle: article.subtitle,
       description: article.description,
-      imgurl: article.imgurl,
+      imgURL: article.imgURL,
       alt: article.alt,
+      carrusel:article.carrusel,
     };
   }
 
