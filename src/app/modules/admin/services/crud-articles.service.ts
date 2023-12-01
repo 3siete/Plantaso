@@ -94,6 +94,7 @@ export class CrudArticlesService {
   
     return {
       articleId:article.articleId,
+      slug:article.slug,
       title: article.title,
       subtitle: article.subtitle,
       description: article.description,
