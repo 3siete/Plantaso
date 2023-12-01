@@ -1,11 +1,11 @@
-
-<div class="card" *ngFor="let producto of productos$ | async">
-    <img [src]= "producto.imgurl"
-        class="card-img" alt="{{ producto.alt }}">
-    <div class="card-body">
-        <h4 class="card-title">{{ producto.title }}</h4>
-        <p class="card-sub-title">{{ producto.subtitle }}</p>
-        <p class="card-info">{{ producto.description }}</p>
-        <button class="card-btn" routerLink="/articulos/articulo">Mas info</button>
+<div *ngFor="let producto of productos$ | async">
+    <div class="card" *ngIf="producto.carrusel === 'si'">
+        <img [src]="producto.imgurl" class="card-img" alt="{{ producto.alt }}">
+        <div class="card-body">
+            <h4 class="card-title">{{ producto.title }}</h4>
+            <p class="card-sub-title">{{ producto.subtitle }}</p>
+            <p class="card-info">{{ producto.description }}</p>
+            <button class="card-btn" routerLink="/articulos/articulo">Mas info</button>
+        </div>
     </div>
 </div>

@@ -74,6 +74,7 @@ export class CrudArticlesService {
       description: article.description,
       imgurl: article.imgurl,
       alt: article.alt,
+      carrusel: article.carrusel
     };
   }
 

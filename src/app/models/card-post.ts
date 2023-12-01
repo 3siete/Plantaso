@@ -4,4 +4,5 @@ export interface CardPost{
     description: string;
     imgurl: string;
     alt:string;
+    carrusel:string;
 }

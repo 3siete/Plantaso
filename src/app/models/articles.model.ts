@@ -11,4 +11,5 @@ export interface Article{
     characteristics:string;
     pests:string;
     insecticides:string;
+    carrusel:string
 }
