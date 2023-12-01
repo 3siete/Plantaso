@@ -4,6 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CrudProductsService {
+  private productsCollection: AngularFirestoreCollection<Products>;
 
-  constructor() { }
+  constructor(private afs: AngularFirestore) {
+    this.productsCollection = afs.collection<Products>('products');
+  }
+  
 }
