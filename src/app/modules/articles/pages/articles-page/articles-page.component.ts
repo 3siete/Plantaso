@@ -39,7 +39,7 @@ export class ArticlesPageComponent implements OnInit {
       slug => {
         if (slug) {
           console.log('hasta aca llega bien no?: ' + slug);
-          
+          this.slugMap.addMapping(slug, articleId); // Agrega el mapeo
           // Navegar a la página de artículo con slug y id
           this.router.navigate(['/articulo', slug]);
         } else {
