@@ -16,7 +16,7 @@ export class ArticlesPageComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private crudService: CrudArticlesService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.crudService.getCardPosts().subscribe(
@@ -38,8 +38,7 @@ export class ArticlesPageComponent implements OnInit {
         if (slug) {
           console.log('hasta aca llega bien no?: ' + slug);
           // Navegar a la página de artículo con slug y id
-          // En el método seeMore
-          this.router.navigate(['/articulo', { id: articleId, slug: slug }]);
+          this.router.navigate(['/articulo', slug]);
         } else {
           console.warn(`No se encontró slug para el articleId: ${articleId}`);
           // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
