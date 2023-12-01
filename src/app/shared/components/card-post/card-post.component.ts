@@ -29,6 +29,7 @@ export class CardPostComponent {
 
     // Emitir el evento seeMore con el id del artículo
     this.seeMoreButton.emit(articleId);
+    console.log('cuando se emite'+articleId)
   }
 
 }

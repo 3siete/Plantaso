@@ -22,12 +22,15 @@ export class ArticlesPageComponent {
         console.error('Error al obtener las CardPosts en la página de artículos:', error);
       }
     );
+      console.log('el id que llega aca es: '+ )
   }
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private crudService: CrudArticlesService
   ) {}
+
+
 
  // Método para navegar a la página de artículo completo
   navigateToArticle(articleId: string): void {
