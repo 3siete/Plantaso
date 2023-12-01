@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article } from 'src/app/models/articles.model';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
+import { MappingService } from '../../services/mapping.service';
 
 @Component({
   selector: 'app-article-page',
