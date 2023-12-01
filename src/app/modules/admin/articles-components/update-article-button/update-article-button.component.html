@@ -1,4 +1,4 @@
-<i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Create"></i>
+<i class="fa-regular fa-pen-to-square fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Create"></i>
 
 <p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
 <div *ngIf="isLoading">Cargando...</div>
@@ -6,7 +6,7 @@
     <div class="group">
         <br>
         <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgurl"></textarea>
+            <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgURL"></textarea>
             <label htmlFor="imgURL">URL de la imagen*</label>
         </span>
     </div>
@@ -71,6 +71,11 @@
             <label htmlFor="email">INSECTICIDAS*</label>
         </span>
     </div>
-    <button type="submit" [disabled]="!updateForm.valid">Actualizar Artículo</button>
+    <div class="group">
+        <span class="p-float-label">
+            <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
+        </span>
+    </div>
+    <button type="submit" [disabled]="isLoading || !updateForm.valid">Actualizar Artículo</button>
 </form>
 </p-dialog>

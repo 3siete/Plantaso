@@ -11,6 +11,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { DialogModule } from 'primeng/dialog';
 import { AdminModule } from '../modules/admin/admin.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminModule } from '../modules/admin/admin.module';
   ],
   imports: [
     CommonModule,
-    AdminModule
+    AdminModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,
