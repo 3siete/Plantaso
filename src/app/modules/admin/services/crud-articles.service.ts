@@ -50,8 +50,6 @@ export class CrudArticlesService {
     return this.afs.doc<Article>(`articles/${articleId}`).valueChanges().pipe(
       map(article => {
         if (article) {
-          // Aquí deberías tener una propiedad slug en tu modelo Article
-          // Ajusta según la estructura de tu modelo
           return article.slug || null;
         } else {
           return null;
