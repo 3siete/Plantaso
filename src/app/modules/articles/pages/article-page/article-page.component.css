@@ -31,7 +31,7 @@
 }
 
 .img {
-    width: 300px;
+    max-width: 300px;
     /* Ajusta según tus necesidades */
     height: 90%;
     object-fit: cover;

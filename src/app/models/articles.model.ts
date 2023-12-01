@@ -1,6 +1,6 @@
 export interface Article{
-    id:string
-    imgurl:string;
+    articleId:string;
+    imgURL:string;
     alt:string;
     title:string;
     subtitle:string;
@@ -8,7 +8,9 @@ export interface Article{
     reproduction:string;
     care:string;
     tips:string;
-    characteristics:string;
+    characteristic:string;
     pests:string;
     insecticides:string;
+    slug?:string;
+    carrusel:string;
 }

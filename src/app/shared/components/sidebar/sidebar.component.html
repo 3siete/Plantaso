@@ -46,7 +46,10 @@
                         <span [ngClass]="'tooltip'">create</span>
                     </div>
                 </li>
-                <app-create-article-button></app-create-article-button>
+                <li *ngIf="login && rol === 'admin'" >
+                    <app-create-article-button></app-create-article-button>
+
+                </li>
             </ul>
         </div>
 

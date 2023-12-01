@@ -1,8 +1,10 @@
 <div class="padre">
     <app-sidebar></app-sidebar>
     <div class="contenedor" *ngIf="article">
-        <img [src]= "article.imgurl" alt="{{ article.alt }}">
+        <img [src]= "article.imgURL" alt="{{ article.alt }}">
         <div class="sub-contenedor">
+            <app-update-article-button [articleId]="article.articleId"></app-update-article-button>
+            <app-delete-article-button [articleId]="article.articleId"></app-delete-article-button>
             <div class="mini-contenedor">
                 <h2 class="titulo">{{ article.title }}</h2>
                 <p class="descripcion">{{ article.description }}</p>
@@ -21,9 +23,9 @@
             </div>
             <div class="mini-contenedor">
                 <h3>Caracteristicas</h3>
-                <ul>
-                    {{ article.characteristics }}
-                </ul>
+                <p>
+                    {{ article.characteristic }}
+                </p>
             </div>
             <div class="mini-contenedor">
                 <h3>Plagas</h3>

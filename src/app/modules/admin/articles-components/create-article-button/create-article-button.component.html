@@ -6,7 +6,7 @@
         <div class="group">
             <br>
             <span class="p-float-label">
-                <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgurl"></textarea>
+                <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgURL"></textarea>
                 <label htmlFor="imgURL">URL de la imagen*</label>
             </span>
         </div>
@@ -69,6 +69,12 @@
             <span class="p-float-label">
                 <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="insecticides"></textarea>
                 <label htmlFor="email">INSECTICIDAS*</label>
+            </span>
+        </div>
+        <br>
+        <div class="group">
+            <span class="p-float-label">
+                <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
             </span>
         </div>
 

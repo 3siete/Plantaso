@@ -18,6 +18,9 @@ import { UpdateProductButtonComponent } from './products-components/update-produ
 import { DeleteProductButtonComponent } from './products-components/delete-product-button/delete-product-button.component';
 
 
+import { InputSwitchModule } from 'primeng/inputswitch';
+
+
 @NgModule({
   declarations: [
   //ARTICULOS
@@ -38,12 +41,15 @@ import { DeleteProductButtonComponent } from './products-components/delete-produ
     ReactiveFormsModule,
     FormsModule,
 
+    InputSwitchModule
+
 
   ],
   exports:[
     //ARTICULOS
     CreateArticleButtonComponent,
-    UpdateArticleButtonComponent
+    UpdateArticleButtonComponent,
+    DeleteArticleButtonComponent
 
   ]
 

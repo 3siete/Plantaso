@@ -4,11 +4,12 @@ import { ArticlesPageComponent } from './pages/articles-page/articles-page.compo
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
 
 const routes: Routes = [
-  //ruta secundaria
+  // Ruta principal (sin slug)
   { path: '', component: ArticlesPageComponent },
-  { path: 'articulo/:slug/:id', component: ArticlePageComponent },
-
+  // Ruta secundaria con slug
+  { path: ':slug', component: ArticlePageComponent },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

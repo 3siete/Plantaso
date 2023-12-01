@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article } from 'src/app/models/articles.model';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
+import { MappingService } from '../../services/mapping.service';
 
 @Component({
   selector: 'app-article-page',
@@ -13,25 +14,35 @@ export class ArticlePageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private articleService: CrudArticlesService
+    private crudService: CrudArticlesService,
+    private slugMap:MappingService
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      const id = params.get('id');
-
+    this.route.params.subscribe(params => {
+      const slug = params['slug'];
+      const id = this.slugMap.getArticleIdFromSlug(slug);
       if (id) {
-        // Llamar al servicio para obtener el artículo por id
-        this.articleService.getArticleById(id).subscribe(
-          (article) => {
-            this.article = article;
+        // Llamada al servicio para obtener el artículo por articleId
+        this.crudService.getArticleById(id).subscribe(
+          article => {
+            if (article) {
+              console.log('Artículo obtenido:', article);
+              // Resto de la lógica para manejar el artículo obtenido
+              this.article = article;
+            } else {
+              console.warn(`No se encontró artículo para el slug: ${slug} y articleId: ${id}`);
+              // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+            }
           },
-          (error) => {
+          error => {
             console.error('Error al obtener el artículo:', error);
-            // Puedes manejar el error según tus necesidades
+            // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
           }
         );
+      } else {
+        console.warn(`No se encontró articleId para el slug: ${slug}`);
       }
     });
-  }
+}
 }

@@ -21,7 +21,7 @@ export class CreateArticleButtonComponent {
 
   ngOnInit():void{
     this.createForm = this.fb.group({
-      imgurl: ['', [Validators.required,]],
+      imgURL: ['', [Validators.required,]],
       alt: ['', [Validators.required]],
       title: ['', [Validators.required]],
       subtitle: ['', [Validators.required]],
@@ -32,8 +32,14 @@ export class CreateArticleButtonComponent {
       characteristic: ['', [Validators.required]],
       pests: ['', [Validators.required]],
       insecticides: ['', [Validators.required]],
+      carrusel:['false',Validators.required]
     });
   }
+
+  updateCarruselValue(event: any) {
+    this.createForm.get('carrusel')?.setValue(event ? 'true' : 'false');
+  }
+  
 
   onSubmit(){
     const value = this.createForm.value;

@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
+import { MappingService } from '../../services/mapping.service';
 
 @Component({
   selector: 'app-articles-page',
   templateUrl: './articles-page.component.html',
   styleUrls: ['./articles-page.component.css']
 })
-export class ArticlesPageComponent {
+export class ArticlesPageComponent implements OnInit {
 
   cardPosts: CardPost[] = [];
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private crudService: CrudArticlesService,
+    private slugMap: MappingService
+  ) {}
 
   ngOnInit(): void {
     this.crudService.getCardPosts().subscribe(
@@ -23,27 +31,29 @@ export class ArticlesPageComponent {
       }
     );
   }
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private crudService: CrudArticlesService
-  ) {}
 
-  // Ejemplo de cómo puedes navegar a una página de artículo
-  navigateToArticle(articleId: string): void {
-    // Obtener el slug para la URL legible (puedes obtener esto desde el servicio o donde sea necesario)
-    const slug = this.getSlugForArticle(articleId);
 
-    // Navegar a la página de artículo con slug y id
-    this.router.navigate(['/articulo', slug, articleId]);
+  // Manejar el evento emitido desde CardPostComponent
+  seeMore(articleId: string): void {
+    this.crudService.getSlugForArticle(articleId).subscribe(
+      slug => {
+        if (slug) {
+          console.log('hasta aca llega bien no?: ' + slug);
+          this.slugMap.addMapping(slug, articleId); // Agrega el mapeo
+          // Navegar a la página de artículo con slug y id
+          this.router.navigate(['/articulo', slug]);
+        } else {
+          console.warn(`No se encontró slug para el articleId: ${articleId}`);
+          // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+        }
+      },
+      error => {
+        console.error('Error al obtener el slug:', error);
+        // Manejar según tus necesidades (por ejemplo, mostrar un mensaje de error)
+      }
+    );
   }
-
-  // Ejemplo de cómo puedes obtener el slug para un artículo (puedes ajustar esto según tus necesidades)
-  private getSlugForArticle(articleId: string): string {
-    // Aquí puedes llamar a tu servicio o lógica para obtener el slug correspondiente al id
-    // Por ejemplo, puedes hacer otra llamada al servicio para obtener el artículo y luego extraer el slug
-    // Aquí, solo estoy devolviendo un slug básico para propósitos de demostración
-    return 'slug-for-' + articleId;
-  }
-
 }
+
+
+
