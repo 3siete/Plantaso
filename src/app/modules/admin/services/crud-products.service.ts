@@ -102,5 +102,13 @@ export class CrudProductsService {
         })
       );
     }
-  
+    // DELETE
+    deleteProduct(productId: string): Observable<void> {
+      return from(this.afs.doc<Products>(`products/${productId}`).delete()).pipe(
+        catchError((error) => {
+          console.error('Error al eliminar el producto', error);
+          return throwError(error);
+        })
+      );
+    }
 }
