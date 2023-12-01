@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CrudProductsService } from '../../services/crud-products.service';
+import { Subject, takeUntil } from 'rxjs';
+import { Products } from 'src/app/models/products.model';
 
 @Component({
   selector: 'app-update-product-button',
