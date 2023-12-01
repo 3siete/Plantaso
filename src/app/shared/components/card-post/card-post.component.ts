@@ -27,11 +27,11 @@ export class CardPostComponent {
 
   seeMore(): void {
     // Aquí, deberías tener acceso al id del artículo asociado a esta tarjeta
-    const slug = this.cardPostData.slug;
+    const articleId = this.cardPostData.articleId;
 
     // Emitir el evento seeMore con el id del artículo
-    this.seeMoreButton.emit(slug);
-    console.log('cuando se emite' + slug);
+    this.seeMoreButton.emit(articleId);
+    console.log('cuando se emite' + articleId);
   }
 }
 
