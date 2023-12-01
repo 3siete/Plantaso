@@ -49,6 +49,7 @@ export class UpdateArticleButtonComponent {
       error => {
         console.error('Error loading article', error);
         this.isLoading = false;
+        // Agrega aquí cualquier lógica adicional necesaria
       }
     );
   }
