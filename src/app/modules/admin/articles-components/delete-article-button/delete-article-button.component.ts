@@ -17,7 +17,7 @@ export class DeleteArticleButtonComponent {
       this.crudService.deleteArticle(this.articleId).subscribe(
         () => {
           console.log('Artículo eliminado con éxito');
-          this.router.navigate(['articulos']);
+          this.router.navigate(['articulo']);
       },
         error => console.error('Error al eliminar el artículo', error)
       );

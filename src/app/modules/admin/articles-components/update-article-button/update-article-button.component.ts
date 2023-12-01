@@ -85,7 +85,7 @@ export class UpdateArticleButtonComponent {
           () => {
             console.log('Article updated successfully');
             this.isLoading = false;
-            this.router.navigate(['/articulos']);
+            this.router.navigate(['articulo']);
           },
           error => {
             console.error('Error updating article', error);
