@@ -1,0 +1,53 @@
+<i class="fa-regular fa-pen-to-square fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Update"></i>
+
+<p-dialog header="Update Product" [(visible)]="visible" [style]="{width: '50vw'}">
+    <div *ngIf="isLoading">Loading...</div>
+    <form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+        <div class="group">
+            <br>
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgURL"></textarea>
+                <label htmlFor="imgURL">Image URL*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="alt" formControlName="alt"></textarea>
+                <label htmlFor="email">Alt*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="title"></textarea>
+                <label htmlFor="email">Title*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="subtitle"></textarea>
+                <label htmlFor="email">Subtitle*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="description"></textarea>
+                <label htmlFor="email">Description*</label>
+            </span>
+        </div>
+        <div class="group">
+            <span class="p-float-label">
+                <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="reproduction"></textarea>
+                <label htmlFor="email">Reproduction*</label>
+            </span>
+        </div>
+
+        <!-- Agrega los demás campos aquí -->
+
+        <div class="group">
+            <span class="p-float-label">
+                <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
+            </span>
+        </div>
+        <button type="submit" [disabled]="isLoading || !updateForm.valid">Update Product</button>
+    </form>
+</p-dialog>

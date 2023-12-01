@@ -17,6 +17,9 @@ export class UpdateProductButtonComponent {
   visible: boolean = false;
   updatingForm = false;
   private unsubscribe$ = new Subject<void>();
+  showDialog(){
+    this.visible = true;
+  }
 
   constructor(
     private fb: FormBuilder,
