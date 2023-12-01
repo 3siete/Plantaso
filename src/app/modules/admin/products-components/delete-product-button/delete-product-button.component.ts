@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CrudProductsService } from '../../services/crud-products.service';
 
 @Component({
   selector: 'app-delete-product-button',
