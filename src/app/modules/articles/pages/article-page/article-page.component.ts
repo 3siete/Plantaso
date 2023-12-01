@@ -17,8 +17,8 @@ export class ArticlePageComponent {
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const id = params.get('articleId');
+    this.route.params.subscribe(params => {
+      const id = params['slug'];
     
       if (id) {
         this.crudService.getArticleById(id).subscribe(
