@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CardPost } from 'src/app/models/card-post';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
+import { MappingService } from '../../services/mapping.service';
 
 @Component({
   selector: 'app-articles-page',
