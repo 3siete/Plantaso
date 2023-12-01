@@ -11,6 +11,18 @@ import { CrudArticlesService } from 'src/app/modules/admin/services/crud-article
 export class ArticlePageComponent {
   constructor(crudService:CrudArticlesService){}
   ngOnInit(): void {
-
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+  
+      this.crudService.getArticleById(id).subscribe(
+        article => {
+          this.article = article;
+        },
+        error => {
+          console.error('Error al obtener el artículo:', error);
+          // Puedes manejar el error según tus necesidades
+        }
+      );
+    });
   }
 }
