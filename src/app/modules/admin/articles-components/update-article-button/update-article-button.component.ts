@@ -33,6 +33,7 @@ export class UpdateArticleButtonComponent {
       characteristic: ['', [Validators.required]],
       pests: ['', [Validators.required]],
       insecticides: ['', [Validators.required]],
+      carrusel:['false',Validators.required]
     });
   }
   
