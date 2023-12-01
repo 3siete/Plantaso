@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrudArticlesService } from '../../services/crud-articles.service';
 import { Article } from 'src/app/models/articles.model';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-update-article-button',
@@ -14,11 +15,14 @@ export class UpdateArticleButtonComponent {
   isLoading=false
   visible: boolean = false;
   
+  private unsubscribe$ = new Subject<void>();
+  
   showDialog() {
     this.loadArticleData(this.articleId);
     this.visible = true;  
   }
-  constructor(private fb: FormBuilder, private crudService: CrudArticlesService){}
+  constructor(private fb: FormBuilder,
+    private crudService: CrudArticlesService){}
 
   ngOnInit():void{
     this.updateForm = this.fb.group({
@@ -57,6 +61,10 @@ export class UpdateArticleButtonComponent {
       }
     );
   }
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
 
   onSubmit(): void {
     if (this.updateForm.valid) {
@@ -74,7 +82,6 @@ export class UpdateArticleButtonComponent {
         }
       );
     }
-    
     this.visible = false;  
   }
 }
