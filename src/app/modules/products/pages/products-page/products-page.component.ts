@@ -4,6 +4,7 @@ import { CardShop } from 'src/app/models/card-shop';
 import { CrudArticlesService } from 'src/app/modules/admin/services/crud-articles.service';
 import { CrudProductsService } from 'src/app/modules/admin/services/crud-products.service';
 import { MappingService } from 'src/app/modules/articles/services/mapping.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-products-page',
@@ -15,7 +16,7 @@ cardShops:CardShop[] = [];
 constructor(
   private router: Router,
   private crudService: CrudProductsService,
-  private slugMap: MappingService
+  private slugMap: ProductsService
 ){
   this.crudService.getCardShops().subscribe(
     (cardShop:CardShop[])=>{
