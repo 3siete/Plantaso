@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-shop.component.css']
 })
 export class CardShopComponent {
+  constructor(){}
 
 }
