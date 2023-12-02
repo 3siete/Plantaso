@@ -164,7 +164,6 @@ h5{
 
 /*contenedor promo*/
 h3 {
-    position: absolute;
     text-transform: uppercase;
     color: #fff;
     font-size: 2.5rem;
@@ -172,6 +171,7 @@ h3 {
     z-index: 1;
     top: 5%;
     left: 45%;
+    line-height: 50px;
     /* Centra el elemento vertical y horizontalmente */
 
 }
@@ -199,24 +199,23 @@ h3 {
     background-position: center center; /* Centra la imagen en el contenedor */
 }
 .cont{
-    background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de opacidad */
-    padding: 10px; /* Espacio alrededor del texto */
-    border-radius: 5px; /* Bordes redondeados del contenedor */
+    background-color: #99c66fab; /* Blanco con 50% de opacidad */
+    padding: 30px; /* Espacio alrededor del texto */
+    border-radius: 25px; /* Bordes redondeados del contenedor */
     left: 30%;
     top: 5%;
-    text-align: justify;
     font-size: 1.5rem;
     line-height: 25px;
     width: 500px;
-    margin-left: 300px;
+    color: #fff;
 }
 
 /*contenedor quienes somos*/
 p {
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     /* Tamaño de fuente */
-    line-height: 25px;
+    line-height: 30px;
     /* Altura de línea */
     margin: 10px 0;
     /* Margen superior e inferior */
