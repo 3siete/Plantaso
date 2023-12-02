@@ -2,21 +2,9 @@
 
 <app-container>
     <div class="products">
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
-        <app-card-shop></app-card-shop>
+        <app-card-shop 
+        *ngFor="let cardShop of cardShops"
+        [cardShopData]="cardShop"
+        (seeMoreButton)="seeMore($event)"/>
     </div>
 </app-container>

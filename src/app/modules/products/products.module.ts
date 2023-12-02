@@ -5,6 +5,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { AdminModule } from '../admin/admin.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
     CommonModule,
     ProductsRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    AdminModule
   ]
 })
 export class ProductsModule { }

@@ -23,15 +23,15 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
-  //ARTICULOS
-  CreateArticleButtonComponent,
-  UpdateArticleButtonComponent,
-  DeleteArticleButtonComponent,
+    //ARTICULOS
+    CreateArticleButtonComponent,
+    UpdateArticleButtonComponent,
+    DeleteArticleButtonComponent,
 
-  //PRODUCTOS
-  CreateProductButtonComponent,
-  UpdateProductButtonComponent,
-  DeleteProductButtonComponent
+    //PRODUCTOS
+    CreateProductButtonComponent,
+    UpdateProductButtonComponent,
+    DeleteProductButtonComponent
   ],
   imports: [
     CommonModule,
@@ -45,11 +45,16 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 
 
   ],
-  exports:[
+  exports: [
     //ARTICULOS
     CreateArticleButtonComponent,
     UpdateArticleButtonComponent,
-    DeleteArticleButtonComponent
+    DeleteArticleButtonComponent,
+
+    //productos
+    CreateProductButtonComponent,
+    UpdateProductButtonComponent,
+    DeleteProductButtonComponent
 
   ]
 
