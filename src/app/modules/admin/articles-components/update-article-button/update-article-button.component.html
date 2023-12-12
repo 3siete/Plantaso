@@ -1,81 +1,136 @@
+<!-- Icono de "editar" con un estilo específico y un evento de clic que llama a la función showDialog() -->
 <i class="fa-regular fa-pen-to-square fa-2xl" style="color: #ffffff;" (click)="showDialog()" label="Create"></i>
 
-<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
-<div *ngIf="isLoading">Cargando...</div>
-<form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
-    <div class="group">
-        <br>
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgURL"></textarea>
-            <label htmlFor="imgURL">URL de la imagen*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="alt" formControlName="alt"></textarea>
-            <label htmlFor="email">alt*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="title"></textarea>
-            <label htmlFor="email">TITULO*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="subtitle"></textarea>
-            <label htmlFor="email">SUBTITULO*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="description"></textarea>
-            <label htmlFor="email">DESCRICION*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="reproduction"></textarea>
-            <label htmlFor="email">REPRODUCCION*</label>
-        </span>
-    </div>
+<!-- Diálogo de PrimeNG con encabezado, vinculado a la visibilidad del componente -->
+<p-dialog header="Editar Artículo" [(visible)]="visible" [style]="{width: '50vw'}">
+    <!-- Mostrar mensaje de carga mientras isLoading es true -->
+    <div *ngIf="isLoading">Cargando...</div>
 
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="care"></textarea>
-            <label htmlFor="email">CUIDADOS*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="tips"></textarea>
-            <label htmlFor="email">CONSEJOS*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="characteristic"></textarea>
-            <label htmlFor="email">CARACTERISTICAS*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="pests"></textarea>
-            <label htmlFor="email">PESTES*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <textarea rows="5" cols="30" pInputTextarea id="email" formControlName="insecticides"></textarea>
-            <label htmlFor="email">INSECTICIDAS*</label>
-        </span>
-    </div>
-    <div class="group">
-        <span class="p-float-label">
-            <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
-        </span>
-    </div>
-    <button type="submit" [disabled]="isLoading || !updateForm.valid">Actualizar Artículo</button>
-</form>
+    <!-- Formulario reactivo con formGroup y evento ngSubmit que llama a la función onSubmit() -->
+    <form *ngIf="!isLoading" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+        <!-- Bloque de entrada de texto para la URL de la imagen -->
+        <div class="group">
+            <br>
+            <!-- Etiqueta flotante para el campo de entrada de texto -->
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="imgURL" formControlName="imgURL"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="imgURL">URL de la imagen*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para el atributo 'alt' -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="alt" formControlName="alt"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="alt">Texto alternativo (Alt)*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para el título -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="title" formControlName="title"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="title">Título*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para el subtítulo -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="subtitle" formControlName="subtitle"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="subtitle">Subtítulo*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para la descripción -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="description" formControlName="description"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="description">Descripción*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para la reproducción -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="reproduction" formControlName="reproduction"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="reproduction">Reproducción*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para los cuidados -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="care" formControlName="care"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="care">Cuidados*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para los consejos -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="tips" formControlName="tips"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="tips">Consejos*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para las características -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="characteristic" formControlName="characteristic"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="characteristic">Características*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para las plagas -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="pests" formControlName="pests"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="pests">Plagas*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de texto para los insecticidas -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Área de texto con rows, cols, id y formControlName -->
+                <textarea rows="5" cols="30" pInputTextarea id="insecticides" formControlName="insecticides"></textarea>
+                <!-- Etiqueta que se eleva cuando se ingresa texto en el área -->
+                <label htmlFor="insecticides">Insecticidas*</label>
+            </span>
+        </div>
+
+        <!-- Bloque de entrada de switch para el campo 'carrusel' -->
+        <div class="group">
+            <span class="p-float-label">
+                <!-- Componente de PrimeNG para un switch con formControlName -->
+                <p-inputSwitch formControlName="carrusel" (onChange)="updateCarruselValue($event)"></p-inputSwitch>
+                <!-- Etiqueta que describe el interruptor -->
+                <label for="carrusel">Mostrar en carrusel</label>
+            </span>
+        </div>
+
+        <!-- Botón de envío del formulario -->
+        <button type="submit" [disabled]="isLoading || !updateForm.valid">Actualizar Artículo</button>
+    </form>
 </p-dialog>
